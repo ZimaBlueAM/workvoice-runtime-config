@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.20",
-  "updatedAt": "2026-06-25T19:10:00+08:00",
+  "configVersion": "2026-06-25.21",
+  "updatedAt": "2026-06-25T19:45:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -500,14 +500,14 @@
     }
   },
   "voiceSession": {
-    "stopTailCaptureSeconds": 0.45,
-    "optimisticStopTailCaptureSeconds": 0.18,
-    "optimisticLiveTranscriptMaxAgeSeconds": 2.8,
+    "stopTailCaptureSeconds": 0.75,
+    "optimisticStopTailCaptureSeconds": 0.35,
+    "optimisticLiveTranscriptMaxAgeSeconds": 4,
     "optimisticLiveTranscriptMinimumCharacters": 4,
     "autoEndpointMinimumSpeechDurationSeconds": 0.65,
     "autoEndpointMinimumRecordingDurationSeconds": 2,
-    "autoEndpointSilenceSeconds": 2.35,
-    "autoEndpointMaxInitialSilenceSeconds": 8,
+    "autoEndpointSilenceSeconds": 4.2,
+    "autoEndpointMaxInitialSilenceSeconds": 12,
     "recordingHealthEarlyCheckSeconds": 1.8,
     "recordingHealthLateCheckSeconds": 4.5,
     "liveRewriteDebounceSeconds": 0.26,
