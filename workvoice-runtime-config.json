@@ -1,10 +1,9 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.16",
-  "updatedAt": "2026-06-25T17:54:12+08:00",
+  "configVersion": "2026-06-25.17",
+  "updatedAt": "2026-06-25T18:10:08+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
-    "serverBaseURL": "http://192.168.71.64:8787",
     "defaultProcessingPolicy": "localFirst",
     "cloudQuality": {
       "enabled": true,
@@ -25,26 +24,6 @@
       "whisperWithLiveFallbackSeconds": 20,
       "speechColdSeconds": 25,
       "speechWithLiveFallbackSeconds": 12
-    },
-    "localLab": {
-      "asrModel": "mlx-community/whisper-small-mlx",
-      "asrInitialPrompt": "以下是普通话简体中文语音转写。请使用简体中文和常用标点，保留 ChatGPT、Lark、飞书、PRD、API 等常见工作术语。",
-      "llmModel": "workvoice-gemma:latest",
-      "ollamaURL": "http://127.0.0.1:11434/api/generate",
-      "rewriteTimeoutSeconds": 60,
-      "generation": {
-        "temperature": 0,
-        "topP": 0.5,
-        "repeatPenalty": 1.1,
-        "numPredict": 140,
-        "keepAlive": "30m"
-      },
-      "toneHints": {
-        "clear": "清楚直接",
-        "work": "自然专业",
-        "formal": "稳妥礼貌",
-        "concise": "简洁"
-      }
     }
   },
   "rewrite": {
