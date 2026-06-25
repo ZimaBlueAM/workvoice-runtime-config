@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.29",
-  "updatedAt": "2026-06-26T03:22:00+08:00",
+  "configVersion": "2026-06-26.30",
+  "updatedAt": "2026-06-26T03:56:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -411,6 +411,11 @@
       "refinedDraftWatchAttempts": 120,
       "styleRewriteTimeoutSeconds": 8,
       "liveTranscriptFallbackMaxAgeSeconds": 10,
+      "liveDraftFallbackMaxAgeSeconds": 10,
+      "persistedLiveTranscriptMaxAgeSeconds": 120,
+      "finalizedInputGuardSeconds": 120,
+      "liveTranscriptReplacementThrottleSeconds": 0.45,
+      "sharedStateRefreshIntervalSeconds": 0.18,
       "hostCaptureRetryDelaysSeconds": [0.12, 0.35, 0.75]
     }
   },
