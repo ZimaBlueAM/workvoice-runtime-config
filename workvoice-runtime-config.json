@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.2",
-  "updatedAt": "2026-06-25T11:55:00+08:00",
+  "configVersion": "2026-06-25.3",
+  "updatedAt": "2026-06-25T12:20:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -345,7 +345,9 @@
       "largeRegressionRatio": 0.72,
       "largePrefixDropCharacters": 6,
       "shortFinalPrefixDropCharacters": 4,
-      "duplicateKeyCharacters": 4
+      "duplicateKeyCharacters": 4,
+      "duplicateSimilarityThreshold": 0.86,
+      "duplicateSplitWindowCharacters": 16
     }
   },
   "ui": {
