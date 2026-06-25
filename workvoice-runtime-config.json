@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.32",
-  "updatedAt": "2026-06-26T04:42:00+08:00",
+  "configVersion": "2026-06-26.33",
+  "updatedAt": "2026-06-26T04:58:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -474,7 +474,28 @@
       "shortFinalPrefixDropCharacters": 4,
       "duplicateKeyCharacters": 4,
       "duplicateSimilarityThreshold": 0.86,
-      "duplicateSplitWindowCharacters": 16
+      "duplicateSplitWindowCharacters": 16,
+      "leadingProbeWords": [
+        "喂喂喂",
+        "喂喂",
+        "喂",
+        "嗯嗯嗯",
+        "嗯嗯",
+        "嗯",
+        "呃",
+        "额",
+        "啊",
+        "那个",
+        "就是"
+      ],
+      "fillerOnlyPhrases": [
+        "嗯嗯嗯",
+        "嗯嗯",
+        "嗯",
+        "呃",
+        "额",
+        "啊"
+      ]
     },
     "liveRecognition": {
       "localeIdentifiers": ["zh-Hans", "zh-CN"],
