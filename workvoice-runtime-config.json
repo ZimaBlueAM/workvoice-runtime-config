@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.15",
-  "updatedAt": "2026-06-25T17:22:38+08:00",
+  "configVersion": "2026-06-25.16",
+  "updatedAt": "2026-06-25T17:54:12+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -461,13 +461,13 @@
   },
   "backgroundWork": {
     "automaticScreenshotOCR": {
-      "minimumIntervalSeconds": 900,
-      "leaseDurationSeconds": 240,
-      "automaticLimit": 18
+      "minimumIntervalSeconds": 7200,
+      "leaseDurationSeconds": 90,
+      "automaticLimit": 6
     },
     "summaryDeepDistillation": {
-      "minimumIntervalSeconds": 900,
-      "leaseDurationSeconds": 90
+      "minimumIntervalSeconds": 1800,
+      "leaseDurationSeconds": 60
     }
   },
   "voiceSession": {
