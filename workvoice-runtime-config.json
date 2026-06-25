@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.6",
-  "updatedAt": "2026-06-25T13:15:00+08:00",
+  "configVersion": "2026-06-25.7",
+  "updatedAt": "2026-06-25T13:30:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -401,6 +401,32 @@
     "liveRewriteMinimumIntervalSeconds": 0.8,
     "keyboardRecordingVisibilityGraceSeconds": 2.2,
     "keyboardRecordingVisibilityCheckSeconds": 0.7
+  },
+  "mainApp": {
+    "configFetchTimeoutSeconds": 8,
+    "commandPollIntervalSeconds": 0.25,
+    "commandFreshIntervalSeconds": 120,
+    "heartbeatIntervalSeconds": 1,
+    "voiceCarrierStateRefreshIntervalSeconds": 1,
+    "postStopRefinementDelaySeconds": 0.35,
+    "autoEndpointCheckIntervalSeconds": 0.25,
+    "selfTestRecordingSeconds": 2,
+    "appTestDraftWaitAttempts": 90,
+    "appTestDraftPollIntervalSeconds": 0.5,
+    "idleAutoStopCompletedKeyboardSeconds": 8,
+    "idleAutoStopCompletedAppSeconds": 30,
+    "idleAutoStopBeforeRecordKeyboardSeconds": 90,
+    "idleAutoStopBeforeRecordAppSeconds": 180,
+    "audioCarrierFallbackDelaySeconds": 4,
+    "keyboardPiPRecoveryDelaysSeconds": [1.2, 2.4, 4.8, 8],
+    "autoReturnProvisionalDelaysSeconds": [0.25, 0.7, 1.3],
+    "autoReturnReadyDelaysSeconds": [0.18, 0.42, 0.85, 1.45],
+    "autoReturnReadinessWatchSeconds": [0.18, 0.36, 0.7, 1.2, 1.9, 3, 4.8, 7.5, 11, 15],
+    "autoReturnRecoveryDelaySeconds": 0.65,
+    "autoReturnPostRequestCleanupSeconds": 2.2,
+    "autoReturnPrivateOpenFallbackSeconds": [1.2, 2.4],
+    "autoReturnPrivateOpenCleanupSeconds": 1.6,
+    "autoReturnMaxRecoveryAttempts": 3
   },
   "experiments": {
     "fastDraftEnabled": true,
