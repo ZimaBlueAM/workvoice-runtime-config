@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.33",
-  "updatedAt": "2026-06-26T04:58:00+08:00",
+  "configVersion": "2026-06-26.34",
+  "updatedAt": "2026-06-26T05:08:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -18,7 +18,9 @@
       "rewriteSeconds": 20
     },
     "draftRunnerTimeouts": {
-      "embeddedLLMSeconds": 180,
+      "embeddedLLMSeconds": 45,
+      "embeddedLLMForegroundSeconds": 35,
+      "embeddedLLMBackgroundSeconds": 8,
       "cloudQualitySeconds": 15,
       "whisperColdSeconds": 45,
       "whisperWithLiveFallbackSeconds": 20,
