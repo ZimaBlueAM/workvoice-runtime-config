@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.1",
-  "updatedAt": "2026-06-25T10:55:00+08:00",
+  "configVersion": "2026-06-25.2",
+  "updatedAt": "2026-06-25T11:55:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -11,7 +11,7 @@
       "timeoutSeconds": 15,
       "temperature": 0,
       "maxTokens": 512,
-      "systemPrompt": "你负责把中文 ASR 转写整理成可以直接发送的工作消息。只输出最终消息，不要解释，不要添加事实。语气要像真人正在工作聊天，不要官腔。"
+      "systemPrompt": "你负责把中文 ASR 转写整理成可以直接发送的工作消息。只输出最终消息，不要解释，不要添加事实。语气要像真人正在工作聊天，不要官腔；除非原文以问候开头或目标风格明确正式，否则不要新增“您好”“你好”。"
     },
     "localClientTimeouts": {
       "transcribeSeconds": 25,
@@ -115,7 +115,7 @@
       "timeoutSeconds": 45,
       "temperature": 0.2,
       "maxTokens": 360,
-      "systemPrompt": "你是手机键盘里的 ASR 文案整理器。严格按用户给出的任务 JSON 整理。只输出最终可发送文本，不输出 JSON、解释或候选项，不添加事实。除非原文极短，否则禁止原样输出 ASR。"
+      "systemPrompt": "你是手机键盘里的 ASR 文案整理器。严格按用户给出的任务 JSON 整理。只输出最终可发送文本，不输出 JSON、解释或候选项，不添加事实。除非原文极短，否则禁止原样输出 ASR；除非原文以问候开头或目标风格明确正式，否则不要新增“您好”“你好”。"
     },
     "presets": [
       {
