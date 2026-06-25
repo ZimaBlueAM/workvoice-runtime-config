@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.31",
-  "updatedAt": "2026-06-26T04:18:00+08:00",
+  "configVersion": "2026-06-26.32",
+  "updatedAt": "2026-06-26T04:42:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -486,6 +486,7 @@
     },
     "finalRoute": {
       "preferLiveTranscriptWhenAvailable": true,
+      "fallbackToLiveTranscriptOnFailure": true,
       "minimumLiveTranscriptCharacters": 8,
       "enableAppleSpeechAnalyzer": true,
       "enableWhisperKitFallback": true,
