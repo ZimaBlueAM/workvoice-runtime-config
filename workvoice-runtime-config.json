@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.22",
-  "updatedAt": "2026-06-25T20:08:00+08:00",
+  "configVersion": "2026-06-25.23",
+  "updatedAt": "2026-06-25T20:20:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -405,6 +405,7 @@
       "mainAppRecordStartWatchSeconds": [1.2, 2.4],
       "mainAppRecordStartCarrierRetryLimit": 2,
       "mainAppRecordStartForcedLaunchLimit": 1,
+      "mainAppRecordStartForceLaunchRequiresStaleCarrier": true,
       "mainAppDraftWaitAttempts": 24,
       "keyboardLocalDraftWaitAttempts": 90,
       "refinedDraftWatchAttempts": 120,
