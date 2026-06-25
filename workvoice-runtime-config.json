@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.34",
-  "updatedAt": "2026-06-26T05:08:00+08:00",
+  "configVersion": "2026-06-26.35",
+  "updatedAt": "2026-06-26T05:22:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -345,6 +345,15 @@
         "instructionName": "Arabic"
       }
     ],
+    "translationGuard": {
+      "strictRetryLimit": 1,
+      "nonLatinScriptMinimumRatio": 0.35,
+      "russianScriptMinimumRatio": 0.45,
+      "latinScriptMinimumRatio": 0.45,
+      "foreignScriptMaximumRatio": 0.34,
+      "sameLatinSourceOverlapRejectThreshold": 0.82,
+      "dominantCompetingScoreMargin": 2
+    },
     "promptRules": {
       "style": [
         "保留原意，不新增事实、时间、数字或承诺。",
