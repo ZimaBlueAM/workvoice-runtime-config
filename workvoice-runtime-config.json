@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.19",
-  "updatedAt": "2026-06-25T18:10:00+08:00",
+  "configVersion": "2026-06-25.20",
+  "updatedAt": "2026-06-25T19:10:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -287,6 +287,48 @@
         "title": "🇵🇹 葡萄牙语",
         "displayName": "葡萄牙语",
         "instructionName": "Portuguese"
+      },
+      {
+        "id": "it",
+        "title": "🇮🇹 意大利语",
+        "displayName": "意大利语",
+        "instructionName": "Italian"
+      },
+      {
+        "id": "nl",
+        "title": "🇳🇱 荷兰语",
+        "displayName": "荷兰语",
+        "instructionName": "Dutch"
+      },
+      {
+        "id": "id",
+        "title": "🇮🇩 印尼语",
+        "displayName": "印尼语",
+        "instructionName": "Indonesian"
+      },
+      {
+        "id": "tr",
+        "title": "🇹🇷 土耳其语",
+        "displayName": "土耳其语",
+        "instructionName": "Turkish"
+      },
+      {
+        "id": "vi",
+        "title": "🇻🇳 越南语",
+        "displayName": "越南语",
+        "instructionName": "Vietnamese"
+      },
+      {
+        "id": "th",
+        "title": "🇹🇭 泰语",
+        "displayName": "泰语",
+        "instructionName": "Thai"
+      },
+      {
+        "id": "hi",
+        "title": "🇮🇳 印地语",
+        "displayName": "印地语",
+        "instructionName": "Hindi"
       },
       {
         "id": "ru",
