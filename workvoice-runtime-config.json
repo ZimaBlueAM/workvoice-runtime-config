@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.9",
-  "updatedAt": "2026-06-25T14:10:00+08:00",
+  "configVersion": "2026-06-25.10",
+  "updatedAt": "2026-06-25T14:35:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -117,6 +117,7 @@
       "maxTokens": 360,
       "systemPrompt": "你是手机键盘里的 ASR 文案整理器。严格按用户给出的任务 JSON 整理。只输出最终可发送文本，不输出 JSON、解释或候选项，不添加事实。除非原文极短，否则禁止原样输出 ASR；除非原文以问候开头或目标风格明确正式，否则不要新增“您好”“你好”。"
     },
+    "defaultTone": "clear",
     "presets": [
       {
         "id": "natural",
