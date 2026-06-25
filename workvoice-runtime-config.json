@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.11",
-  "updatedAt": "2026-06-25T14:50:00+08:00",
+  "configVersion": "2026-06-25.12",
+  "updatedAt": "2026-06-25T14:55:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -484,7 +484,12 @@
     "liveRewriteMinimumDelta": 6,
     "liveRewriteMinimumIntervalSeconds": 0.8,
     "keyboardRecordingVisibilityGraceSeconds": 2.2,
-    "keyboardRecordingVisibilityCheckSeconds": 0.7
+    "keyboardRecordingVisibilityCheckSeconds": 0.7,
+    "heartbeatFreshSeconds": 90,
+    "keyboardControlHeartbeatFreshSeconds": 12,
+    "keyboardControlCarrierFreshSeconds": 360,
+    "recordingCarrierFreshSeconds": 420,
+    "pipCarrierStickyGraceSeconds": 180
   },
   "mainApp": {
     "configFetchTimeoutSeconds": 8,
