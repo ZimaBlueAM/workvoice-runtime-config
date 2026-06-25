@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.30",
-  "updatedAt": "2026-06-26T03:56:00+08:00",
+  "configVersion": "2026-06-26.31",
+  "updatedAt": "2026-06-26T04:18:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -416,6 +416,8 @@
       "finalizedInputGuardSeconds": 120,
       "liveTranscriptReplacementThrottleSeconds": 0.45,
       "sharedStateRefreshIntervalSeconds": 0.18,
+      "deleteRepeatIntervalSeconds": 0.085,
+      "cursorRepeatIntervalSeconds": 0.058,
       "hostCaptureRetryDelaysSeconds": [0.12, 0.35, 0.75]
     }
   },
@@ -551,6 +553,9 @@
     "idleAutoStopBeforeRecordKeyboardSeconds": 90,
     "idleAutoStopBeforeRecordAppSeconds": 180,
     "audioCarrierFallbackDelaySeconds": 4,
+    "pipActivationRetryLimit": 56,
+    "pipActivationRetryPollSeconds": 0.22,
+    "pipActivationStartSettleSeconds": 0.6,
     "keyboardPiPRecoveryDelaysSeconds": [1.2, 2.4, 4.8, 8],
     "autoReturnProvisionalDelaysSeconds": [0.25, 0.7, 1.3],
     "autoReturnReadyDelaysSeconds": [0.18, 0.42, 0.85, 1.45],
