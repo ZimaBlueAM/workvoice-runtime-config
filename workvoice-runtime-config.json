@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "configVersion": "2026-06-24.1",
+  "updatedAt": "2026-06-24T00:00:00+08:00",
+  "refreshIntervalSeconds": 300,
+  "services": {
+    "serverBaseURL": "http://192.168.71.64:8787",
+    "defaultProcessingPolicy": "localFirst",
+    "cloudQuality": {
+      "enabled": true,
+      "timeoutSeconds": 15,
+      "temperature": 0,
+      "maxTokens": 512,
+      "systemPrompt": "你负责把中文 ASR 转写整理成可以直接发送的工作消息。只输出最终消息，不要解释，不要添加事实。语气要像真人正在工作聊天，不要官腔。"
+    },
+    "localClientTimeouts": {
+      "transcribeSeconds": 25,
+      "draftSeconds": 30,
+      "rewriteSeconds": 20
+    },
+    "draftRunnerTimeouts": {
+      "embeddedLLMSeconds": 180,
+      "cloudQualitySeconds": 15,
+      "whisperColdSeconds": 45,
+      "whisperWithLiveFallbackSeconds": 20,
+      "speechColdSeconds": 25,
+      "speechWithLiveFallbackSeconds": 12
+    },
+    "localLab": {
+      "asrModel": "mlx-community/whisper-small-mlx",
+      "asrInitialPrompt": "以下是普通话简体中文语音转写。请使用简体中文和常用标点，保留 ChatGPT、Lark、飞书、PRD、API 等常见工作术语。",
+      "llmModel": "workvoice-gemma:latest",
+      "ollamaURL": "http://127.0.0.1:11434/api/generate",
+      "rewriteTimeoutSeconds": 60,
+      "generation": {
+        "temperature": 0,
+        "topP": 0.5,
+        "repeatPenalty": 1.1,
+        "numPredict": 140,
+        "keepAlive": "30m"
+      },
+      "toneHints": {
+        "clear": "清楚直接",
+        "work": "自然专业",
+        "formal": "稳妥礼貌",
+        "concise": "简洁"
+      }
+    }
+  },
+  "rewrite": {
+    "systemPrompt": "把手机 ASR 转写整理成一条能直接发送的工作消息。只输出最终消息，不输出解释。",
+    "toneInstructions": {
+      "clear": "像真人随手发出的清楚消息。保留一点口语感，输出 1-3 句，不要像公文或会议纪要。",
+      "work": "适合日常工作 IM，先说结论，再说必要背景和下一步。自然、靠谱、能直接发给同事或平级，不要太客套。",
+      "formal": "适合发给上级、跨团队或外部合作方。表达更完整稳妥，适当礼貌，但不要夸张客套。",
+      "concise": "压缩成最短可发送版本，只保留结论、请求、时间点和下一步，尽量比原文短 30% 以上。"
+    },
+    "toneExamples": {
+      "work": "ASR：嗯那个我现在在外面没带电脑，然后你先把那个最新的数据表发我一下，我晚点到地方以后看一下，今天应该能给你一个最终版本\n最终消息：我现在在外面，暂时没带电脑。你先把最新数据表发我，我到地方后看一下，今天给你最终版本。",
+      "formal": "ASR：嗯那个我现在在外面没带电脑，然后你先把那个最新的数据表发我一下，我晚点到地方以后看一下，今天应该能给你一个最终版本\n最终消息：我现在在外面，暂时不方便用电脑。麻烦您先把最新数据表发我，我到地方后会尽快确认，今天给您最终版本。",
+      "concise": "ASR：嗯那个我现在在外面没带电脑，然后你先把那个最新的数据表发我一下，我晚点到地方以后看一下，今天应该能给你一个最终版本\n最终消息：我现在没带电脑。请先发最新数据表，我晚点给你最终版本。"
+    },
+    "corrections": {
+      "玩点": "晚点",
+      "最终板": "最终版",
+      "最新版表": "最新数据表",
+      "数据标": "数据表",
+      "发窝": "发我",
+      "排其": "排期",
+      "飞叔": "飞书",
+      "其微": "企微",
+      "企业威信": "企业微信",
+      "拉克": "Lark",
+      "查 g p t": "ChatGPT"
+    },
+    "fillers": [
+      "喂喂喂",
+      "喂喂",
+      "喂",
+      "嗯嗯嗯",
+      "嗯嗯",
+      "嗯",
+      "呃",
+      "额",
+      "啊",
+      "那个",
+      "就是",
+      "就是说",
+      "怎么说",
+      "然后呢",
+      "然后",
+      "反正",
+      "我说",
+      "我想说"
+    ],
+    "phraseReplacements": {
+      "你先": "请先",
+      "帮我": "麻烦帮我",
+      "我怕": "避免",
+      "不然": "否则"
+    },
+    "formalMarkers": [
+      "您好",
+      "你好",
+      "请",
+      "麻烦",
+      "辛苦",
+      "感谢",
+      "方便"
+    ]
+  },
+  "keyboard": {
+    "cloud": {
+      "enabled": true,
+      "timeoutSeconds": 45,
+      "temperature": 0.2,
+      "maxTokens": 360,
+      "systemPrompt": "你是手机键盘里的 ASR 文案整理器。严格按用户给出的任务 JSON 整理。只输出最终可发送文本，不输出 JSON、解释或候选项，不添加事实。除非原文极短，否则禁止原样输出 ASR。"
+    },
+    "presets": [
+      {
+        "id": "natural",
+        "title": "自然",
+        "tone": "clear",
+        "maxTokens": 260,
+        "temperature": 0.2,
+        "instruction": "像真人随手发出的清楚消息。保留温度和口语感，但删除口癖、重复和明显 ASR 噪声。输出 1-3 句，不要像会议纪要。"
+      },
+      {
+        "id": "work",
+        "title": "工作",
+        "tone": "work",
+        "maxTokens": 320,
+        "temperature": 0.2,
+        "instruction": "适合发给同事、平级、上级或外部合作方。先结论，再必要背景和下一步，语气自然专业。必要时把原文重排成“结论/说明/请求”。"
+      },
+      {
+        "id": "formal",
+        "title": "正式",
+        "tone": "formal",
+        "maxTokens": 360,
+        "temperature": 0.15,
+        "instruction": "更稳妥、完整、礼貌，适合跨团队、对外或较正式的工作沟通。措辞要比“工作”更完整，必要时加入礼貌请求，但不要夸张客套。"
+      },
+      {
+        "id": "concise",
+        "title": "精简",
+        "tone": "concise",
+        "maxTokens": 180,
+        "temperature": 0.1,
+        "instruction": "压缩成最短可发送版本，只保留结论、请求、时间点和下一步。尽量控制在原文长度的 60% 以内。"
+      }
+    ],
+    "styleOptions": [
+      {
+        "id": "joy",
+        "title": "喜",
+        "emoji": "😄",
+        "basePresetRawValue": "natural",
+        "prompt": "语气积极、轻快、友好，像开心地快速回复。保留事实，不夸张，不新增承诺。"
+      },
+      {
+        "id": "angry",
+        "title": "怒",
+        "emoji": "😠",
+        "basePresetRawValue": "work",
+        "prompt": "表达明确不满或边界，但保持职业、克制、可发送。指出问题和期望动作，不攻击个人。"
+      },
+      {
+        "id": "sad",
+        "title": "哀",
+        "emoji": "😔",
+        "basePresetRawValue": "natural",
+        "prompt": "语气柔和、诚恳、低姿态，适合解释遗憾、抱歉或困难。不要卖惨，不新增事实。"
+      },
+      {
+        "id": "fun",
+        "title": "乐",
+        "emoji": "🔥",
+        "basePresetRawValue": "natural",
+        "prompt": "语气轻松、有活力、带一点热情，适合熟人沟通。保留重点，不油腻，不像营销文案。"
+      },
+      {
+        "id": "praise",
+        "title": "赞扬",
+        "emoji": "👍",
+        "basePresetRawValue": "work",
+        "prompt": "突出认可、感谢和正向反馈，同时给出清楚下一步。真诚具体，不空泛吹捧。"
+      },
+      {
+        "id": "reject",
+        "title": "否定",
+        "emoji": "👎",
+        "basePresetRawValue": "work",
+        "prompt": "清楚表达不同意、不能做或需要调整。语气坚定但礼貌，给出原因或替代方案。"
+      },
+      {
+        "id": "formal",
+        "title": "正式",
+        "emoji": "💼",
+        "basePresetRawValue": "formal",
+        "prompt": "更正式、完整、稳妥，适合上级、跨团队或外部合作方。表达清晰礼貌，不夸张客套。"
+      },
+      {
+        "id": "casual",
+        "title": "轻松",
+        "emoji": "🙂",
+        "basePresetRawValue": "natural",
+        "prompt": "像熟人聊天一样自然轻松，但仍然清楚、可发送。去掉口头禅和重复，不要过度正式。"
+      }
+    ],
+    "translationLanguages": [
+      {
+        "id": "none",
+        "title": "🌐 不翻译",
+        "displayName": "不翻译",
+        "instructionName": "keep_source_language"
+      },
+      {
+        "id": "zh-Hans",
+        "title": "🇨🇳 中文",
+        "displayName": "中文",
+        "instructionName": "Simplified Chinese"
+      },
+      {
+        "id": "en",
+        "title": "🇺🇸 英语",
+        "displayName": "英语",
+        "instructionName": "English"
+      },
+      {
+        "id": "ja",
+        "title": "🇯🇵 日语",
+        "displayName": "日语",
+        "instructionName": "Japanese"
+      },
+      {
+        "id": "ko",
+        "title": "🇰🇷 韩语",
+        "displayName": "韩语",
+        "instructionName": "Korean"
+      },
+      {
+        "id": "es",
+        "title": "🇪🇸 西班牙语",
+        "displayName": "西班牙语",
+        "instructionName": "Spanish"
+      },
+      {
+        "id": "fr",
+        "title": "🇫🇷 法语",
+        "displayName": "法语",
+        "instructionName": "French"
+      },
+      {
+        "id": "de",
+        "title": "🇩🇪 德语",
+        "displayName": "德语",
+        "instructionName": "German"
+      },
+      {
+        "id": "pt",
+        "title": "🇵🇹 葡萄牙语",
+        "displayName": "葡萄牙语",
+        "instructionName": "Portuguese"
+      },
+      {
+        "id": "ru",
+        "title": "🇷🇺 俄语",
+        "displayName": "俄语",
+        "instructionName": "Russian"
+      },
+      {
+        "id": "ar",
+        "title": "🇸🇦 阿拉伯语",
+        "displayName": "阿拉伯语",
+        "instructionName": "Arabic"
+      }
+    ],
+    "ui": {
+      "showPiPEducation": true,
+      "hapticsEnabled": true,
+      "animationsEnabled": true,
+      "messages": {
+        "thinking": "正在整理语音...",
+        "thinkingShort": "正在整理语音",
+        "thinkingTiny": "正在整理",
+        "fastDraft": "快稿已准备好，正在精修...",
+        "liveFastDraft": "实时快稿已准备好，正在精修...",
+        "ready": "候选已准备好。回键盘查看并插入。",
+        "readyShort": "候选已准备好",
+        "readyForImport": "候选已准备好。回键盘导入并插入。",
+        "noAudio": "没有录到麦克风声音。请确认 PIP 小窗还在，再按住重说。"
+      }
+    }
+  },
+  "asr": {
+    "contextualStrings": [
+      "ChatGPT",
+      "GPT",
+      "OpenAI",
+      "Lark",
+      "飞书",
+      "钉钉",
+      "企业微信",
+      "企微",
+      "微信",
+      "小红书",
+      "Codex",
+      "Xcode",
+      "SwiftUI",
+      "UIKit",
+      "PRD",
+      "OKR",
+      "SOP",
+      "API",
+      "SDK",
+      "UI",
+      "UX",
+      "Bug",
+      "ASR",
+      "LLM",
+      "Prompt",
+      "PIP",
+      "PiP",
+      "iCloud",
+      "GitHub",
+      "Vercel",
+      "Cloudflare",
+      "需求",
+      "排期",
+      "里程碑",
+      "版本",
+      "上线",
+      "复盘",
+      "会议",
+      "纪要",
+      "候选",
+      "转写",
+      "风格化",
+      "热更新"
+    ],
+    "liveStream": {
+      "partialDebounceSeconds": 0.45,
+      "largeRegressionRatio": 0.72,
+      "largePrefixDropCharacters": 6,
+      "shortFinalPrefixDropCharacters": 4,
+      "duplicateKeyCharacters": 4
+    }
+  },
+  "ui": {
+    "hapticsEnabled": true,
+    "animationsEnabled": true
+  },
+  "experiments": {
+    "fastDraftEnabled": true,
+    "refinedDraftWatchEnabled": true,
+    "keyboardCloudRewriteEnabled": true,
+    "cloudQualityEnabled": true,
+    "asrPrewarmEnabled": false
+  }
+}
