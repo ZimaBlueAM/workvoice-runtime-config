@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.27",
-  "updatedAt": "2026-06-26T02:12:00+08:00",
+  "configVersion": "2026-06-26.28",
+  "updatedAt": "2026-06-26T03:18:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -532,6 +532,7 @@
     "configFetchTimeoutSeconds": 8,
     "commandPollIntervalSeconds": 0.25,
     "commandFreshIntervalSeconds": 120,
+    "automaticSetupDedupWindowSeconds": 2.5,
     "heartbeatIntervalSeconds": 1,
     "voiceCarrierStateRefreshIntervalSeconds": 1,
     "postStopRefinementDelaySeconds": 0.35,
