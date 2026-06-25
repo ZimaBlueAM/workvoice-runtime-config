@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.14",
-  "updatedAt": "2026-06-25T16:25:49+08:00",
+  "configVersion": "2026-06-25.15",
+  "updatedAt": "2026-06-25T17:22:38+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -442,7 +442,8 @@
       "localeIdentifiers": ["zh-Hans", "zh-CN"],
       "requiresOnDeviceRecognition": false,
       "addsPunctuation": true,
-      "contextualStringsLimit": 100
+      "contextualStringsLimit": 100,
+      "restartLimit": 3
     },
     "finalRoute": {
       "preferLiveTranscriptWhenAvailable": true,
