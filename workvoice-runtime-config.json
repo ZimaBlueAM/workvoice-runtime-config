@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.36",
-  "updatedAt": "2026-06-26T05:52:00+08:00",
+  "configVersion": "2026-06-26.37",
+  "updatedAt": "2026-06-26T06:24:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -414,7 +414,10 @@
         "liveASRNoFirstText": "已收到声音，实时字幕还没出字。结束录音后仍会处理整段录音。",
         "liveASRReconnecting": "已收到声音，正在重新连接实时字幕。继续说话即可。",
         "liveASRUnavailableDuringRecording": "实时文字暂不可用，结束录音后仍会整理整段语音。",
-        "liveASRUnavailableIdle": "实时文字暂不可用。仍可轻点开始说话，再轻点结束后整理。"
+        "liveASRUnavailableIdle": "实时文字暂不可用。仍可轻点开始说话，再轻点结束后整理。",
+        "translationTargetMismatch": "翻译结果没有稳定输出目标语种，已拒绝这次假翻译，避免插入错误文本。请再试一次。",
+        "translationFailed": "翻译没有完成，请检查网络或稍后再试。",
+        "styleRewriteFailed": "风格化没有完成，请再试一次。"
       }
     },
     "timing": {
