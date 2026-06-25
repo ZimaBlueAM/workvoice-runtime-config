@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.37",
-  "updatedAt": "2026-06-26T06:24:00+08:00",
+  "configVersion": "2026-06-26.38",
+  "updatedAt": "2026-06-26T06:39:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -524,8 +524,8 @@
       "requiresOnDeviceRecognition": false,
       "addsPunctuation": true,
       "contextualStringsLimit": 100,
-      "restartLimit": 3,
-      "finalResultRestartDelaySeconds": 0.18
+      "restartLimit": 6,
+      "finalResultRestartDelaySeconds": 0.12
     },
     "finalRoute": {
       "preferLiveTranscriptWhenAvailable": true,
