@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.3",
-  "updatedAt": "2026-06-25T12:20:00+08:00",
+  "configVersion": "2026-06-25.4",
+  "updatedAt": "2026-06-25T12:45:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -364,6 +364,24 @@
       "minimumIntervalSeconds": 900,
       "leaseDurationSeconds": 90
     }
+  },
+  "voiceSession": {
+    "stopTailCaptureSeconds": 0.45,
+    "optimisticStopTailCaptureSeconds": 0.18,
+    "optimisticLiveTranscriptMaxAgeSeconds": 2.8,
+    "optimisticLiveTranscriptMinimumCharacters": 4,
+    "autoEndpointMinimumSpeechDurationSeconds": 0.65,
+    "autoEndpointMinimumRecordingDurationSeconds": 2,
+    "autoEndpointSilenceSeconds": 2.35,
+    "autoEndpointMaxInitialSilenceSeconds": 8,
+    "recordingHealthEarlyCheckSeconds": 1.8,
+    "recordingHealthLateCheckSeconds": 4.5,
+    "liveRewriteDebounceSeconds": 0.26,
+    "liveRewriteMinimumCharacters": 8,
+    "liveRewriteMinimumDelta": 6,
+    "liveRewriteMinimumIntervalSeconds": 0.8,
+    "keyboardRecordingVisibilityGraceSeconds": 2.2,
+    "keyboardRecordingVisibilityCheckSeconds": 0.7
   },
   "experiments": {
     "fastDraftEnabled": true,
