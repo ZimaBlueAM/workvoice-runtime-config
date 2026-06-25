@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.17",
-  "updatedAt": "2026-06-25T18:10:08+08:00",
+  "configVersion": "2026-06-25.18",
+  "updatedAt": "2026-06-25T18:20:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -347,11 +347,13 @@
         "ready": "候选已准备好。回键盘查看并插入。",
         "readyShort": "候选已准备好",
         "readyForImport": "候选已准备好。回键盘导入并插入。",
-        "noAudio": "没有录到麦克风声音。请确认 PIP 小窗还在，再按住重说。"
+        "noAudio": "没有录到麦克风声音。请确认 PIP 小窗还在，再轻点重说。"
       }
     },
     "timing": {
       "draftPollIntervalSeconds": 0.5,
+      "autoLaunchCooldownSeconds": 4.0,
+      "recordingRecoveryAutoLaunchCooldownSeconds": 8.0,
       "mainAppRecordStartWatchSeconds": [1.2, 2.4],
       "mainAppRecordStartCarrierRetryLimit": 2,
       "mainAppDraftWaitAttempts": 24,
