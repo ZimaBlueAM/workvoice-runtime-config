@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.13",
+  "configVersion": "2026-06-25.14",
   "updatedAt": "2026-06-25T16:25:49+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
@@ -374,6 +374,7 @@
     "timing": {
       "draftPollIntervalSeconds": 0.5,
       "mainAppRecordStartWatchSeconds": [1.2, 2.4],
+      "mainAppRecordStartCarrierRetryLimit": 2,
       "mainAppDraftWaitAttempts": 24,
       "keyboardLocalDraftWaitAttempts": 90,
       "refinedDraftWatchAttempts": 120,
