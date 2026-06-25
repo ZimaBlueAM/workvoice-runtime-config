@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.28",
-  "updatedAt": "2026-06-26T03:18:00+08:00",
+  "configVersion": "2026-06-26.29",
+  "updatedAt": "2026-06-26T03:22:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -520,6 +520,7 @@
     "liveRewriteMinimumCharacters": 8,
     "liveRewriteMinimumDelta": 6,
     "liveRewriteMinimumIntervalSeconds": 0.8,
+    "liveRewriteMaxRequestsPerSession": 3,
     "keyboardRecordingVisibilityGraceSeconds": 2.2,
     "keyboardRecordingVisibilityCheckSeconds": 0.7,
     "heartbeatFreshSeconds": 90,
