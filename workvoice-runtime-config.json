@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.23",
-  "updatedAt": "2026-06-25T20:20:00+08:00",
+  "configVersion": "2026-06-25.24",
+  "updatedAt": "2026-06-25T21:35:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -494,11 +494,13 @@
     "automaticScreenshotOCR": {
       "minimumIntervalSeconds": 7200,
       "leaseDurationSeconds": 90,
+      "idleDelaySeconds": 5,
       "automaticLimit": 6
     },
     "summaryDeepDistillation": {
       "minimumIntervalSeconds": 1800,
-      "leaseDurationSeconds": 60
+      "leaseDurationSeconds": 60,
+      "idleDelaySeconds": 8
     }
   },
   "voiceSession": {
