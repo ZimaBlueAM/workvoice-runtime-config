@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.25",
-  "updatedAt": "2026-06-25T23:55:00+08:00",
+  "configVersion": "2026-06-26.26",
+  "updatedAt": "2026-06-26T01:10:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -403,7 +403,7 @@
       "autoLaunchCooldownSeconds": 4.0,
       "recordingRecoveryAutoLaunchCooldownSeconds": 8.0,
       "mainAppRecordStartWatchSeconds": [1.2, 2.4],
-      "mainAppRecordStartCarrierRetryLimit": 2,
+      "mainAppRecordStartCarrierRetryLimit": 4,
       "mainAppRecordStartForcedLaunchLimit": 1,
       "mainAppRecordStartForceLaunchRequiresStaleCarrier": true,
       "mainAppDraftWaitAttempts": 24,
