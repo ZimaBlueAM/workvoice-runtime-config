@@ -522,6 +522,7 @@
     "refinedDraftWatchEnabled": true,
     "keyboardCloudRewriteEnabled": true,
     "cloudQualityEnabled": true,
+    "liveStreamingRewriteEnabled": true,
     "asrPrewarmEnabled": false
   }
 }
