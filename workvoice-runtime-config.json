@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.7",
-  "updatedAt": "2026-06-25T13:30:00+08:00",
+  "configVersion": "2026-06-25.8",
+  "updatedAt": "2026-06-25T13:50:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
