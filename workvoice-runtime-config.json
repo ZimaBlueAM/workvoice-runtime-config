@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-25.10",
-  "updatedAt": "2026-06-25T14:35:00+08:00",
+  "configVersion": "2026-06-25.11",
+  "updatedAt": "2026-06-25T14:50:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "serverBaseURL": "http://192.168.71.64:8787",
@@ -208,6 +208,50 @@
         "emoji": "🙂",
         "basePresetRawValue": "natural",
         "prompt": "像熟人聊天一样自然轻松，但仍然清楚、可发送。去掉口头禅和重复，不要过度正式。"
+      }
+    ],
+    "styleTemplates": [
+      {
+        "id": "direct",
+        "title": "直接",
+        "emoji": "🎯",
+        "basePresetRawValue": "work",
+        "prompt": "直接说结论，短句、少铺垫，保留事实和必要背景。语气清楚、有行动感，不绕弯，不新增承诺。"
+      },
+      {
+        "id": "warm",
+        "title": "温柔",
+        "emoji": "🫧",
+        "basePresetRawValue": "natural",
+        "prompt": "语气温柔、耐心、让人容易接受。先承接对方感受，再清楚表达事实、请求或下一步，不讨好，不卖惨。"
+      },
+      {
+        "id": "eq",
+        "title": "高情商",
+        "emoji": "🤝",
+        "basePresetRawValue": "work",
+        "prompt": "照顾对方感受，但不牺牲重点。先表达理解或认可，再说明边界、原因和下一步，听起来成熟、体面、可发送。"
+      },
+      {
+        "id": "push",
+        "title": "推进",
+        "emoji": "📣",
+        "basePresetRawValue": "work",
+        "prompt": "像项目负责人推进事情：明确现状、阻塞点、责任人和下一步。语气积极但不催命，适合推动协作。"
+      },
+      {
+        "id": "calm",
+        "title": "克制",
+        "emoji": "🧊",
+        "basePresetRawValue": "work",
+        "prompt": "冷静克制、就事论事。去掉情绪化表达，保留问题、证据、影响和期望动作，适合处理冲突或否定。"
+      },
+      {
+        "id": "expert",
+        "title": "专业",
+        "emoji": "🧠",
+        "basePresetRawValue": "formal",
+        "prompt": "表达专业、结构清楚、概念准确。适合对外、跨团队或复杂事项，保留关键术语，避免空话和过度客套。"
       }
     ],
     "translationLanguages": [
