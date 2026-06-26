@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-27.53",
-  "updatedAt": "2026-06-27T05:34:07+08:00",
+  "configVersion": "2026-06-27.54",
+  "updatedAt": "2026-06-27T06:55:54+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -779,7 +779,64 @@
     "autoReturnPostRequestCleanupSeconds": 2.2,
     "autoReturnPrivateOpenFallbackSeconds": [1.2, 2.4],
     "autoReturnPrivateOpenCleanupSeconds": 1.6,
-    "autoReturnMaxRecoveryAttempts": 3
+    "autoReturnMaxRecoveryAttempts": 3,
+    "memoTitleRules": [
+      {
+        "title": "外出没带电脑",
+        "requiredAny": [["外面", "在外", "外出"], ["没带电脑", "没有带电脑"]]
+      },
+      {
+        "title": "优化光标控制",
+        "any": ["控制光标", "移动光标", "拖动光标"]
+      },
+      {
+        "title": "修复 ASR 反馈",
+        "all": ["ASR"],
+        "any": ["没反馈", "没有反馈", "不动", "没在动"]
+      },
+      {
+        "title": "修复风格化错位",
+        "requiredAny": [["风格化", "风格"], ["对齐", "错位", "之前"]]
+      },
+      {
+        "title": "完善翻译语种",
+        "all": ["翻译"],
+        "any": ["语种", "语言"]
+      },
+      {
+        "title": "测试语音键盘",
+        "all": ["键盘"],
+        "any": ["测试", "好用"]
+      },
+      {
+        "title": "确认语音可听见",
+        "any": ["能听到", "听到我说话", "听见"]
+      },
+      {
+        "title": "同步最新数据表",
+        "any": ["数据表", "最新表"]
+      },
+      {
+        "title": "修复自动回跳",
+        "any": ["回跳", "跳回"]
+      },
+      {
+        "title": "截图权限处理",
+        "all": ["截图", "权限"]
+      }
+    ],
+    "lowValueMemoFragments": [
+      "哈哈", "嘿嘿", "嗯嗯", "啊啊", "喂喂", "啦啦",
+      "测试", "试试看", "看看效果", "有没有用", "是否听到", "听见了吗",
+      "随便说", "没什么", "无所谓", "好的好的", "可以可以"
+    ],
+    "memorySignalFragments": [
+      "客户", "用户", "项目", "产品", "版本", "设计", "需求", "问题", "原因", "方案",
+      "会议", "日历", "提醒", "待办", "跟进", "确认", "发送", "整理", "修改", "删除",
+      "明天", "今天", "后天", "下周", "周一", "周二", "周三", "周四", "周五", "周六", "周日",
+      "上午", "下午", "晚上", "点", "号", "月", "年", "App", "ASR", "LLM", "PIP", "PiP",
+      "微信", "Lark", "ChatGPT", "截图", "语音", "键盘", "输入框", "回跳"
+    ]
   },
   "experiments": {
     "fastDraftEnabled": true,
