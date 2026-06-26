@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-27.51",
-  "updatedAt": "2026-06-27T04:45:00+08:00",
+  "configVersion": "2026-06-27.52",
+  "updatedAt": "2026-06-27T05:12:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -459,6 +459,8 @@
       "sharedStateRefreshIntervalSeconds": 0.18,
       "deleteRepeatIntervalSeconds": 0.085,
       "cursorRepeatIntervalSeconds": 0.058,
+      "primaryCursorScrubStepWidthPoints": 2.4,
+      "primaryCursorScrubAccelerationMax": 8,
       "hostCaptureRetryDelaysSeconds": [0.12, 0.35, 0.75]
     }
   },
