@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.47",
-  "updatedAt": "2026-06-26T22:46:00+08:00",
+  "configVersion": "2026-06-26.48",
+  "updatedAt": "2026-06-26T23:58:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -404,6 +404,19 @@
     "ui": {
       "showPiPEducation": true,
       "hapticsEnabled": true,
+      "hapticIntensities": {
+        "key": 0.45,
+        "primaryPress": 0.65,
+        "recordStart": 0.85,
+        "recordStop": 0.9,
+        "styleSelect": 0.62,
+        "intensityStep": 0.9,
+        "translationSelect": 0.5,
+        "delete": 0.68,
+        "restore": 0.55,
+        "warning": 0.75,
+        "cursorStep": 0.48
+      },
       "animationsEnabled": true,
       "messages": {
         "thinking": "正在整理语音...",
