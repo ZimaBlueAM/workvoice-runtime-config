@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.39",
-  "updatedAt": "2026-06-26T08:29:02+08:00",
+  "configVersion": "2026-06-26.40",
+  "updatedAt": "2026-06-26T11:59:30+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -651,6 +651,45 @@
     "keyboardControlCarrierFreshSeconds": 360,
     "recordingCarrierFreshSeconds": 420,
     "pipCarrierStickyGraceSeconds": 180
+  },
+  "voiceAnalysis": {
+    "audioEvidenceEnabled": true,
+    "maxArchiveBytes": 100663296,
+    "maxSingleAudioBytes": 12582912,
+    "autoAnalyzeAfterMemoSave": false,
+    "minimumAudioDurationSeconds": 1.2,
+    "suggestedTermLimit": 18,
+    "preferredASRReviewProviderID": "apple-speech-review",
+    "preferredPronunciationProviderID": "azure-pronunciation-assessment",
+    "providers": [
+      {
+        "id": "apple-speech-review",
+        "title": "Apple Speech 复核",
+        "kind": "asr-review",
+        "endpointMode": "on-device-or-system",
+        "enabled": true,
+        "requiresExplicitOptIn": false,
+        "notes": "用于复核转写、学习个人常用词和中英混合术语；不做发音评分。"
+      },
+      {
+        "id": "azure-pronunciation-assessment",
+        "title": "Azure 发音评分",
+        "kind": "pronunciation",
+        "endpointMode": "cloud-explicit",
+        "enabled": false,
+        "requiresExplicitOptIn": true,
+        "notes": "可返回准确度、流利度、完整度、韵律和音素/单词级反馈；默认关闭，避免后台耗电和隐私风险。"
+      },
+      {
+        "id": "speechbrain-commonaccent",
+        "title": "CommonAccent 口音识别",
+        "kind": "accent-classification",
+        "endpointMode": "local-or-server",
+        "enabled": false,
+        "requiresExplicitOptIn": true,
+        "notes": "用于粗粒度英语口音分类，适合做发音复盘辅助，不参与键盘实时输入。"
+      }
+    ]
   },
   "mainApp": {
     "configFetchTimeoutSeconds": 8,
