@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.38",
-  "updatedAt": "2026-06-26T06:39:00+08:00",
+  "configVersion": "2026-06-26.39",
+  "updatedAt": "2026-06-26T08:29:02+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -488,6 +488,78 @@
       "转写",
       "风格化",
       "热更新"
+    ],
+    "industryContexts": [
+      {
+        "id": "general",
+        "title": "通用",
+        "emoji": "🌐",
+        "terms": ["ChatGPT", "OpenAI", "GPT", "Lark", "飞书", "微信", "企业微信", "钉钉", "PRD", "OKR", "SOP", "API", "SDK", "UI", "UX", "ASR", "LLM", "Prompt"],
+        "promptContext": "通用工作沟通语境：保留 App 名、产品名、英文缩写、项目术语和中英混合表达。"
+      },
+      {
+        "id": "ai-product",
+        "title": "AI/产品",
+        "emoji": "🤖",
+        "terms": ["ASR", "LLM", "RAG", "Agent", "Prompt", "Embedding", "向量检索", "蒸馏", "上下文", "多模态", "工作流", "原型", "PRD", "埋点", "留存", "转化率", "A/B 测试"],
+        "promptContext": "AI 和产品语境：保留模型、prompt、ASR、LLM、RAG、PRD、指标和实验相关术语，不要把技术缩写翻译成普通词。"
+      },
+      {
+        "id": "sales-cs",
+        "title": "销售/客户",
+        "emoji": "🤝",
+        "terms": ["线索", "商机", "客户成功", "续费", "回款", "报价", "合同", "交付", "需求确认", "跟进", "客诉", "SLA", "CRM", "ARR", "MRR", "POC"],
+        "promptContext": "销售和客户沟通语境：优先保留客户、报价、合同、回款、续费、POC、SLA 等业务术语，语气清楚可跟进。"
+      },
+      {
+        "id": "legal",
+        "title": "法律",
+        "emoji": "⚖️",
+        "terms": ["合同", "协议", "违约", "条款", "补充协议", "授权", "保密协议", "NDA", "合规", "诉讼", "仲裁", "法务", "知识产权", "商标", "著作权", "隐私政策"],
+        "promptContext": "法律语境：保留合同、条款、合规、授权、NDA、知识产权等术语，避免随意弱化义务、风险和边界。"
+      },
+      {
+        "id": "medical",
+        "title": "医疗",
+        "emoji": "🩺",
+        "terms": ["病历", "门诊", "复诊", "处方", "剂量", "过敏史", "检查报告", "血常规", "影像", "CT", "MRI", "B 超", "诊断", "症状", "用药", "随访"],
+        "promptContext": "医疗健康语境：保留症状、检查、诊断、剂量、用药、随访等术语；不新增医学结论，不替用户做诊断。"
+      },
+      {
+        "id": "finance",
+        "title": "金融",
+        "emoji": "📈",
+        "terms": ["财报", "现金流", "毛利率", "净利润", "估值", "融资", "风控", "授信", "回撤", "收益率", "资产配置", "合规", "审计", "税务", "预算", "ROI"],
+        "promptContext": "金融和经营语境：保留财务指标、融资、风控、审计、预算、ROI 等术语，不把数字和口径改乱。"
+      },
+      {
+        "id": "education",
+        "title": "教育",
+        "emoji": "🎓",
+        "terms": ["课程", "教案", "作业", "考试", "测评", "学情", "班级", "家长会", "录取", "申请", "论文", "课题", "答辩", "GPA", "雅思", "托福"],
+        "promptContext": "教育语境：保留课程、测评、学情、申请、论文、考试等术语，表达要清楚、耐心、可执行。"
+      },
+      {
+        "id": "engineering",
+        "title": "研发",
+        "emoji": "💻",
+        "terms": ["接口", "后端", "前端", "数据库", "缓存", "队列", "部署", "灰度", "回滚", "日志", "崩溃", "Crash", "性能", "延迟", "Pull Request", "CI/CD"],
+        "promptContext": "研发语境：保留接口、部署、日志、Crash、CI/CD、Pull Request 等工程术语，避免把代码标识和英文缩写改掉。"
+      },
+      {
+        "id": "operations",
+        "title": "运营",
+        "emoji": "📣",
+        "terms": ["活动", "投放", "素材", "转化", "漏斗", "私域", "社群", "复盘", "用户增长", "留存", "GMV", "ROI", "CTR", "CVR", "DAU", "MAU"],
+        "promptContext": "运营增长语境：保留活动、投放、素材、转化、漏斗、GMV、ROI、CTR、CVR 等术语，突出目标和下一步。"
+      },
+      {
+        "id": "ecommerce",
+        "title": "电商",
+        "emoji": "🛒",
+        "terms": ["SKU", "SPU", "库存", "上架", "下架", "发货", "退货", "售后", "直播间", "客单价", "转化率", "复购", "达人", "佣金", "投流", "GMV"],
+        "promptContext": "电商语境：保留 SKU、库存、上架、售后、直播间、客单价、复购、GMV 等术语，别把商品和履约信息改乱。"
+      }
     ],
     "liveStream": {
       "partialDebounceSeconds": 0.45,
