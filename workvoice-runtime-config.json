@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.40",
-  "updatedAt": "2026-06-26T11:59:30+08:00",
+  "configVersion": "2026-06-26.41",
+  "updatedAt": "2026-06-26T18:08:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -656,7 +656,7 @@
     "audioEvidenceEnabled": true,
     "maxArchiveBytes": 100663296,
     "maxSingleAudioBytes": 12582912,
-    "autoAnalyzeAfterMemoSave": false,
+    "autoAnalyzeAfterMemoSave": true,
     "minimumAudioDurationSeconds": 1.2,
     "suggestedTermLimit": 18,
     "preferredASRReviewProviderID": "apple-speech-review",
