@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.42",
-  "updatedAt": "2026-06-26T18:14:00+08:00",
+  "configVersion": "2026-06-26.43",
+  "updatedAt": "2026-06-26T19:02:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -665,6 +665,10 @@
     "autoAnalyzeAfterMemoSave": true,
     "minimumAudioDurationSeconds": 1.2,
     "suggestedTermLimit": 18,
+    "speechProfileEnabled": true,
+    "speechProfileTermLimit": 48,
+    "speechProfileMemoLookbackLimit": 120,
+    "speechProfileMinimumTermOccurrences": 1,
     "preferredASRReviewProviderID": "apple-speech-review",
     "preferredPronunciationProviderID": "azure-pronunciation-assessment",
     "providers": [
