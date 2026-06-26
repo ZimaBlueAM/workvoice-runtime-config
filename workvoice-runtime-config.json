@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.44",
-  "updatedAt": "2026-06-26T19:12:00+08:00",
+  "configVersion": "2026-06-26.45",
+  "updatedAt": "2026-06-26T20:04:13+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -607,6 +607,7 @@
       "enableWhisperKitFallback": true,
       "enableLocalModelFallback": true,
       "appleLocaleIdentifier": "zh-Hans",
+      "appleLocaleIdentifiers": ["zh-Hans", "zh-CN", "en-US"],
       "whisperLocaleIdentifier": "und"
     }
   },
