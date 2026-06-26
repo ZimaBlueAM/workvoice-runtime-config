@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.41",
-  "updatedAt": "2026-06-26T18:08:00+08:00",
+  "configVersion": "2026-06-26.42",
+  "updatedAt": "2026-06-26T18:14:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -625,7 +625,13 @@
       "minimumIntervalSeconds": 1800,
       "leaseDurationSeconds": 60,
       "idleDelaySeconds": 8
-    }
+    },
+    "deferWhenAppInactive": true,
+    "deferDuringKeyboardReturn": true,
+    "deferDuringAutoReturn": true,
+    "deferDuringVoiceBusy": true,
+    "deferDuringLowPower": true,
+    "deferDuringThermalPressure": true
   },
   "voiceSession": {
     "stopTailCaptureSeconds": 0.75,
