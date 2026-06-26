@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-26.43",
-  "updatedAt": "2026-06-26T19:02:00+08:00",
+  "configVersion": "2026-06-26.44",
+  "updatedAt": "2026-06-26T19:12:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -689,6 +689,15 @@
         "enabled": false,
         "requiresExplicitOptIn": true,
         "notes": "可返回准确度、流利度、完整度、韵律和音素/单词级反馈；默认关闭，避免后台耗电和隐私风险。"
+      },
+      {
+        "id": "speechace-pronunciation-scoring",
+        "title": "Speechace 发音评分",
+        "kind": "pronunciation",
+        "endpointMode": "cloud-explicit",
+        "enabled": false,
+        "requiresExplicitOptIn": true,
+        "notes": "用于英语发音、流利度和单词级复盘；作为 Azure 备选，默认关闭。"
       },
       {
         "id": "speechbrain-commonaccent",
