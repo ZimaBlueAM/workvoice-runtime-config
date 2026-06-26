@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-27.50",
-  "updatedAt": "2026-06-27T02:18:00+08:00",
+  "configVersion": "2026-06-27.51",
+  "updatedAt": "2026-06-27T04:45:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -656,6 +656,18 @@
     "deferDuringVoiceBusy": true,
     "deferDuringLowPower": true,
     "deferDuringThermalPressure": true
+  },
+  "summaryReports": {
+    "enabledPeriodIDs": ["daily", "everyThreeDays", "weekly", "monthly", "quarterly", "halfYearly", "yearly"],
+    "storedLimit": 160,
+    "visibleLimit": 40,
+    "shelfLimit": 8,
+    "contextReportLimit": 10,
+    "contextActionLimit": 4,
+    "highlightLimit": 6,
+    "keyMemoryLimit": 8,
+    "actionItemLimit": 12,
+    "minimumWeightedMemoCount": 1
   },
   "voiceSession": {
     "stopTailCaptureSeconds": 0.75,
