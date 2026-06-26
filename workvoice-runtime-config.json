@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-27.49",
-  "updatedAt": "2026-06-27T00:46:00+08:00",
+  "configVersion": "2026-06-27.50",
+  "updatedAt": "2026-06-27T02:18:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -636,15 +636,19 @@
   },
   "backgroundWork": {
     "automaticScreenshotOCR": {
+      "enabled": true,
       "minimumIntervalSeconds": 7200,
       "leaseDurationSeconds": 90,
       "idleDelaySeconds": 5,
-      "automaticLimit": 6
+      "automaticLimit": 6,
+      "maxRunsPerLaunch": 1
     },
     "summaryDeepDistillation": {
+      "enabled": true,
       "minimumIntervalSeconds": 1800,
       "leaseDurationSeconds": 60,
-      "idleDelaySeconds": 8
+      "idleDelaySeconds": 8,
+      "maxRunsPerLaunch": 1
     },
     "deferWhenAppInactive": true,
     "deferDuringKeyboardReturn": true,
