@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.69",
-  "updatedAt": "2026-06-28T04:42:00+08:00",
+  "configVersion": "2026-06-28.70",
+  "updatedAt": "2026-06-28T05:05:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -469,6 +469,13 @@
         "keyboardStartingRecording": "正在开始录音",
         "keyboardOpeningMic": "正在开麦",
         "keyboardRecording": "正在录音",
+        "keyboardPreparingRecording": "正在准备录音",
+        "keyboardLiveTranscribing": "实时转写",
+        "keyboardNeedsRecovery": "语音需恢复",
+        "keyboardVoiceReady": "语音已准备好",
+        "keyboardLiveTranscribingNow": "实时转写中",
+        "keyboardPrepareVoice": "点准备语音",
+        "keyboardFirstPrepare": "首次准备",
         "keyboardStoppedWaiting": "已停止等待。可重新轻点说话。",
         "keyboardWaitingVoiceEntry": "正在等待语音入口",
         "keyboardWakingApp": "正在唤醒",
