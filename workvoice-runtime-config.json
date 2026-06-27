@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.60",
-  "updatedAt": "2026-06-28T00:20:00+08:00",
+  "configVersion": "2026-06-28.61",
+  "updatedAt": "2026-06-28T00:40:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -434,6 +434,16 @@
         "primaryKeyDark": { "red": 0.24, "green": 0.24, "blue": 0.26, "alpha": 0.96 },
         "auxiliaryKeyLight": { "red": 0.74, "green": 0.77, "blue": 0.82, "alpha": 0.94 },
         "auxiliaryKeyDark": { "red": 0.31, "green": 0.31, "blue": 0.34, "alpha": 0.96 }
+      },
+      "layout": {
+        "contentVerticalSpacing": 13,
+        "paletteVerticalSpacing": 9,
+        "actionButtonSpacing": 15,
+        "styleButtonSpacing": 15,
+        "translationButtonSpacing": 9,
+        "horizontalInset": 18,
+        "verticalInset": 14,
+        "styleLabelSpacing": 4
       },
       "animationsEnabled": true,
       "messages": {
