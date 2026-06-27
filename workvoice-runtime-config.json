@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.64",
-  "updatedAt": "2026-06-28T01:44:00+08:00",
+  "configVersion": "2026-06-28.65",
+  "updatedAt": "2026-06-28T02:42:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -436,14 +436,14 @@
         "auxiliaryKeyDark": { "red": 0.31, "green": 0.31, "blue": 0.34, "alpha": 0.96 }
       },
       "layout": {
-        "contentVerticalSpacing": 13,
-        "paletteVerticalSpacing": 9,
+        "contentVerticalSpacing": 14,
+        "paletteVerticalSpacing": 10,
         "actionButtonSpacing": 15,
         "styleButtonSpacing": 15,
         "translationButtonSpacing": 9,
         "horizontalInset": 18,
-        "verticalInset": 14,
-        "styleLabelSpacing": 4
+        "verticalInset": 10,
+        "styleLabelSpacing": 5
       },
       "animationsEnabled": true,
       "messages": {
