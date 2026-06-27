@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-27.57",
-  "updatedAt": "2026-06-27T16:35:22+08:00",
+  "configVersion": "2026-06-27.58",
+  "updatedAt": "2026-06-27T22:30:45+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -14,6 +14,16 @@
       "temperature": 0,
       "maxTokens": 512,
       "systemPrompt": "你负责把中文 ASR 转写整理成可以直接发送的工作消息。只输出最终消息，不要解释，不要添加事实。语气要像真人正在工作聊天，不要官腔；除非原文以问候开头，否则不要新增“您好”“你好”。即使目标风格是正式，也不要凭空补问候。"
+    },
+    "localQuality": {
+      "temperature": 0.2,
+      "topP": 0.9,
+      "topK": 30,
+      "repeatPenalty": 1.08,
+      "maxTokens": 384,
+      "partialMinimumCharacters": 6,
+      "partialMinimumDelta": 8,
+      "partialMinimumIntervalSeconds": 0.45
     },
     "localClientTimeouts": {
       "transcribeSeconds": 25,
@@ -453,15 +463,19 @@
       "styleRewriteTimeoutSeconds": 8,
       "liveTranscriptFallbackMaxAgeSeconds": 10,
       "liveDraftFallbackMaxAgeSeconds": 10,
+      "liveDraftASRLagToleranceSeconds": 0.25,
       "persistedLiveTranscriptMaxAgeSeconds": 120,
       "finalizedInputGuardSeconds": 120,
       "liveTranscriptReplacementThrottleSeconds": 0.45,
+      "keyboardLocalAudioActivityRenderThrottleSeconds": 0.7,
       "sharedStateRefreshIntervalSeconds": 0.18,
       "deleteRepeatIntervalSeconds": 0.085,
       "cursorRepeatIntervalSeconds": 0.058,
       "primaryCursorScrubStepWidthPoints": 2.4,
       "primaryCursorScrubAccelerationMax": 8,
-      "hostCaptureRetryDelaysSeconds": [0.12, 0.35, 0.75]
+      "hostCaptureRetryDelaysSeconds": [0.12, 0.35, 0.75],
+      "hostArbiterActiveCheckAttempts": 3,
+      "hostArbiterActiveCheckDelaySeconds": 0.06
     }
   },
   "asr": {
@@ -683,6 +697,7 @@
     "recordingHealthEarlyCheckSeconds": 1.8,
     "recordingHealthLateCheckSeconds": 4.5,
     "liveASRStaleRestartSeconds": 4.5,
+    "liveASRStaleWatchCheckIntervalSeconds": 0.7,
     "liveRewriteDebounceSeconds": 0.26,
     "liveRewriteMinimumCharacters": 8,
     "liveRewriteMinimumDelta": 6,
