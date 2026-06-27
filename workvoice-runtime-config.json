@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-27.58",
-  "updatedAt": "2026-06-27T22:30:45+08:00",
+  "configVersion": "2026-06-27.59",
+  "updatedAt": "2026-06-27T23:45:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -706,7 +706,7 @@
     "keyboardRecordingVisibilityGraceSeconds": 2.2,
     "keyboardRecordingVisibilityCheckSeconds": 0.7,
     "heartbeatFreshSeconds": 90,
-    "keyboardControlHeartbeatFreshSeconds": 12,
+    "keyboardControlHeartbeatFreshSeconds": 36,
     "keyboardControlCarrierFreshSeconds": 360,
     "recordingCarrierFreshSeconds": 420,
     "pipCarrierStickyGraceSeconds": 180,
