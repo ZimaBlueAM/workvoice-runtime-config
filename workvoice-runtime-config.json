@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-27.54",
-  "updatedAt": "2026-06-27T06:55:54+08:00",
+  "configVersion": "2026-06-27.55",
+  "updatedAt": "2026-06-27T12:24:17+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -415,7 +415,7 @@
         "delete": 0.68,
         "restore": 0.55,
         "warning": 0.75,
-        "cursorStep": 0.48
+        "cursorStep": 0.72
       },
       "animationsEnabled": true,
       "messages": {
