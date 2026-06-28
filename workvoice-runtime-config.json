@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.4",
-  "updatedAt": "2026-06-29T06:45:00+08:00",
+  "configVersion": "2026-06-29.5",
+  "updatedAt": "2026-06-29T07:20:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1073,6 +1073,11 @@
     "defaultASRProviderID": "apple-speech",
     "defaultLLMProviderID": "qwen-2.5-0.5b-q4km",
     "bundledFallbackLLMProviderID": "gemma-3-270m-it",
+    "nonRemovableBaselineProviderIDs": [
+      "apple-speech",
+      "qwen-2.5-0.5b-q4km",
+      "gemma-3-270m-it"
+    ],
     "asrModels": [
       {
         "id": "apple-speech",
