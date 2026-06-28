@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.83",
-  "updatedAt": "2026-06-29T04:20:00+08:00",
+  "configVersion": "2026-06-28.84",
+  "updatedAt": "2026-06-29T04:32:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -442,10 +442,10 @@
           "alpha": 0.9
         },
         "primaryKeyLight": {
-          "red": 0.96,
-          "green": 0.97,
-          "blue": 0.98,
-          "alpha": 0.94
+          "red": 0.92,
+          "green": 0.93,
+          "blue": 0.95,
+          "alpha": 0.96
         },
         "primaryKeyDark": {
           "red": 0.28,
