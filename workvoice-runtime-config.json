@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.88",
-  "updatedAt": "2026-06-29T04:16:00+08:00",
+  "configVersion": "2026-06-29.1",
+  "updatedAt": "2026-06-29T05:20:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1999,6 +1999,7 @@
       "telemetryFields": [
         "regionProfileID",
         "localeIdentifier",
+        "accentTag",
         "industryContextID",
         "hostAppTag",
         "asrProviderID",
