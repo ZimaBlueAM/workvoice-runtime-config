@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.77",
-  "updatedAt": "2026-06-28T23:30:00+08:00",
+  "configVersion": "2026-06-28.78",
+  "updatedAt": "2026-06-29T00:10:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1317,17 +1317,17 @@
         "requiresExplicitDownload": true
       },
       {
-        "id": "gemma-3n-e2b-it-q4",
-        "title": "Gemma 3n E2B IT Q4",
+        "id": "gemma-3n-e2b-it-mobile",
+        "title": "Gemma 3n E2B IT Mobile",
         "kind": "llm",
         "provider": "Google",
         "model": "Gemma-3n-E2B-it",
         "repo": "google/gemma-3n-E2B-it",
-        "artifactFile": "gemma-3n-e2b-it-q4.gguf",
-        "format": "gguf",
+        "artifactFile": null,
+        "format": "mobile-runtime",
         "downloadMode": "research",
-        "runtimeStatus": "download-candidate",
-        "role": "全球多语和翻译候选；只用于显式下载后的地区评测，不进入默认安装包。",
+        "runtimeStatus": "research-candidate",
+        "role": "全球多语和翻译候选；需要先完成 iOS 移动运行时适配和真实键盘评测，不进入默认安装包。",
         "localeIdentifiers": [
           "en-US",
           "ja-JP",
@@ -1347,7 +1347,7 @@
         ],
         "sizeBytesApprox": 1600000000,
         "defaultEnabled": false,
-        "requiresExplicitDownload": true
+        "requiresExplicitDownload": false
       },
       {
         "id": "apple-foundation-models",
@@ -1386,17 +1386,17 @@
         "requiresExplicitDownload": false
       },
       {
-        "id": "gemma-4-e2b-it-q4",
-        "title": "Gemma 4 E2B IT Q4",
+        "id": "gemma-4-e2b-it-mobile",
+        "title": "Gemma 4 E2B IT Mobile",
         "kind": "llm",
         "provider": "Google",
         "model": "Gemma-4-E2B-it",
         "repo": "google/gemma-4-e2b-it",
-        "artifactFile": "gemma-4-e2b-it-q4.gguf",
-        "format": "gguf",
+        "artifactFile": null,
+        "format": "mobile-runtime",
         "downloadMode": "research",
-        "runtimeStatus": "download-candidate",
-        "role": "最新多语轻量开放模型候选；优先评测翻译、英文和全球多语场景，不进入默认安装包。",
+        "runtimeStatus": "research-candidate",
+        "role": "最新多语轻量开放模型候选；需要先完成 iOS 移动运行时适配和真实键盘评测，不进入默认安装包。",
         "localeIdentifiers": [
           "en-US",
           "ja-JP",
@@ -1416,7 +1416,7 @@
         ],
         "sizeBytesApprox": 1700000000,
         "defaultEnabled": false,
-        "requiresExplicitDownload": true
+        "requiresExplicitDownload": false
       }
     ],
     "regionProfiles": [
@@ -1480,10 +1480,10 @@
         "preferredLLMModelIDs": [
           "qwen-2.5-0.5b-q4km",
           "qwen-2.5-1.5b-q4km",
-          "gemma-3n-e2b-it-q4",
+          "gemma-3n-e2b-it-mobile",
           "qwen-3-0.6b-q4km",
           "apple-foundation-models",
-          "gemma-4-e2b-it-q4"
+          "gemma-4-e2b-it-mobile"
         ],
         "notes": "用于翻译、多语输入和低延迟 streaming ASR 候选评估。"
       }
@@ -1625,7 +1625,7 @@
         ]
       },
       "safetyGates": [
-        "所有非 baseline ASR/LLM 必须显式下载或显式启用，不能远程静默切换默认。",
+        "所有非 baseline ASR/LLM 必须显式下载、系统可用或显式启用，不能远程静默切换默认。",
         "候选模型必须在每个目标地区 sample bucket 中分别超过 baseline，不能用全局平均掩盖某地区退化。",
         "任何候选如果 duplicateInsertionRate、noSpeechFalsePositiveRate 或旧 session 改写率高于 baseline，直接降级为 research。",
         "低电量、热状态 elevated、后台或键盘不可见时，只允许 Apple Speech/live transcript 和轻量本地整理。"
@@ -1659,20 +1659,19 @@
       "requiresExplicitDownloadForNonBaseline": true,
       "minimumEvaluationSamplesPerRegion": 80,
       "promotionRules": [
-        "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载 A/B 候选。",
+        "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载或 research A/B 候选。",
         "Apple Speech 和 0.5B 轻量 LLM 是基础链路，必须随 App 可用，远程配置只能降级到它们，不能移除它们。",
         "候选 ASR 只有在本地区真实键盘录音 finalWER、termRecall、duplicateInsertionRate 和 firstTokenLatencyMs 全部优于 baseline 后才允许推荐。",
         "候选 LLM 只有在本机延迟、热量、内存和 styleAlignment 达标后才允许从推荐下载进入默认优先级。",
-        "云端或大模型不得后台自动启用，必须用户显式下载或显式 opt-in。"
+        "云端或大模型不得后台自动启用，必须用户显式下载、系统明确可用或显式 opt-in。",
+        "mobile-runtime research 候选没有 iOS 适配器前只能展示为评测路线，不能出现在下载按钮或自动 fallback 执行链路。"
       ],
       "fallbackOrder": [
         "apple-speech",
         "qwen-2.5-0.5b-q4km",
         "qwen-2.5-1.5b-q4km",
         "qwen-3-0.6b-q4km",
-        "gemma-3n-e2b-it-q4",
         "apple-foundation-models",
-        "gemma-4-e2b-it-q4",
         "whisperkit-large-v3",
         "sensevoice-small"
       ],
