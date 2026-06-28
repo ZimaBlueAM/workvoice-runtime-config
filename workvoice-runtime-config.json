@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.76",
-  "updatedAt": "2026-06-28T22:25:00+08:00",
+  "configVersion": "2026-06-28.77",
+  "updatedAt": "2026-06-28T23:30:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1285,6 +1285,138 @@
         "sizeBytesApprox": 1117000000,
         "defaultEnabled": false,
         "requiresExplicitDownload": true
+      },
+      {
+        "id": "qwen-3-0.6b-q4km",
+        "title": "Qwen3 0.6B Q4_K_M",
+        "kind": "llm",
+        "provider": "Qwen",
+        "model": "Qwen3-0.6B-GGUF",
+        "repo": "Qwen/Qwen3-0.6B-GGUF",
+        "artifactFile": "qwen3-0.6b-q4_k_m.gguf",
+        "format": "gguf",
+        "downloadMode": "research",
+        "runtimeStatus": "download-candidate",
+        "role": "中文和中英混合的下一代轻量整理候选；只在真实键盘样本胜过 0.5B baseline 后推荐。",
+        "localeIdentifiers": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering",
+          "sales-cs"
+        ],
+        "sizeBytesApprox": 522000000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      },
+      {
+        "id": "gemma-3n-e2b-it-q4",
+        "title": "Gemma 3n E2B IT Q4",
+        "kind": "llm",
+        "provider": "Google",
+        "model": "Gemma-3n-E2B-it",
+        "repo": "google/gemma-3n-E2B-it",
+        "artifactFile": "gemma-3n-e2b-it-q4.gguf",
+        "format": "gguf",
+        "downloadMode": "research",
+        "runtimeStatus": "download-candidate",
+        "role": "全球多语和翻译候选；只用于显式下载后的地区评测，不进入默认安装包。",
+        "localeIdentifiers": [
+          "en-US",
+          "ja-JP",
+          "ko-KR",
+          "fr-FR",
+          "de-DE",
+          "es-ES",
+          "pt-BR",
+          "hi-IN"
+        ],
+        "regionIDs": [
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product"
+        ],
+        "sizeBytesApprox": 1600000000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      },
+      {
+        "id": "apple-foundation-models",
+        "title": "Apple Foundation Models",
+        "kind": "llm",
+        "provider": "Apple",
+        "model": "SystemLanguageModel",
+        "repo": null,
+        "artifactFile": null,
+        "format": "system",
+        "downloadMode": "system-conditional",
+        "runtimeStatus": "system-candidate",
+        "role": "Apple Intelligence 可用设备上的系统级本地改写候选；作为可用性增强，不替代 0.5B baseline。",
+        "localeIdentifiers": [
+          "zh-Hans",
+          "en-US",
+          "ja-JP",
+          "ko-KR",
+          "fr-FR",
+          "de-DE",
+          "es-ES",
+          "pt-BR"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering",
+          "sales-cs"
+        ],
+        "sizeBytesApprox": null,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": false
+      },
+      {
+        "id": "gemma-4-e2b-it-q4",
+        "title": "Gemma 4 E2B IT Q4",
+        "kind": "llm",
+        "provider": "Google",
+        "model": "Gemma-4-E2B-it",
+        "repo": "google/gemma-4-e2b-it",
+        "artifactFile": "gemma-4-e2b-it-q4.gguf",
+        "format": "gguf",
+        "downloadMode": "research",
+        "runtimeStatus": "download-candidate",
+        "role": "最新多语轻量开放模型候选；优先评测翻译、英文和全球多语场景，不进入默认安装包。",
+        "localeIdentifiers": [
+          "en-US",
+          "ja-JP",
+          "ko-KR",
+          "fr-FR",
+          "de-DE",
+          "es-ES",
+          "pt-BR",
+          "hi-IN"
+        ],
+        "regionIDs": [
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product"
+        ],
+        "sizeBytesApprox": 1700000000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
       }
     ],
     "regionProfiles": [
@@ -1303,7 +1435,9 @@
         ],
         "preferredLLMModelIDs": [
           "qwen-2.5-0.5b-q4km",
-          "qwen-2.5-1.5b-q4km"
+          "qwen-2.5-1.5b-q4km",
+          "qwen-3-0.6b-q4km",
+          "apple-foundation-models"
         ],
         "notes": "优先普通话和中英混合；行业词表对 ASR 和改写同时生效。"
       },
@@ -1345,7 +1479,11 @@
         ],
         "preferredLLMModelIDs": [
           "qwen-2.5-0.5b-q4km",
-          "qwen-2.5-1.5b-q4km"
+          "qwen-2.5-1.5b-q4km",
+          "gemma-3n-e2b-it-q4",
+          "qwen-3-0.6b-q4km",
+          "apple-foundation-models",
+          "gemma-4-e2b-it-q4"
         ],
         "notes": "用于翻译、多语输入和低延迟 streaming ASR 候选评估。"
       }
@@ -1522,6 +1660,7 @@
       "minimumEvaluationSamplesPerRegion": 80,
       "promotionRules": [
         "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载 A/B 候选。",
+        "Apple Speech 和 0.5B 轻量 LLM 是基础链路，必须随 App 可用，远程配置只能降级到它们，不能移除它们。",
         "候选 ASR 只有在本地区真实键盘录音 finalWER、termRecall、duplicateInsertionRate 和 firstTokenLatencyMs 全部优于 baseline 后才允许推荐。",
         "候选 LLM 只有在本机延迟、热量、内存和 styleAlignment 达标后才允许从推荐下载进入默认优先级。",
         "云端或大模型不得后台自动启用，必须用户显式下载或显式 opt-in。"
@@ -1530,6 +1669,10 @@
         "apple-speech",
         "qwen-2.5-0.5b-q4km",
         "qwen-2.5-1.5b-q4km",
+        "qwen-3-0.6b-q4km",
+        "gemma-3n-e2b-it-q4",
+        "apple-foundation-models",
+        "gemma-4-e2b-it-q4",
         "whisperkit-large-v3",
         "sensevoice-small"
       ],
