@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.79",
-  "updatedAt": "2026-06-29T01:05:00+08:00",
+  "configVersion": "2026-06-28.80",
+  "updatedAt": "2026-06-29T02:10:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1537,7 +1537,11 @@
           "partialStability",
           "duplicateInsertionRate",
           "batteryCost",
-          "styleAlignment"
+          "styleAlignment",
+          "semanticPreservation",
+          "hallucinationRate",
+          "staleContextRewriteRate",
+          "candidateCurrentSessionMatch"
         ],
         "minimumSamples": 80,
         "notes": "使用真实键盘录音、ASR 原文和最终发送文案评测，不用公开榜单替代。"
@@ -1646,6 +1650,11 @@
         "p95EndToEndLatencyMaximumMs": 4000,
         "styleAlignmentMinimum": 0.94,
         "translationAdequacyMinimum": 0.9,
+        "semanticPreservationMinimum": 0.96,
+        "hallucinationRateMaximum": 0.01,
+        "actionItemAccuracyMinimum": 0.95,
+        "staleContextRewriteRateMaximum": 0.0,
+        "candidateCurrentSessionMatchMinimum": 0.98,
         "peakMemoryMaximumMB": 900,
         "thermalStateAllowed": [
           "nominal",
@@ -1675,6 +1684,14 @@
         "noSpeechFalsePositiveRate",
         "styleAlignment",
         "translationAdequacy",
+        "semanticPreservation",
+        "hallucinationRate",
+        "actionItemAccuracy",
+        "staleContextRewriteRate",
+        "candidateCurrentSessionMatch",
+        "audioSampleID",
+        "transcriptSessionID",
+        "deviceClass",
         "peakMemoryMB",
         "thermalState"
       ]
@@ -1690,7 +1707,7 @@
         "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载或 research A/B 候选。",
         "Apple Speech 是不可移除 ASR 基线；随包 270M LLM 是断网应急层；0.5B 轻量 Qwen 是下载后本地质量 baseline，远程配置不能移除这些层级。",
         "候选 ASR 只有在本地区真实键盘录音 finalWER、termRecall、duplicateInsertionRate 和 firstTokenLatencyMs 全部优于 baseline 后才允许推荐。",
-        "候选 LLM 只有在本机延迟、热量、内存和 styleAlignment 达标后才允许从推荐下载进入默认优先级。",
+        "候选 LLM 只有在本机延迟、热量、内存、styleAlignment、semanticPreservation、hallucinationRate 和 candidateCurrentSessionMatch 达标后才允许从推荐下载进入默认优先级。",
         "随包 270M LLM 只能用于应急整理和可用性兜底，不能因一次热更新被提升为高质量默认模型。",
         "云端或大模型不得后台自动启用，必须用户显式下载、系统明确可用或显式 opt-in。",
         "mobile-runtime research 候选没有 iOS 适配器前只能展示为评测路线，不能出现在下载按钮或自动 fallback 执行链路。"
