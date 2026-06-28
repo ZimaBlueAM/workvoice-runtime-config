@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.84",
-  "updatedAt": "2026-06-29T04:32:00+08:00",
+  "configVersion": "2026-06-28.85",
+  "updatedAt": "2026-06-29T05:20:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1085,14 +1085,34 @@
         "localeIdentifiers": [
           "zh-Hans",
           "zh-CN",
+          "zh-Hant",
+          "yue",
           "en-US",
           "ja-JP",
           "ko-KR",
-          "fr-FR"
+          "fr-FR",
+          "de-DE",
+          "es-ES",
+          "pt-BR",
+          "it-IT",
+          "ru-RU",
+          "ar-SA",
+          "hi-IN",
+          "vi-VN",
+          "th-TH",
+          "id-ID"
         ],
         "regionIDs": [
           "cn-mainland",
-          "global"
+          "hk-tw",
+          "global",
+          "japan",
+          "korea",
+          "europe",
+          "latin-america",
+          "southeast-asia",
+          "india",
+          "middle-east"
         ],
         "industryContextIDs": [
           "general",
@@ -1122,10 +1142,23 @@
           "ko",
           "fr",
           "de",
-          "es"
+          "es",
+          "pt",
+          "it",
+          "ru",
+          "ar",
+          "hi",
+          "vi",
+          "th",
+          "id"
         ],
         "regionIDs": [
-          "global"
+          "global",
+          "europe",
+          "latin-america",
+          "southeast-asia",
+          "india",
+          "middle-east"
         ],
         "industryContextIDs": [
           "general",
@@ -1154,11 +1187,15 @@
           "yue",
           "en-US",
           "ja-JP",
-          "ko-KR"
+          "ko-KR",
+          "th-TH",
+          "vi-VN",
+          "id-ID"
         ],
         "regionIDs": [
           "cn-mainland",
-          "hk-tw"
+          "hk-tw",
+          "southeast-asia"
         ],
         "industryContextIDs": [
           "general",
@@ -1187,10 +1224,15 @@
           "ja-JP",
           "ko-KR",
           "vi-VN",
-          "ar"
+          "ar-SA",
+          "hi-IN"
         ],
         "regionIDs": [
-          "global"
+          "global",
+          "latin-america",
+          "southeast-asia",
+          "india",
+          "middle-east"
         ],
         "industryContextIDs": [
           "general"
@@ -1214,10 +1256,13 @@
           "zh-Hans",
           "en-US",
           "ja-JP",
-          "ko-KR"
+          "ko-KR",
+          "vi-VN",
+          "th-TH"
         ],
         "regionIDs": [
-          "global"
+          "global",
+          "southeast-asia"
         ],
         "industryContextIDs": [
           "general",
@@ -1242,11 +1287,16 @@
         "role": "低内存设备的基础本地整理模型；没有网络时保证可用体验。",
         "localeIdentifiers": [
           "zh-Hans",
-          "en-US"
+          "en-US",
+          "ja-JP",
+          "ko-KR"
         ],
         "regionIDs": [
           "cn-mainland",
-          "global"
+          "hk-tw",
+          "global",
+          "japan",
+          "korea"
         ],
         "industryContextIDs": [
           "general",
@@ -1275,6 +1325,7 @@
         ],
         "regionIDs": [
           "cn-mainland",
+          "hk-tw",
           "global"
         ],
         "industryContextIDs": [
@@ -1298,11 +1349,16 @@
         "role": "默认推荐下载的中文工作消息整理模型，平衡速度和质量。",
         "localeIdentifiers": [
           "zh-Hans",
-          "en-US"
+          "en-US",
+          "ja-JP",
+          "ko-KR"
         ],
         "regionIDs": [
           "cn-mainland",
-          "global"
+          "hk-tw",
+          "global",
+          "japan",
+          "korea"
         ],
         "industryContextIDs": [
           "general",
@@ -1328,11 +1384,16 @@
         "role": "中文和中英混合的下一代轻量整理候选；只在真实键盘样本胜过 0.5B baseline 后推荐。",
         "localeIdentifiers": [
           "zh-Hans",
-          "en-US"
+          "en-US",
+          "ja-JP",
+          "ko-KR"
         ],
         "regionIDs": [
           "cn-mainland",
-          "global"
+          "hk-tw",
+          "global",
+          "japan",
+          "korea"
         ],
         "industryContextIDs": [
           "general",
@@ -1364,10 +1425,23 @@
           "de-DE",
           "es-ES",
           "pt-BR",
-          "hi-IN"
+          "it-IT",
+          "ru-RU",
+          "ar-SA",
+          "hi-IN",
+          "vi-VN",
+          "th-TH",
+          "id-ID"
         ],
         "regionIDs": [
-          "global"
+          "global",
+          "japan",
+          "korea",
+          "europe",
+          "latin-america",
+          "southeast-asia",
+          "india",
+          "middle-east"
         ],
         "industryContextIDs": [
           "general",
@@ -1397,11 +1471,19 @@
           "fr-FR",
           "de-DE",
           "es-ES",
-          "pt-BR"
+          "pt-BR",
+          "it-IT",
+          "hi-IN"
         ],
         "regionIDs": [
           "cn-mainland",
-          "global"
+          "hk-tw",
+          "global",
+          "japan",
+          "korea",
+          "europe",
+          "latin-america",
+          "india"
         ],
         "industryContextIDs": [
           "general",
@@ -1433,10 +1515,23 @@
           "de-DE",
           "es-ES",
           "pt-BR",
-          "hi-IN"
+          "it-IT",
+          "ru-RU",
+          "ar-SA",
+          "hi-IN",
+          "vi-VN",
+          "th-TH",
+          "id-ID"
         ],
         "regionIDs": [
-          "global"
+          "global",
+          "japan",
+          "korea",
+          "europe",
+          "latin-america",
+          "southeast-asia",
+          "india",
+          "middle-east"
         ],
         "industryContextIDs": [
           "general",
@@ -1497,7 +1592,15 @@
           "ko-KR",
           "fr-FR",
           "de-DE",
-          "es-ES"
+          "es-ES",
+          "pt-BR",
+          "it-IT",
+          "ru-RU",
+          "ar-SA",
+          "hi-IN",
+          "vi-VN",
+          "th-TH",
+          "id-ID"
         ],
         "preferredASRModelIDs": [
           "apple-speech",
@@ -1514,6 +1617,146 @@
           "gemma-4-e2b-it-mobile"
         ],
         "notes": "用于翻译、多语输入和低延迟 streaming ASR 候选评估。"
+      },
+      {
+        "id": "japan",
+        "title": "日本/日语",
+        "localeIdentifiers": [
+          "ja-JP",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "whisperkit-large-v3",
+          "sherpa-onnx-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
+          "apple-foundation-models",
+          "gemma-3n-e2b-it-mobile"
+        ],
+        "notes": "日语假名、汉字、人名和英文产品名混合评测，翻译不得回落成中文摘要。"
+      },
+      {
+        "id": "korea",
+        "title": "韩国/韩语",
+        "localeIdentifiers": [
+          "ko-KR",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "whisperkit-large-v3",
+          "sherpa-onnx-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
+          "apple-foundation-models",
+          "gemma-3n-e2b-it-mobile"
+        ],
+        "notes": "韩语敬语、英文专名和短 IM 语气必须单独评测。"
+      },
+      {
+        "id": "europe",
+        "title": "欧洲主流语种",
+        "localeIdentifiers": [
+          "fr-FR",
+          "de-DE",
+          "es-ES",
+          "it-IT",
+          "ru-RU",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "whisperkit-large-v3",
+          "moonshine-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "apple-foundation-models",
+          "gemma-3n-e2b-it-mobile",
+          "gemma-4-e2b-it-mobile"
+        ],
+        "notes": "法德西意俄和英语混合评测，优先翻译准确性和专名保真。"
+      },
+      {
+        "id": "latin-america",
+        "title": "拉美/葡西语",
+        "localeIdentifiers": [
+          "es-ES",
+          "pt-BR",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "whisperkit-large-v3",
+          "moonshine-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "apple-foundation-models",
+          "gemma-3n-e2b-it-mobile"
+        ],
+        "notes": "西语、巴葡和英语代码切换评测，避免把翻译输出成源语言改写。"
+      },
+      {
+        "id": "southeast-asia",
+        "title": "东南亚",
+        "localeIdentifiers": [
+          "vi-VN",
+          "th-TH",
+          "id-ID",
+          "en-US",
+          "zh-Hans"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "sensevoice-small",
+          "whisperkit-large-v3",
+          "moonshine-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "apple-foundation-models",
+          "gemma-3n-e2b-it-mobile",
+          "qwen-2.5-0.5b-q4km"
+        ],
+        "notes": "越南语、泰语、印尼语和中英混合按地区单独累计样本。"
+      },
+      {
+        "id": "india",
+        "title": "印度/英语与印地语",
+        "localeIdentifiers": [
+          "hi-IN",
+          "en-IN",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "whisperkit-large-v3",
+          "moonshine-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "apple-foundation-models",
+          "gemma-3n-e2b-it-mobile"
+        ],
+        "notes": "印度英语口音、印地语和英文专名要同时覆盖，不能只用美式英语样本。"
+      },
+      {
+        "id": "middle-east",
+        "title": "中东/阿语",
+        "localeIdentifiers": [
+          "ar-SA",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "whisperkit-large-v3",
+          "moonshine-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "apple-foundation-models",
+          "gemma-3n-e2b-it-mobile"
+        ],
+        "notes": "阿语和英语混合输入必须单独评测 RTL 文本、翻译方向和专名保真。"
       }
     ],
     "evaluationSuites": [
@@ -1569,6 +1812,38 @@
         ],
         "minimumSamples": 60,
         "notes": "用于判断地区路由和行业词表是否真的提升识别。"
+      },
+      {
+        "id": "global-top10-languages",
+        "title": "主流 10 语种 ASR 与翻译",
+        "localeIdentifiers": [
+          "zh-Hans",
+          "en-US",
+          "ja-JP",
+          "ko-KR",
+          "fr-FR",
+          "de-DE",
+          "es-ES",
+          "pt-BR",
+          "it-IT",
+          "hi-IN"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "sales-cs"
+        ],
+        "metrics": [
+          "firstTokenLatencyMs",
+          "finalWER",
+          "translationAdequacy",
+          "semanticPreservation",
+          "properNounAccuracy",
+          "codeSwitchAccuracy",
+          "candidateCurrentSessionMatch"
+        ],
+        "minimumSamples": 100,
+        "notes": "覆盖中文、英语、日语、韩语、法语、德语、西语、葡语、意语、印地语；每个语种必须独立达标才允许推荐。"
       }
     ],
     "evaluationMatrix": {
@@ -1638,6 +1913,57 @@
             "Lark"
           ],
           "notes": "覆盖翻译和多语输入；评估 WhisperKit、Moonshine、sherpa-onnx 与 Apple baseline 的差距。"
+        },
+        {
+          "id": "global-top10-language-balance",
+          "regionProfileID": "global",
+          "localeIdentifiers": [
+            "zh-Hans",
+            "en-US",
+            "ja-JP",
+            "ko-KR",
+            "fr-FR",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "it-IT",
+            "hi-IN"
+          ],
+          "industryContextIDs": [
+            "general",
+            "ai-product",
+            "sales-cs"
+          ],
+          "minimumSamples": 160,
+          "minimumSpeakers": 10,
+          "requiredAppTags": [
+            "微信",
+            "Lark",
+            "ChatGPT"
+          ],
+          "notes": "主流 10 语种每种都要有真实键盘音频、ASR 原文、最终候选和翻译结果；任何单一语种退化都不能靠平均分晋级。"
+        },
+        {
+          "id": "southeast-asia-work-im",
+          "regionProfileID": "southeast-asia",
+          "localeIdentifiers": [
+            "vi-VN",
+            "th-TH",
+            "id-ID",
+            "en-US",
+            "zh-Hans"
+          ],
+          "industryContextIDs": [
+            "general",
+            "sales-cs"
+          ],
+          "minimumSamples": 90,
+          "minimumSpeakers": 6,
+          "requiredAppTags": [
+            "微信",
+            "Lark"
+          ],
+          "notes": "覆盖越南语、泰语、印尼语、英语和中文夹杂的工作 IM 场景。"
         }
       ],
       "promotionThresholds": {
@@ -1665,6 +1991,7 @@
       "safetyGates": [
         "所有非 baseline ASR/LLM 必须显式下载、系统可用或显式启用，不能远程静默切换默认。",
         "候选模型必须在每个目标地区 sample bucket 中分别超过 baseline，不能用全局平均掩盖某地区退化。",
+        "主流 10 语种必须逐语种达标；翻译充分性、语义保真和当前 session 匹配低于阈值时禁止晋级。",
         "任何候选如果 duplicateInsertionRate、noSpeechFalsePositiveRate 或旧 session 改写率高于 baseline，直接降级为 research。",
         "低电量、热状态 elevated、后台或键盘不可见时，只允许 Apple Speech/live transcript 和轻量本地整理。"
       ],
@@ -1726,7 +2053,8 @@
       "notes": [
         "Apple ASR、随包 270M 应急 LLM 和轻量 Qwen 本地质量 baseline 是稳定保底，不因远程配置移除。",
         "地区选择来自系统 locale、用户设置和真实错误统计，不能只看公开榜单。",
-        "行业词表和个人词表必须同时喂给 ASR contextual strings 和 LLM rewrite prompt。"
+        "行业词表和个人词表必须同时喂给 ASR contextual strings 和 LLM rewrite prompt。",
+        "主流 10 语种和地区 profile 只能决定评测与推荐，不得绕过 Apple ASR 与轻量 LLM baseline。"
       ]
     }
   },
