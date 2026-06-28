@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.87",
-  "updatedAt": "2026-06-29T06:40:00+08:00",
+  "configVersion": "2026-06-28.88",
+  "updatedAt": "2026-06-29T04:16:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -432,7 +432,7 @@
         "deckLight": {
           "red": 0.84,
           "green": 0.85,
-          "blue": 0.87,
+          "blue": 0.86,
           "alpha": 0.98
         },
         "deckDark": {
@@ -444,25 +444,25 @@
         "primaryKeyLight": {
           "red": 0.89,
           "green": 0.9,
-          "blue": 0.92,
+          "blue": 0.91,
           "alpha": 0.96
         },
         "primaryKeyDark": {
           "red": 0.28,
           "green": 0.28,
-          "blue": 0.3,
+          "blue": 0.29,
           "alpha": 0.98
         },
         "auxiliaryKeyLight": {
-          "red": 0.74,
+          "red": 0.75,
           "green": 0.76,
-          "blue": 0.79,
+          "blue": 0.78,
           "alpha": 0.95
         },
         "auxiliaryKeyDark": {
           "red": 0.22,
           "green": 0.22,
-          "blue": 0.24,
+          "blue": 0.23,
           "alpha": 0.98
         }
       },
