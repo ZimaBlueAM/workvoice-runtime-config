@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.81",
-  "updatedAt": "2026-06-29T02:45:00+08:00",
+  "configVersion": "2026-06-28.82",
+  "updatedAt": "2026-06-29T03:35:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1844,24 +1844,6 @@
         "any": [
           "语种",
           "语言"
-        ]
-      },
-      {
-        "title": "测试语音键盘",
-        "all": [
-          "键盘"
-        ],
-        "any": [
-          "测试",
-          "好用"
-        ]
-      },
-      {
-        "title": "确认语音可听见",
-        "any": [
-          "能听到",
-          "听到我说话",
-          "听见"
         ]
       },
       {
