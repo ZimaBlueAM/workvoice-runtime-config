@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.75",
-  "updatedAt": "2026-06-28T21:32:00+08:00",
+  "configVersion": "2026-06-28.76",
+  "updatedAt": "2026-06-28T22:25:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1401,6 +1401,118 @@
         "notes": "用于判断地区路由和行业词表是否真的提升识别。"
       }
     ],
+    "evaluationMatrix": {
+      "sampleBuckets": [
+        {
+          "id": "cn-mainland-work-im",
+          "regionProfileID": "cn-mainland",
+          "localeIdentifiers": [
+            "zh-Hans",
+            "zh-CN",
+            "en-US"
+          ],
+          "industryContextIDs": [
+            "general",
+            "ai-product",
+            "engineering",
+            "sales-cs"
+          ],
+          "minimumSamples": 120,
+          "minimumSpeakers": 8,
+          "requiredAppTags": [
+            "微信",
+            "Lark",
+            "ChatGPT"
+          ],
+          "notes": "覆盖中文工作 IM、中英混合、专有名词和长短句；用于 Apple Speech、SenseVoice、WhisperKit 对比。"
+        },
+        {
+          "id": "hk-tw-yue-mixed",
+          "regionProfileID": "hk-tw",
+          "localeIdentifiers": [
+            "zh-Hant",
+            "yue",
+            "en-US"
+          ],
+          "industryContextIDs": [
+            "general",
+            "sales-cs"
+          ],
+          "minimumSamples": 80,
+          "minimumSpeakers": 6,
+          "requiredAppTags": [
+            "微信",
+            "Lark"
+          ],
+          "notes": "覆盖繁中、粤语和英文专名，防止候选模型把地区表达改成普通话。"
+        },
+        {
+          "id": "global-translation",
+          "regionProfileID": "global",
+          "localeIdentifiers": [
+            "en-US",
+            "ja-JP",
+            "ko-KR",
+            "fr-FR",
+            "de-DE",
+            "es-ES"
+          ],
+          "industryContextIDs": [
+            "general",
+            "ai-product"
+          ],
+          "minimumSamples": 100,
+          "minimumSpeakers": 8,
+          "requiredAppTags": [
+            "ChatGPT",
+            "Lark"
+          ],
+          "notes": "覆盖翻译和多语输入；评估 WhisperKit、Moonshine、sherpa-onnx 与 Apple baseline 的差距。"
+        }
+      ],
+      "promotionThresholds": {
+        "finalWERRelativeImprovement": 0.08,
+        "termRecallMinimum": 0.94,
+        "properNounAccuracyMinimum": 0.95,
+        "codeSwitchAccuracyMinimum": 0.9,
+        "duplicateInsertionRateMaximum": 0.01,
+        "firstTokenLatencyMaximumMs": 900,
+        "p95EndToEndLatencyMaximumMs": 4000,
+        "styleAlignmentMinimum": 0.94,
+        "translationAdequacyMinimum": 0.9,
+        "peakMemoryMaximumMB": 900,
+        "thermalStateAllowed": [
+          "nominal",
+          "fair"
+        ]
+      },
+      "safetyGates": [
+        "所有非 baseline ASR/LLM 必须显式下载或显式启用，不能远程静默切换默认。",
+        "候选模型必须在每个目标地区 sample bucket 中分别超过 baseline，不能用全局平均掩盖某地区退化。",
+        "任何候选如果 duplicateInsertionRate、noSpeechFalsePositiveRate 或旧 session 改写率高于 baseline，直接降级为 research。",
+        "低电量、热状态 elevated、后台或键盘不可见时，只允许 Apple Speech/live transcript 和轻量本地整理。"
+      ],
+      "telemetryFields": [
+        "regionProfileID",
+        "localeIdentifier",
+        "industryContextID",
+        "hostAppTag",
+        "asrProviderID",
+        "llmProviderID",
+        "firstTokenLatencyMs",
+        "p95EndToEndLatencyMs",
+        "finalWER",
+        "termRecall",
+        "properNounAccuracy",
+        "codeSwitchAccuracy",
+        "duplicateInsertionRate",
+        "noSpeechFalsePositiveRate",
+        "styleAlignment",
+        "translationAdequacy",
+        "peakMemoryMB",
+        "thermalState"
+      ]
+    },
     "selectionPolicy": {
       "routingMode": "baseline-first-measured-promotion",
       "baselineASRProviderID": "apple-speech",
