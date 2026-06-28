@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.2",
-  "updatedAt": "2026-06-29T05:45:00+08:00",
+  "configVersion": "2026-06-29.4",
+  "updatedAt": "2026-06-29T06:45:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -559,7 +559,7 @@
         2.4
       ],
       "mainAppRecordStartCarrierRetryLimit": 4,
-      "mainAppRecordStartForcedLaunchLimit": 1,
+      "mainAppRecordStartForcedLaunchLimit": 0,
       "mainAppRecordStartForceLaunchRequiresStaleCarrier": true,
       "mainAppDraftWaitAttempts": 24,
       "keyboardLocalDraftWaitAttempts": 90,
@@ -1858,6 +1858,11 @@
             "zh-CN",
             "en-US"
           ],
+          "requiredAccentTags": [
+            "mandarin-default",
+            "mandarin-southern",
+            "english-l2-cn"
+          ],
           "industryContextIDs": [
             "general",
             "ai-product",
@@ -1881,6 +1886,11 @@
             "yue",
             "en-US"
           ],
+          "requiredAccentTags": [
+            "zh-hant-default",
+            "yue-default",
+            "english-l2-hk"
+          ],
           "industryContextIDs": [
             "general",
             "sales-cs"
@@ -1903,6 +1913,12 @@
             "fr-FR",
             "de-DE",
             "es-ES"
+          ],
+          "requiredAccentTags": [
+            "english-default",
+            "ja-jp-default",
+            "ko-kr-default",
+            "european-default"
           ],
           "industryContextIDs": [
             "general",
@@ -1931,6 +1947,14 @@
             "it-IT",
             "hi-IN"
           ],
+          "requiredAccentTags": [
+            "mandarin-default",
+            "english-default",
+            "ja-jp-default",
+            "ko-kr-default",
+            "european-default",
+            "hi-in-default"
+          ],
           "industryContextIDs": [
             "general",
             "ai-product",
@@ -1954,6 +1978,13 @@
             "id-ID",
             "en-US",
             "zh-Hans"
+          ],
+          "requiredAccentTags": [
+            "vi-vn-default",
+            "th-th-default",
+            "id-id-default",
+            "english-l2-sea",
+            "mandarin-default"
           ],
           "industryContextIDs": [
             "general",
@@ -1986,6 +2017,7 @@
         "candidateCurrentSessionMatchMinimum": 0.98,
         "peakMemoryMaximumMB": 900,
         "perLocaleMinimumSamples": 12,
+        "perAccentMinimumSamples": 12,
         "thermalStateAllowed": [
           "nominal",
           "fair"
