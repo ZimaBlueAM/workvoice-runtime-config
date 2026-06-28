@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.73",
-  "updatedAt": "2026-06-28T13:55:00+08:00",
+  "configVersion": "2026-06-28.74",
+  "updatedAt": "2026-06-28T14:28:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -836,6 +836,187 @@
         "enabled": false,
         "requiresExplicitOptIn": true,
         "notes": "用于粗粒度英语口音分类，适合做发音复盘辅助，不参与键盘实时输入。"
+      }
+    ]
+  },
+  "modelCatalog": {
+    "defaultASRProviderID": "apple-speech",
+    "defaultLLMProviderID": "qwen-2.5-0.5b-q4km",
+    "asrModels": [
+      {
+        "id": "apple-speech",
+        "title": "Apple Speech",
+        "kind": "asr",
+        "provider": "Apple",
+        "model": "SpeechAnalyzer/SFSpeechRecognizer",
+        "format": "system",
+        "downloadMode": "system",
+        "runtimeStatus": "default-on",
+        "role": "键盘实时 ASR 和 iPhone 默认最终 ASR；必须保留为基础链路。",
+        "localeIdentifiers": ["zh-Hans", "zh-CN", "en-US", "ja-JP", "ko-KR", "fr-FR"],
+        "regionIDs": ["cn-mainland", "global"],
+        "industryContextIDs": ["general", "ai-product", "engineering"],
+        "defaultEnabled": true,
+        "requiresExplicitDownload": false
+      },
+      {
+        "id": "whisperkit-large-v3",
+        "title": "WhisperKit large-v3",
+        "kind": "asr",
+        "provider": "Argmax WhisperKit",
+        "model": "large-v3-v20240930_626MB",
+        "repo": "argmaxinc/whisperkit-coreml",
+        "artifactFile": "WhisperKitLargeV3.bundle",
+        "format": "coreml-bundle",
+        "downloadMode": "optional",
+        "runtimeStatus": "cataloged",
+        "role": "多语言高精度离线最终 ASR 候选，按需下载，不进入默认安装包。",
+        "localeIdentifiers": ["und", "zh", "en", "ja", "ko", "fr", "de", "es"],
+        "regionIDs": ["global"],
+        "industryContextIDs": ["general", "ai-product", "engineering"],
+        "sizeBytesApprox": 626000000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      },
+      {
+        "id": "sensevoice-small",
+        "title": "SenseVoice Small GGUF",
+        "kind": "asr",
+        "provider": "FunAudioLLM",
+        "model": "SenseVoiceSmall-GGUF",
+        "repo": "FunAudioLLM/SenseVoiceSmall-GGUF",
+        "artifactFile": "sensevoice-small-q8.gguf",
+        "format": "gguf",
+        "downloadMode": "optional",
+        "runtimeStatus": "cataloged",
+        "role": "中文、粤语和中英混合最终 ASR A/B 候选，需要适配器后启用。",
+        "localeIdentifiers": ["zh-Hans", "zh-Hant", "yue", "en-US", "ja-JP", "ko-KR"],
+        "regionIDs": ["cn-mainland", "hk-tw"],
+        "industryContextIDs": ["general", "ai-product", "sales-cs"],
+        "sizeBytesApprox": 254000000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      },
+      {
+        "id": "moonshine-streaming",
+        "title": "Moonshine Streaming ASR",
+        "kind": "asr",
+        "provider": "Moonshine",
+        "model": "moonshine streaming",
+        "repo": "moonshine-ai/moonshine",
+        "format": "native-runtime",
+        "downloadMode": "research",
+        "runtimeStatus": "research-candidate",
+        "role": "低延迟 streaming ASR 候选，用于评估首字延迟和增量稳定性。",
+        "localeIdentifiers": ["en-US", "es-ES", "zh-Hans", "ja-JP", "ko-KR", "vi-VN", "ar"],
+        "regionIDs": ["global"],
+        "industryContextIDs": ["general"],
+        "sizeBytesApprox": 26000000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      },
+      {
+        "id": "sherpa-onnx-streaming",
+        "title": "sherpa-onnx Streaming ASR",
+        "kind": "asr",
+        "provider": "k2-fsa",
+        "model": "sherpa-onnx streaming",
+        "repo": "k2-fsa/sherpa-onnx",
+        "format": "onnx",
+        "downloadMode": "research",
+        "runtimeStatus": "research-candidate",
+        "role": "端侧 streaming/non-streaming ASR 候选，用于多地区模型路由实验。",
+        "localeIdentifiers": ["zh-Hans", "en-US", "ja-JP", "ko-KR"],
+        "regionIDs": ["global"],
+        "industryContextIDs": ["general", "engineering"],
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      }
+    ],
+    "llmModels": [
+      {
+        "id": "qwen-2.5-0.5b-q4km",
+        "title": "Qwen2.5 0.5B Instruct Q4_K_M",
+        "kind": "llm",
+        "provider": "Qwen",
+        "model": "Qwen2.5-0.5B-Instruct-GGUF",
+        "repo": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+        "artifactFile": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+        "format": "gguf",
+        "downloadMode": "optional",
+        "runtimeStatus": "compact-local-baseline",
+        "role": "低内存设备的基础本地整理模型；没有网络时保证可用体验。",
+        "localeIdentifiers": ["zh-Hans", "en-US"],
+        "regionIDs": ["cn-mainland", "global"],
+        "industryContextIDs": ["general", "ai-product", "engineering"],
+        "sizeBytesApprox": 491000000,
+        "defaultEnabled": true,
+        "requiresExplicitDownload": true
+      },
+      {
+        "id": "qwen-2.5-1.5b-q4km",
+        "title": "Qwen2.5 1.5B Instruct Q4_K_M",
+        "kind": "llm",
+        "provider": "Qwen",
+        "model": "Qwen2.5-1.5B-Instruct-GGUF",
+        "repo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+        "artifactFile": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+        "format": "gguf",
+        "downloadMode": "recommended",
+        "runtimeStatus": "recommended-local-quality",
+        "role": "默认推荐下载的中文工作消息整理模型，平衡速度和质量。",
+        "localeIdentifiers": ["zh-Hans", "en-US"],
+        "regionIDs": ["cn-mainland", "global"],
+        "industryContextIDs": ["general", "ai-product", "engineering", "sales-cs"],
+        "sizeBytesApprox": 1117000000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      }
+    ],
+    "regionProfiles": [
+      {
+        "id": "cn-mainland",
+        "title": "中国大陆",
+        "localeIdentifiers": ["zh-Hans", "zh-CN", "en-US"],
+        "preferredASRModelIDs": ["apple-speech", "sensevoice-small", "whisperkit-large-v3"],
+        "preferredLLMModelIDs": ["qwen-2.5-0.5b-q4km", "qwen-2.5-1.5b-q4km"],
+        "notes": "优先普通话和中英混合；行业词表对 ASR 和改写同时生效。"
+      },
+      {
+        "id": "hk-tw",
+        "title": "港澳台",
+        "localeIdentifiers": ["zh-Hant", "yue", "en-US"],
+        "preferredASRModelIDs": ["apple-speech", "sensevoice-small", "whisperkit-large-v3"],
+        "preferredLLMModelIDs": ["qwen-2.5-0.5b-q4km", "qwen-2.5-1.5b-q4km"],
+        "notes": "评估繁中、粤语和中英夹杂，避免把专名误改为普通话词。"
+      },
+      {
+        "id": "global",
+        "title": "全球/多语",
+        "localeIdentifiers": ["en-US", "ja-JP", "ko-KR", "fr-FR", "de-DE", "es-ES"],
+        "preferredASRModelIDs": ["apple-speech", "whisperkit-large-v3", "moonshine-streaming", "sherpa-onnx-streaming"],
+        "preferredLLMModelIDs": ["qwen-2.5-0.5b-q4km", "qwen-2.5-1.5b-q4km"],
+        "notes": "用于翻译、多语输入和低延迟 streaming ASR 候选评估。"
+      }
+    ],
+    "evaluationSuites": [
+      {
+        "id": "keyboard-realworld-cn",
+        "title": "中文键盘真实输入",
+        "localeIdentifiers": ["zh-Hans", "zh-CN", "en-US"],
+        "industryContextIDs": ["general", "ai-product", "engineering", "sales-cs"],
+        "metrics": ["firstTokenLatencyMs", "finalWER", "partialStability", "duplicateInsertionRate", "batteryCost", "styleAlignment"],
+        "minimumSamples": 80,
+        "notes": "使用真实键盘录音、ASR 原文和最终发送文案评测，不用公开榜单替代。"
+      },
+      {
+        "id": "accent-and-mixed-language",
+        "title": "口音与中英混合",
+        "localeIdentifiers": ["zh-Hans", "zh-Hant", "yue", "en-US", "ja-JP", "ko-KR"],
+        "industryContextIDs": ["general", "ai-product"],
+        "metrics": ["termRecall", "properNounAccuracy", "codeSwitchAccuracy", "noSpeechFalsePositiveRate"],
+        "minimumSamples": 60,
+        "notes": "用于判断地区路由和行业词表是否真的提升识别。"
       }
     ]
   },
