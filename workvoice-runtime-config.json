@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.74",
-  "updatedAt": "2026-06-28T14:28:00+08:00",
+  "configVersion": "2026-06-28.75",
+  "updatedAt": "2026-06-28T21:32:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -429,12 +429,42 @@
         "cursorStep": 0.72
       },
       "palette": {
-        "deckLight": { "red": 0.80, "green": 0.81, "blue": 0.83, "alpha": 0.98 },
-        "deckDark": { "red": 0.12, "green": 0.12, "blue": 0.13, "alpha": 0.90 },
-        "primaryKeyLight": { "red": 0.84, "green": 0.85, "blue": 0.87, "alpha": 0.98 },
-        "primaryKeyDark": { "red": 0.25, "green": 0.25, "blue": 0.27, "alpha": 0.98 },
-        "auxiliaryKeyLight": { "red": 0.84, "green": 0.85, "blue": 0.87, "alpha": 0.98 },
-        "auxiliaryKeyDark": { "red": 0.25, "green": 0.25, "blue": 0.27, "alpha": 0.98 }
+        "deckLight": {
+          "red": 0.8,
+          "green": 0.81,
+          "blue": 0.83,
+          "alpha": 0.98
+        },
+        "deckDark": {
+          "red": 0.12,
+          "green": 0.12,
+          "blue": 0.13,
+          "alpha": 0.9
+        },
+        "primaryKeyLight": {
+          "red": 0.84,
+          "green": 0.85,
+          "blue": 0.87,
+          "alpha": 0.98
+        },
+        "primaryKeyDark": {
+          "red": 0.25,
+          "green": 0.25,
+          "blue": 0.27,
+          "alpha": 0.98
+        },
+        "auxiliaryKeyLight": {
+          "red": 0.84,
+          "green": 0.85,
+          "blue": 0.87,
+          "alpha": 0.98
+        },
+        "auxiliaryKeyDark": {
+          "red": 0.25,
+          "green": 0.25,
+          "blue": 0.27,
+          "alpha": 0.98
+        }
       },
       "layout": {
         "contentVerticalSpacing": 14,
@@ -524,7 +554,10 @@
       "draftPollIntervalSeconds": 0.5,
       "autoLaunchCooldownSeconds": 4.0,
       "recordingRecoveryAutoLaunchCooldownSeconds": 8.0,
-      "mainAppRecordStartWatchSeconds": [1.2, 2.4],
+      "mainAppRecordStartWatchSeconds": [
+        1.2,
+        2.4
+      ],
       "mainAppRecordStartCarrierRetryLimit": 4,
       "mainAppRecordStartForcedLaunchLimit": 1,
       "mainAppRecordStartForceLaunchRequiresStaleCarrier": true,
@@ -544,7 +577,11 @@
       "cursorRepeatIntervalSeconds": 0.058,
       "primaryCursorScrubStepWidthPoints": 2.4,
       "primaryCursorScrubAccelerationMax": 8,
-      "hostCaptureRetryDelaysSeconds": [0.12, 0.35, 0.75],
+      "hostCaptureRetryDelaysSeconds": [
+        0.12,
+        0.35,
+        0.75
+      ],
       "hostArbiterActiveCheckAttempts": 3,
       "hostArbiterActiveCheckDelaySeconds": 0.06
     }
@@ -600,70 +637,243 @@
         "id": "general",
         "title": "通用",
         "emoji": "🌐",
-        "terms": ["ChatGPT", "OpenAI", "GPT", "Lark", "飞书", "微信", "企业微信", "钉钉", "PRD", "OKR", "SOP", "API", "SDK", "UI", "UX", "ASR", "LLM", "Prompt"],
+        "terms": [
+          "ChatGPT",
+          "OpenAI",
+          "GPT",
+          "Lark",
+          "飞书",
+          "微信",
+          "企业微信",
+          "钉钉",
+          "PRD",
+          "OKR",
+          "SOP",
+          "API",
+          "SDK",
+          "UI",
+          "UX",
+          "ASR",
+          "LLM",
+          "Prompt"
+        ],
         "promptContext": "通用工作沟通语境：保留 App 名、产品名、英文缩写、项目术语和中英混合表达。"
       },
       {
         "id": "ai-product",
         "title": "AI/产品",
         "emoji": "🤖",
-        "terms": ["ASR", "LLM", "RAG", "Agent", "Prompt", "Embedding", "向量检索", "蒸馏", "上下文", "多模态", "工作流", "原型", "PRD", "埋点", "留存", "转化率", "A/B 测试"],
+        "terms": [
+          "ASR",
+          "LLM",
+          "RAG",
+          "Agent",
+          "Prompt",
+          "Embedding",
+          "向量检索",
+          "蒸馏",
+          "上下文",
+          "多模态",
+          "工作流",
+          "原型",
+          "PRD",
+          "埋点",
+          "留存",
+          "转化率",
+          "A/B 测试"
+        ],
         "promptContext": "AI 和产品语境：保留模型、prompt、ASR、LLM、RAG、PRD、指标和实验相关术语，不要把技术缩写翻译成普通词。"
       },
       {
         "id": "sales-cs",
         "title": "销售/客户",
         "emoji": "🤝",
-        "terms": ["线索", "商机", "客户成功", "续费", "回款", "报价", "合同", "交付", "需求确认", "跟进", "客诉", "SLA", "CRM", "ARR", "MRR", "POC"],
+        "terms": [
+          "线索",
+          "商机",
+          "客户成功",
+          "续费",
+          "回款",
+          "报价",
+          "合同",
+          "交付",
+          "需求确认",
+          "跟进",
+          "客诉",
+          "SLA",
+          "CRM",
+          "ARR",
+          "MRR",
+          "POC"
+        ],
         "promptContext": "销售和客户沟通语境：优先保留客户、报价、合同、回款、续费、POC、SLA 等业务术语，语气清楚可跟进。"
       },
       {
         "id": "legal",
         "title": "法律",
         "emoji": "⚖️",
-        "terms": ["合同", "协议", "违约", "条款", "补充协议", "授权", "保密协议", "NDA", "合规", "诉讼", "仲裁", "法务", "知识产权", "商标", "著作权", "隐私政策"],
+        "terms": [
+          "合同",
+          "协议",
+          "违约",
+          "条款",
+          "补充协议",
+          "授权",
+          "保密协议",
+          "NDA",
+          "合规",
+          "诉讼",
+          "仲裁",
+          "法务",
+          "知识产权",
+          "商标",
+          "著作权",
+          "隐私政策"
+        ],
         "promptContext": "法律语境：保留合同、条款、合规、授权、NDA、知识产权等术语，避免随意弱化义务、风险和边界。"
       },
       {
         "id": "medical",
         "title": "医疗",
         "emoji": "🩺",
-        "terms": ["病历", "门诊", "复诊", "处方", "剂量", "过敏史", "检查报告", "血常规", "影像", "CT", "MRI", "B 超", "诊断", "症状", "用药", "随访"],
+        "terms": [
+          "病历",
+          "门诊",
+          "复诊",
+          "处方",
+          "剂量",
+          "过敏史",
+          "检查报告",
+          "血常规",
+          "影像",
+          "CT",
+          "MRI",
+          "B 超",
+          "诊断",
+          "症状",
+          "用药",
+          "随访"
+        ],
         "promptContext": "医疗健康语境：保留症状、检查、诊断、剂量、用药、随访等术语；不新增医学结论，不替用户做诊断。"
       },
       {
         "id": "finance",
         "title": "金融",
         "emoji": "📈",
-        "terms": ["财报", "现金流", "毛利率", "净利润", "估值", "融资", "风控", "授信", "回撤", "收益率", "资产配置", "合规", "审计", "税务", "预算", "ROI"],
+        "terms": [
+          "财报",
+          "现金流",
+          "毛利率",
+          "净利润",
+          "估值",
+          "融资",
+          "风控",
+          "授信",
+          "回撤",
+          "收益率",
+          "资产配置",
+          "合规",
+          "审计",
+          "税务",
+          "预算",
+          "ROI"
+        ],
         "promptContext": "金融和经营语境：保留财务指标、融资、风控、审计、预算、ROI 等术语，不把数字和口径改乱。"
       },
       {
         "id": "education",
         "title": "教育",
         "emoji": "🎓",
-        "terms": ["课程", "教案", "作业", "考试", "测评", "学情", "班级", "家长会", "录取", "申请", "论文", "课题", "答辩", "GPA", "雅思", "托福"],
+        "terms": [
+          "课程",
+          "教案",
+          "作业",
+          "考试",
+          "测评",
+          "学情",
+          "班级",
+          "家长会",
+          "录取",
+          "申请",
+          "论文",
+          "课题",
+          "答辩",
+          "GPA",
+          "雅思",
+          "托福"
+        ],
         "promptContext": "教育语境：保留课程、测评、学情、申请、论文、考试等术语，表达要清楚、耐心、可执行。"
       },
       {
         "id": "engineering",
         "title": "研发",
         "emoji": "💻",
-        "terms": ["接口", "后端", "前端", "数据库", "缓存", "队列", "部署", "灰度", "回滚", "日志", "崩溃", "Crash", "性能", "延迟", "Pull Request", "CI/CD"],
+        "terms": [
+          "接口",
+          "后端",
+          "前端",
+          "数据库",
+          "缓存",
+          "队列",
+          "部署",
+          "灰度",
+          "回滚",
+          "日志",
+          "崩溃",
+          "Crash",
+          "性能",
+          "延迟",
+          "Pull Request",
+          "CI/CD"
+        ],
         "promptContext": "研发语境：保留接口、部署、日志、Crash、CI/CD、Pull Request 等工程术语，避免把代码标识和英文缩写改掉。"
       },
       {
         "id": "operations",
         "title": "运营",
         "emoji": "📣",
-        "terms": ["活动", "投放", "素材", "转化", "漏斗", "私域", "社群", "复盘", "用户增长", "留存", "GMV", "ROI", "CTR", "CVR", "DAU", "MAU"],
+        "terms": [
+          "活动",
+          "投放",
+          "素材",
+          "转化",
+          "漏斗",
+          "私域",
+          "社群",
+          "复盘",
+          "用户增长",
+          "留存",
+          "GMV",
+          "ROI",
+          "CTR",
+          "CVR",
+          "DAU",
+          "MAU"
+        ],
         "promptContext": "运营增长语境：保留活动、投放、素材、转化、漏斗、GMV、ROI、CTR、CVR 等术语，突出目标和下一步。"
       },
       {
         "id": "ecommerce",
         "title": "电商",
         "emoji": "🛒",
-        "terms": ["SKU", "SPU", "库存", "上架", "下架", "发货", "退货", "售后", "直播间", "客单价", "转化率", "复购", "达人", "佣金", "投流", "GMV"],
+        "terms": [
+          "SKU",
+          "SPU",
+          "库存",
+          "上架",
+          "下架",
+          "发货",
+          "退货",
+          "售后",
+          "直播间",
+          "客单价",
+          "转化率",
+          "复购",
+          "达人",
+          "佣金",
+          "投流",
+          "GMV"
+        ],
         "promptContext": "电商语境：保留 SKU、库存、上架、售后、直播间、客单价、复购、GMV 等术语，别把商品和履约信息改乱。"
       }
     ],
@@ -698,7 +908,10 @@
       ]
     },
     "liveRecognition": {
-      "localeIdentifiers": ["zh-Hans", "zh-CN"],
+      "localeIdentifiers": [
+        "zh-Hans",
+        "zh-CN"
+      ],
       "requiresOnDeviceRecognition": false,
       "addsPunctuation": true,
       "contextualStringsLimit": 100,
@@ -713,7 +926,14 @@
       "enableWhisperKitFallback": false,
       "enableLocalModelFallback": true,
       "appleLocaleIdentifier": "zh-Hans",
-      "appleLocaleIdentifiers": ["zh-Hans", "zh-CN", "en-US", "ja-JP", "ko-KR", "fr-FR"],
+      "appleLocaleIdentifiers": [
+        "zh-Hans",
+        "zh-CN",
+        "en-US",
+        "ja-JP",
+        "ko-KR",
+        "fr-FR"
+      ],
       "whisperLocaleIdentifier": "und"
     }
   },
@@ -745,7 +965,15 @@
     "deferDuringThermalPressure": true
   },
   "summaryReports": {
-    "enabledPeriodIDs": ["daily", "everyThreeDays", "weekly", "monthly", "quarterly", "halfYearly", "yearly"],
+    "enabledPeriodIDs": [
+      "daily",
+      "everyThreeDays",
+      "weekly",
+      "monthly",
+      "quarterly",
+      "halfYearly",
+      "yearly"
+    ],
     "storedLimit": 160,
     "visibleLimit": 40,
     "shelfLimit": 8,
@@ -853,9 +1081,23 @@
         "downloadMode": "system",
         "runtimeStatus": "default-on",
         "role": "键盘实时 ASR 和 iPhone 默认最终 ASR；必须保留为基础链路。",
-        "localeIdentifiers": ["zh-Hans", "zh-CN", "en-US", "ja-JP", "ko-KR", "fr-FR"],
-        "regionIDs": ["cn-mainland", "global"],
-        "industryContextIDs": ["general", "ai-product", "engineering"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "zh-CN",
+          "en-US",
+          "ja-JP",
+          "ko-KR",
+          "fr-FR"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering"
+        ],
         "defaultEnabled": true,
         "requiresExplicitDownload": false
       },
@@ -871,9 +1113,24 @@
         "downloadMode": "optional",
         "runtimeStatus": "cataloged",
         "role": "多语言高精度离线最终 ASR 候选，按需下载，不进入默认安装包。",
-        "localeIdentifiers": ["und", "zh", "en", "ja", "ko", "fr", "de", "es"],
-        "regionIDs": ["global"],
-        "industryContextIDs": ["general", "ai-product", "engineering"],
+        "localeIdentifiers": [
+          "und",
+          "zh",
+          "en",
+          "ja",
+          "ko",
+          "fr",
+          "de",
+          "es"
+        ],
+        "regionIDs": [
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering"
+        ],
         "sizeBytesApprox": 626000000,
         "defaultEnabled": false,
         "requiresExplicitDownload": true
@@ -890,9 +1147,23 @@
         "downloadMode": "optional",
         "runtimeStatus": "cataloged",
         "role": "中文、粤语和中英混合最终 ASR A/B 候选，需要适配器后启用。",
-        "localeIdentifiers": ["zh-Hans", "zh-Hant", "yue", "en-US", "ja-JP", "ko-KR"],
-        "regionIDs": ["cn-mainland", "hk-tw"],
-        "industryContextIDs": ["general", "ai-product", "sales-cs"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "zh-Hant",
+          "yue",
+          "en-US",
+          "ja-JP",
+          "ko-KR"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "hk-tw"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "sales-cs"
+        ],
         "sizeBytesApprox": 254000000,
         "defaultEnabled": false,
         "requiresExplicitDownload": true
@@ -908,9 +1179,21 @@
         "downloadMode": "research",
         "runtimeStatus": "research-candidate",
         "role": "低延迟 streaming ASR 候选，用于评估首字延迟和增量稳定性。",
-        "localeIdentifiers": ["en-US", "es-ES", "zh-Hans", "ja-JP", "ko-KR", "vi-VN", "ar"],
-        "regionIDs": ["global"],
-        "industryContextIDs": ["general"],
+        "localeIdentifiers": [
+          "en-US",
+          "es-ES",
+          "zh-Hans",
+          "ja-JP",
+          "ko-KR",
+          "vi-VN",
+          "ar"
+        ],
+        "regionIDs": [
+          "global"
+        ],
+        "industryContextIDs": [
+          "general"
+        ],
         "sizeBytesApprox": 26000000,
         "defaultEnabled": false,
         "requiresExplicitDownload": true
@@ -926,9 +1209,19 @@
         "downloadMode": "research",
         "runtimeStatus": "research-candidate",
         "role": "端侧 streaming/non-streaming ASR 候选，用于多地区模型路由实验。",
-        "localeIdentifiers": ["zh-Hans", "en-US", "ja-JP", "ko-KR"],
-        "regionIDs": ["global"],
-        "industryContextIDs": ["general", "engineering"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "en-US",
+          "ja-JP",
+          "ko-KR"
+        ],
+        "regionIDs": [
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "engineering"
+        ],
         "defaultEnabled": false,
         "requiresExplicitDownload": true
       }
@@ -946,9 +1239,19 @@
         "downloadMode": "optional",
         "runtimeStatus": "compact-local-baseline",
         "role": "低内存设备的基础本地整理模型；没有网络时保证可用体验。",
-        "localeIdentifiers": ["zh-Hans", "en-US"],
-        "regionIDs": ["cn-mainland", "global"],
-        "industryContextIDs": ["general", "ai-product", "engineering"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering"
+        ],
         "sizeBytesApprox": 491000000,
         "defaultEnabled": true,
         "requiresExplicitDownload": true
@@ -965,9 +1268,20 @@
         "downloadMode": "recommended",
         "runtimeStatus": "recommended-local-quality",
         "role": "默认推荐下载的中文工作消息整理模型，平衡速度和质量。",
-        "localeIdentifiers": ["zh-Hans", "en-US"],
-        "regionIDs": ["cn-mainland", "global"],
-        "industryContextIDs": ["general", "ai-product", "engineering", "sales-cs"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering",
+          "sales-cs"
+        ],
         "sizeBytesApprox": 1117000000,
         "defaultEnabled": false,
         "requiresExplicitDownload": true
@@ -977,25 +1291,62 @@
       {
         "id": "cn-mainland",
         "title": "中国大陆",
-        "localeIdentifiers": ["zh-Hans", "zh-CN", "en-US"],
-        "preferredASRModelIDs": ["apple-speech", "sensevoice-small", "whisperkit-large-v3"],
-        "preferredLLMModelIDs": ["qwen-2.5-0.5b-q4km", "qwen-2.5-1.5b-q4km"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "zh-CN",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "sensevoice-small",
+          "whisperkit-large-v3"
+        ],
+        "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
+          "qwen-2.5-1.5b-q4km"
+        ],
         "notes": "优先普通话和中英混合；行业词表对 ASR 和改写同时生效。"
       },
       {
         "id": "hk-tw",
         "title": "港澳台",
-        "localeIdentifiers": ["zh-Hant", "yue", "en-US"],
-        "preferredASRModelIDs": ["apple-speech", "sensevoice-small", "whisperkit-large-v3"],
-        "preferredLLMModelIDs": ["qwen-2.5-0.5b-q4km", "qwen-2.5-1.5b-q4km"],
+        "localeIdentifiers": [
+          "zh-Hant",
+          "yue",
+          "en-US"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "sensevoice-small",
+          "whisperkit-large-v3"
+        ],
+        "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
+          "qwen-2.5-1.5b-q4km"
+        ],
         "notes": "评估繁中、粤语和中英夹杂，避免把专名误改为普通话词。"
       },
       {
         "id": "global",
         "title": "全球/多语",
-        "localeIdentifiers": ["en-US", "ja-JP", "ko-KR", "fr-FR", "de-DE", "es-ES"],
-        "preferredASRModelIDs": ["apple-speech", "whisperkit-large-v3", "moonshine-streaming", "sherpa-onnx-streaming"],
-        "preferredLLMModelIDs": ["qwen-2.5-0.5b-q4km", "qwen-2.5-1.5b-q4km"],
+        "localeIdentifiers": [
+          "en-US",
+          "ja-JP",
+          "ko-KR",
+          "fr-FR",
+          "de-DE",
+          "es-ES"
+        ],
+        "preferredASRModelIDs": [
+          "apple-speech",
+          "whisperkit-large-v3",
+          "moonshine-streaming",
+          "sherpa-onnx-streaming"
+        ],
+        "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
+          "qwen-2.5-1.5b-q4km"
+        ],
         "notes": "用于翻译、多语输入和低延迟 streaming ASR 候选评估。"
       }
     ],
@@ -1003,22 +1354,79 @@
       {
         "id": "keyboard-realworld-cn",
         "title": "中文键盘真实输入",
-        "localeIdentifiers": ["zh-Hans", "zh-CN", "en-US"],
-        "industryContextIDs": ["general", "ai-product", "engineering", "sales-cs"],
-        "metrics": ["firstTokenLatencyMs", "finalWER", "partialStability", "duplicateInsertionRate", "batteryCost", "styleAlignment"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "zh-CN",
+          "en-US"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering",
+          "sales-cs"
+        ],
+        "metrics": [
+          "firstTokenLatencyMs",
+          "finalWER",
+          "partialStability",
+          "duplicateInsertionRate",
+          "batteryCost",
+          "styleAlignment"
+        ],
         "minimumSamples": 80,
         "notes": "使用真实键盘录音、ASR 原文和最终发送文案评测，不用公开榜单替代。"
       },
       {
         "id": "accent-and-mixed-language",
         "title": "口音与中英混合",
-        "localeIdentifiers": ["zh-Hans", "zh-Hant", "yue", "en-US", "ja-JP", "ko-KR"],
-        "industryContextIDs": ["general", "ai-product"],
-        "metrics": ["termRecall", "properNounAccuracy", "codeSwitchAccuracy", "noSpeechFalsePositiveRate"],
+        "localeIdentifiers": [
+          "zh-Hans",
+          "zh-Hant",
+          "yue",
+          "en-US",
+          "ja-JP",
+          "ko-KR"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product"
+        ],
+        "metrics": [
+          "termRecall",
+          "properNounAccuracy",
+          "codeSwitchAccuracy",
+          "noSpeechFalsePositiveRate"
+        ],
         "minimumSamples": 60,
         "notes": "用于判断地区路由和行业词表是否真的提升识别。"
       }
-    ]
+    ],
+    "selectionPolicy": {
+      "routingMode": "baseline-first-measured-promotion",
+      "baselineASRProviderID": "apple-speech",
+      "baselineLLMProviderID": "qwen-2.5-0.5b-q4km",
+      "defaultRegionProfileID": "cn-mainland",
+      "requiresExplicitDownloadForNonBaseline": true,
+      "minimumEvaluationSamplesPerRegion": 80,
+      "promotionRules": [
+        "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载 A/B 候选。",
+        "候选 ASR 只有在本地区真实键盘录音 finalWER、termRecall、duplicateInsertionRate 和 firstTokenLatencyMs 全部优于 baseline 后才允许推荐。",
+        "候选 LLM 只有在本机延迟、热量、内存和 styleAlignment 达标后才允许从推荐下载进入默认优先级。",
+        "云端或大模型不得后台自动启用，必须用户显式下载或显式 opt-in。"
+      ],
+      "fallbackOrder": [
+        "apple-speech",
+        "qwen-2.5-0.5b-q4km",
+        "qwen-2.5-1.5b-q4km",
+        "whisperkit-large-v3",
+        "sensevoice-small"
+      ],
+      "notes": [
+        "Apple ASR 和轻量 Qwen 是稳定保底，不因远程配置移除。",
+        "地区选择来自系统 locale、用户设置和真实错误统计，不能只看公开榜单。",
+        "行业词表和个人词表必须同时喂给 ASR contextual strings 和 LLM rewrite prompt。"
+      ]
+    }
   },
   "mainApp": {
     "configFetchTimeoutSeconds": 8,
@@ -1040,71 +1448,213 @@
     "pipActivationRetryLimit": 56,
     "pipActivationRetryPollSeconds": 0.22,
     "pipActivationStartSettleSeconds": 0.6,
-    "keyboardPiPRecoveryDelaysSeconds": [1.2, 2.4, 4.8, 8],
-    "autoReturnProvisionalDelaysSeconds": [0.25, 0.7, 1.3],
-    "autoReturnReadyDelaysSeconds": [0.18, 0.42, 0.85, 1.45],
-    "autoReturnReadinessWatchSeconds": [0.18, 0.36, 0.7, 1.2, 1.9, 3, 4.8, 7.5, 11, 15],
+    "keyboardPiPRecoveryDelaysSeconds": [
+      1.2,
+      2.4,
+      4.8,
+      8
+    ],
+    "autoReturnProvisionalDelaysSeconds": [
+      0.25,
+      0.7,
+      1.3
+    ],
+    "autoReturnReadyDelaysSeconds": [
+      0.18,
+      0.42,
+      0.85,
+      1.45
+    ],
+    "autoReturnReadinessWatchSeconds": [
+      0.18,
+      0.36,
+      0.7,
+      1.2,
+      1.9,
+      3,
+      4.8,
+      7.5,
+      11,
+      15
+    ],
     "autoReturnRecoveryDelaySeconds": 0.65,
     "autoReturnPostRequestCleanupSeconds": 2.2,
-    "autoReturnPrivateOpenFallbackSeconds": [1.2, 2.4],
+    "autoReturnPrivateOpenFallbackSeconds": [
+      1.2,
+      2.4
+    ],
     "autoReturnPrivateOpenCleanupSeconds": 1.6,
     "autoReturnMaxRecoveryAttempts": 3,
     "memoTitleRules": [
       {
         "title": "外出没带电脑",
-        "requiredAny": [["外面", "在外", "外出"], ["没带电脑", "没有带电脑"]]
+        "requiredAny": [
+          [
+            "外面",
+            "在外",
+            "外出"
+          ],
+          [
+            "没带电脑",
+            "没有带电脑"
+          ]
+        ]
       },
       {
         "title": "优化光标控制",
-        "any": ["控制光标", "移动光标", "拖动光标"]
+        "any": [
+          "控制光标",
+          "移动光标",
+          "拖动光标"
+        ]
       },
       {
         "title": "修复 ASR 反馈",
-        "all": ["ASR"],
-        "any": ["没反馈", "没有反馈", "不动", "没在动"]
+        "all": [
+          "ASR"
+        ],
+        "any": [
+          "没反馈",
+          "没有反馈",
+          "不动",
+          "没在动"
+        ]
       },
       {
         "title": "修复风格化错位",
-        "requiredAny": [["风格化", "风格"], ["对齐", "错位", "之前"]]
+        "requiredAny": [
+          [
+            "风格化",
+            "风格"
+          ],
+          [
+            "对齐",
+            "错位",
+            "之前"
+          ]
+        ]
       },
       {
         "title": "完善翻译语种",
-        "all": ["翻译"],
-        "any": ["语种", "语言"]
+        "all": [
+          "翻译"
+        ],
+        "any": [
+          "语种",
+          "语言"
+        ]
       },
       {
         "title": "测试语音键盘",
-        "all": ["键盘"],
-        "any": ["测试", "好用"]
+        "all": [
+          "键盘"
+        ],
+        "any": [
+          "测试",
+          "好用"
+        ]
       },
       {
         "title": "确认语音可听见",
-        "any": ["能听到", "听到我说话", "听见"]
+        "any": [
+          "能听到",
+          "听到我说话",
+          "听见"
+        ]
       },
       {
         "title": "同步最新数据表",
-        "any": ["数据表", "最新表"]
+        "any": [
+          "数据表",
+          "最新表"
+        ]
       },
       {
         "title": "修复自动回跳",
-        "any": ["回跳", "跳回"]
+        "any": [
+          "回跳",
+          "跳回"
+        ]
       },
       {
         "title": "截图权限处理",
-        "all": ["截图", "权限"]
+        "all": [
+          "截图",
+          "权限"
+        ]
       }
     ],
     "lowValueMemoFragments": [
-      "哈哈", "嘿嘿", "嗯嗯", "啊啊", "喂喂", "啦啦",
-      "测试", "试试看", "看看效果", "有没有用", "是否听到", "听见了吗",
-      "随便说", "没什么", "无所谓", "好的好的", "可以可以"
+      "哈哈",
+      "嘿嘿",
+      "嗯嗯",
+      "啊啊",
+      "喂喂",
+      "啦啦",
+      "测试",
+      "试试看",
+      "看看效果",
+      "有没有用",
+      "是否听到",
+      "听见了吗",
+      "随便说",
+      "没什么",
+      "无所谓",
+      "好的好的",
+      "可以可以"
     ],
     "memorySignalFragments": [
-      "客户", "用户", "项目", "产品", "版本", "设计", "需求", "问题", "原因", "方案",
-      "会议", "日历", "提醒", "待办", "跟进", "确认", "发送", "整理", "修改", "删除",
-      "明天", "今天", "后天", "下周", "周一", "周二", "周三", "周四", "周五", "周六", "周日",
-      "上午", "下午", "晚上", "点", "号", "月", "年", "App", "ASR", "LLM", "PIP", "PiP",
-      "微信", "Lark", "ChatGPT", "截图", "语音", "键盘", "输入框", "回跳"
+      "客户",
+      "用户",
+      "项目",
+      "产品",
+      "版本",
+      "设计",
+      "需求",
+      "问题",
+      "原因",
+      "方案",
+      "会议",
+      "日历",
+      "提醒",
+      "待办",
+      "跟进",
+      "确认",
+      "发送",
+      "整理",
+      "修改",
+      "删除",
+      "明天",
+      "今天",
+      "后天",
+      "下周",
+      "周一",
+      "周二",
+      "周三",
+      "周四",
+      "周五",
+      "周六",
+      "周日",
+      "上午",
+      "下午",
+      "晚上",
+      "点",
+      "号",
+      "月",
+      "年",
+      "App",
+      "ASR",
+      "LLM",
+      "PIP",
+      "PiP",
+      "微信",
+      "Lark",
+      "ChatGPT",
+      "截图",
+      "语音",
+      "键盘",
+      "输入框",
+      "回跳"
     ]
   },
   "experiments": {
