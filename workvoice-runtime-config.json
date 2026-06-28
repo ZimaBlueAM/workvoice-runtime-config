@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-28.78",
-  "updatedAt": "2026-06-29T00:10:00+08:00",
+  "configVersion": "2026-06-28.79",
+  "updatedAt": "2026-06-29T01:05:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1070,6 +1070,7 @@
   "modelCatalog": {
     "defaultASRProviderID": "apple-speech",
     "defaultLLMProviderID": "qwen-2.5-0.5b-q4km",
+    "bundledFallbackLLMProviderID": "gemma-3-270m-it",
     "asrModels": [
       {
         "id": "apple-speech",
@@ -1255,6 +1256,33 @@
         "sizeBytesApprox": 491000000,
         "defaultEnabled": true,
         "requiresExplicitDownload": true
+      },
+      {
+        "id": "gemma-3-270m-it",
+        "title": "Gemma 3 270M Instruct",
+        "kind": "llm",
+        "provider": "Google",
+        "model": "Gemma-3-270M-it",
+        "repo": null,
+        "artifactFile": "gemma3-270m-it-q8.task",
+        "format": "mediapipe-task",
+        "downloadMode": "bundled",
+        "runtimeStatus": "bundled-emergency-fallback",
+        "role": "随 App 内置的最小离线整理层，只用于断网、未下载 Qwen 或系统/云端不可用时兜底；不作为质量上限。",
+        "localeIdentifiers": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "global"
+        ],
+        "industryContextIDs": [
+          "general"
+        ],
+        "sizeBytesApprox": null,
+        "defaultEnabled": true,
+        "requiresExplicitDownload": false
       },
       {
         "id": "qwen-2.5-1.5b-q4km",
@@ -1660,15 +1688,17 @@
       "minimumEvaluationSamplesPerRegion": 80,
       "promotionRules": [
         "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载或 research A/B 候选。",
-        "Apple Speech 和 0.5B 轻量 LLM 是基础链路，必须随 App 可用，远程配置只能降级到它们，不能移除它们。",
+        "Apple Speech 是不可移除 ASR 基线；随包 270M LLM 是断网应急层；0.5B 轻量 Qwen 是下载后本地质量 baseline，远程配置不能移除这些层级。",
         "候选 ASR 只有在本地区真实键盘录音 finalWER、termRecall、duplicateInsertionRate 和 firstTokenLatencyMs 全部优于 baseline 后才允许推荐。",
         "候选 LLM 只有在本机延迟、热量、内存和 styleAlignment 达标后才允许从推荐下载进入默认优先级。",
+        "随包 270M LLM 只能用于应急整理和可用性兜底，不能因一次热更新被提升为高质量默认模型。",
         "云端或大模型不得后台自动启用，必须用户显式下载、系统明确可用或显式 opt-in。",
         "mobile-runtime research 候选没有 iOS 适配器前只能展示为评测路线，不能出现在下载按钮或自动 fallback 执行链路。"
       ],
       "fallbackOrder": [
         "apple-speech",
         "qwen-2.5-0.5b-q4km",
+        "gemma-3-270m-it",
         "qwen-2.5-1.5b-q4km",
         "qwen-3-0.6b-q4km",
         "apple-foundation-models",
@@ -1676,7 +1706,7 @@
         "sensevoice-small"
       ],
       "notes": [
-        "Apple ASR 和轻量 Qwen 是稳定保底，不因远程配置移除。",
+        "Apple ASR、随包 270M 应急 LLM 和轻量 Qwen 本地质量 baseline 是稳定保底，不因远程配置移除。",
         "地区选择来自系统 locale、用户设置和真实错误统计，不能只看公开榜单。",
         "行业词表和个人词表必须同时喂给 ASR contextual strings 和 LLM rewrite prompt。"
       ]
