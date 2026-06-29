@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.12",
-  "updatedAt": "2026-06-29T11:28:00+08:00",
+  "configVersion": "2026-06-29.13",
+  "updatedAt": "2026-06-29T13:05:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1088,6 +1088,8 @@
         "format": "system",
         "downloadMode": "system",
         "runtimeStatus": "default-on",
+        "candidateLifecycleStage": "baseline",
+        "defaultEligible": true,
         "role": "键盘实时 ASR 和 iPhone 默认最终 ASR；必须保留为基础链路。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1140,6 +1142,8 @@
         "format": "coreml-bundle",
         "downloadMode": "optional",
         "runtimeStatus": "cataloged",
+        "candidateLifecycleStage": "downloadable",
+        "defaultEligible": false,
         "role": "多语言高精度离线最终 ASR 候选，按需下载，不进入默认安装包。",
         "localeIdentifiers": [
           "und",
@@ -1187,6 +1191,8 @@
         "format": "gguf",
         "downloadMode": "optional",
         "runtimeStatus": "cataloged",
+        "candidateLifecycleStage": "downloadable",
+        "defaultEligible": false,
         "role": "中文、粤语和中英混合最终 ASR A/B 候选，需要适配器后启用。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1223,6 +1229,8 @@
         "format": "native-runtime",
         "downloadMode": "research",
         "runtimeStatus": "research-candidate",
+        "candidateLifecycleStage": "research",
+        "defaultEligible": false,
         "role": "低延迟 streaming ASR 候选，用于评估首字延迟和增量稳定性。",
         "localeIdentifiers": [
           "en-US",
@@ -1258,6 +1266,8 @@
         "format": "onnx",
         "downloadMode": "research",
         "runtimeStatus": "research-candidate",
+        "candidateLifecycleStage": "research",
+        "defaultEligible": false,
         "role": "端侧 streaming/non-streaming ASR 候选，用于多地区模型路由实验。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1291,6 +1301,8 @@
         "format": "gguf",
         "downloadMode": "optional",
         "runtimeStatus": "compact-local-baseline",
+        "candidateLifecycleStage": "baseline",
+        "defaultEligible": true,
         "role": "低内存设备的基础本地整理模型；没有网络时保证可用体验。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1325,6 +1337,8 @@
         "format": "mediapipe-task",
         "downloadMode": "bundled",
         "runtimeStatus": "bundled-emergency-fallback",
+        "candidateLifecycleStage": "baseline",
+        "defaultEligible": true,
         "role": "随 App 内置的最小离线整理层，只用于断网、未下载 Qwen 或系统/云端不可用时兜底；不作为质量上限。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1353,6 +1367,8 @@
         "format": "gguf",
         "downloadMode": "recommended",
         "runtimeStatus": "recommended-local-quality",
+        "candidateLifecycleStage": "recommended",
+        "defaultEligible": false,
         "role": "默认推荐下载的中文工作消息整理模型，平衡速度和质量。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1388,6 +1404,8 @@
         "format": "gguf",
         "downloadMode": "research",
         "runtimeStatus": "download-candidate",
+        "candidateLifecycleStage": "research",
+        "defaultEligible": false,
         "role": "中文和中英混合的下一代轻量整理候选；只在真实键盘样本胜过 0.5B baseline 后推荐。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1423,6 +1441,8 @@
         "format": "mobile-runtime",
         "downloadMode": "research",
         "runtimeStatus": "research-candidate",
+        "candidateLifecycleStage": "research",
+        "defaultEligible": false,
         "role": "全球多语和翻译候选；需要先完成 iOS 移动运行时适配和真实键盘评测，不进入默认安装包。",
         "localeIdentifiers": [
           "en-US",
@@ -1469,6 +1489,8 @@
         "format": "system",
         "downloadMode": "system-conditional",
         "runtimeStatus": "system-candidate",
+        "candidateLifecycleStage": "system",
+        "defaultEligible": false,
         "role": "Apple Intelligence 可用设备上的系统级本地改写候选；作为可用性增强，不替代 0.5B baseline。",
         "localeIdentifiers": [
           "zh-Hans",
@@ -1513,6 +1535,8 @@
         "format": "mobile-runtime",
         "downloadMode": "research",
         "runtimeStatus": "research-candidate",
+        "candidateLifecycleStage": "research",
+        "defaultEligible": false,
         "role": "最新多语轻量开放模型候选；需要先完成 iOS 移动运行时适配和真实键盘评测，不进入默认安装包。",
         "localeIdentifiers": [
           "en-US",
