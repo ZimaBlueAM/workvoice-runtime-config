@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.7",
-  "updatedAt": "2026-06-29T14:45:00+08:00",
+  "configVersion": "2026-06-29.8",
+  "updatedAt": "2026-06-29T08:10:44+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -430,40 +430,40 @@
       },
       "palette": {
         "deckLight": {
-          "red": 0.82,
-          "green": 0.83,
-          "blue": 0.85,
-          "alpha": 0.99
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 0
         },
         "deckDark": {
-          "red": 0.12,
-          "green": 0.12,
-          "blue": 0.13,
-          "alpha": 0.9
+          "red": 0,
+          "green": 0,
+          "blue": 0,
+          "alpha": 0
         },
         "primaryKeyLight": {
-          "red": 0.94,
-          "green": 0.94,
-          "blue": 0.95,
-          "alpha": 0.98
+          "red": 1,
+          "green": 1,
+          "blue": 1,
+          "alpha": 0.88
         },
         "primaryKeyDark": {
-          "red": 0.28,
-          "green": 0.28,
+          "red": 0.27,
+          "green": 0.27,
           "blue": 0.29,
-          "alpha": 0.98
+          "alpha": 0.96
         },
         "auxiliaryKeyLight": {
-          "red": 0.72,
-          "green": 0.73,
-          "blue": 0.75,
-          "alpha": 0.96
+          "red": 0.67,
+          "green": 0.69,
+          "blue": 0.73,
+          "alpha": 0.84
         },
         "auxiliaryKeyDark": {
           "red": 0.22,
           "green": 0.22,
-          "blue": 0.23,
-          "alpha": 0.98
+          "blue": 0.24,
+          "alpha": 0.92
         }
       },
       "layout": {
@@ -2072,6 +2072,36 @@
       "defaultRegionProfileID": "cn-mainland",
       "requiresExplicitDownloadForNonBaseline": true,
       "minimumEvaluationSamplesPerRegion": 80,
+      "candidateLifecycleStages": [
+        "research",
+        "downloadable",
+        "recommended",
+        "default-eligible"
+      ],
+      "requiredEvidenceFields": [
+        "sampleID",
+        "audioSampleID",
+        "transcriptSessionID",
+        "regionProfileID",
+        "localeIdentifier",
+        "accentTag",
+        "hostAppTag",
+        "industryContextID",
+        "referenceText",
+        "hypothesisText",
+        "finalWER",
+        "termRecall",
+        "properNounAccuracy",
+        "duplicateInsertionRate",
+        "firstTokenLatencyMs",
+        "styleAlignment",
+        "semanticPreservation",
+        "candidateCurrentSessionMatch",
+        "hallucinationRate",
+        "staleContextRewriteRate",
+        "peakMemoryMB",
+        "thermalState"
+      ],
       "promotionRules": [
         "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载或 research A/B 候选。",
         "Apple Speech 是不可移除 ASR 基线；随包 270M LLM 是断网应急层；0.5B 轻量 Qwen 是下载后本地质量 baseline，远程配置不能移除这些层级。",
