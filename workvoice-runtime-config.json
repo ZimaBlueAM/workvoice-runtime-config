@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.15",
-  "updatedAt": "2026-06-29T16:02:51+08:00",
+  "configVersion": "2026-06-29.16",
+  "updatedAt": "2026-06-29T17:08:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -2518,7 +2518,7 @@
     "refinedDraftWatchEnabled": true,
     "keyboardCloudRewriteEnabled": true,
     "cloudQualityEnabled": true,
-    "liveStreamingRewriteEnabled": true,
+    "liveStreamingRewriteEnabled": false,
     "asrPrewarmEnabled": false
   }
 }
