@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.13",
-  "updatedAt": "2026-06-29T13:05:00+08:00",
+  "configVersion": "2026-06-29.14",
+  "updatedAt": "2026-06-29T13:49:12+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -2274,6 +2274,15 @@
         "随包 270M LLM 只能用于应急整理和可用性兜底，不能因一次热更新被提升为高质量默认模型。",
         "云端或大模型不得后台自动启用，必须用户显式下载、系统明确可用或显式 opt-in。",
         "mobile-runtime research 候选没有 iOS 适配器前只能展示为评测路线，不能出现在下载按钮或自动 fallback 执行链路。"
+      ],
+      "fallbackExecutionGates": [
+        "baseline providers may execute immediately",
+        "system providers require systemAvailability=true",
+        "downloadable providers require explicitUserConsent=true and downloadState=installed",
+        "recommended providers require evaluationPassed=true for the active region",
+        "research providers may run shadow-only and must not write the keyboard input",
+        "candidateCurrentSessionMatch must stay above the configured threshold",
+        "low-power, elevated thermal, background, or keyboard-invisible state must fall back to baseline"
       ],
       "fallbackOrder": [
         "apple-speech",
