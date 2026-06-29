@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.16",
-  "updatedAt": "2026-06-29T17:08:00+08:00",
+  "configVersion": "2026-06-29.17",
+  "updatedAt": "2026-06-29T17:42:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -442,10 +442,10 @@
           "alpha": 0
         },
         "primaryKeyLight": {
-          "red": 1,
-          "green": 1,
-          "blue": 1,
-          "alpha": 0.88
+          "red": 0.94,
+          "green": 0.95,
+          "blue": 0.96,
+          "alpha": 0.82
         },
         "primaryKeyDark": {
           "red": 0.27,
@@ -454,10 +454,10 @@
           "alpha": 0.96
         },
         "auxiliaryKeyLight": {
-          "red": 0.67,
-          "green": 0.69,
-          "blue": 0.73,
-          "alpha": 0.84
+          "red": 0.72,
+          "green": 0.73,
+          "blue": 0.75,
+          "alpha": 0.78
         },
         "auxiliaryKeyDark": {
           "red": 0.22,
