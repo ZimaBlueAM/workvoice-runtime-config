@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.18",
-  "updatedAt": "2026-06-29T23:08:00+08:00",
+  "configVersion": "2026-06-29.19",
+  "updatedAt": "2026-06-29T23:36:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -926,7 +926,16 @@
         "试试看",
         "试试",
         "看看效果",
-        "看看"
+        "看看",
+        "哈喽哈喽",
+        "哈喽",
+        "hello hello",
+        "hello",
+        "测试一下",
+        "试一下",
+        "能听到吗",
+        "能听见吗",
+        "听得到吗"
       ],
       "fillerOnlyPhrases": [
         "嗯嗯嗯",
@@ -943,7 +952,16 @@
         "试试看",
         "试试",
         "看看效果",
-        "看看"
+        "看看",
+        "哈喽哈喽",
+        "哈喽",
+        "hello hello",
+        "hello",
+        "测试一下",
+        "试一下",
+        "能听到吗",
+        "能听见吗",
+        "听得到吗"
       ]
     },
     "liveRecognition": {
