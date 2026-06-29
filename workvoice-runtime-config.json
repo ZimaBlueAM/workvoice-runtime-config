@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.10",
-  "updatedAt": "2026-06-29T10:13:00+08:00",
+  "configVersion": "2026-06-29.11",
+  "updatedAt": "2026-06-29T10:42:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1680,6 +1680,7 @@
           "moonshine-streaming"
         ],
         "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
           "apple-foundation-models",
           "gemma-3n-e2b-it-mobile",
           "gemma-4-e2b-it-mobile"
@@ -1700,6 +1701,7 @@
           "moonshine-streaming"
         ],
         "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
           "apple-foundation-models",
           "gemma-3n-e2b-it-mobile"
         ],
@@ -1722,9 +1724,9 @@
           "moonshine-streaming"
         ],
         "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
           "apple-foundation-models",
-          "gemma-3n-e2b-it-mobile",
-          "qwen-2.5-0.5b-q4km"
+          "gemma-3n-e2b-it-mobile"
         ],
         "notes": "越南语、泰语、印尼语和中英混合按地区单独累计样本。"
       },
@@ -1742,6 +1744,7 @@
           "moonshine-streaming"
         ],
         "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
           "apple-foundation-models",
           "gemma-3n-e2b-it-mobile"
         ],
@@ -1760,6 +1763,7 @@
           "moonshine-streaming"
         ],
         "preferredLLMModelIDs": [
+          "qwen-2.5-0.5b-q4km",
           "apple-foundation-models",
           "gemma-3n-e2b-it-mobile"
         ],
