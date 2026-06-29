@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.11",
-  "updatedAt": "2026-06-29T10:42:00+08:00",
+  "configVersion": "2026-06-29.12",
+  "updatedAt": "2026-06-29T11:28:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -2149,6 +2149,7 @@
       "safetyGates": [
         "所有非 baseline ASR/LLM 必须显式下载、系统可用或显式启用，不能远程静默切换默认。",
         "候选 ASR/LLM 在 default-eligible 之前只能影子评测：同一录音、同一 session、同一来源 App 双跑对比，不能直接改写用户输入框或覆盖 Apple baseline 输出。",
+        "候选样本必须记录模型版本、适配器、下载状态、用户显式同意和 baselineCandidatePairID；缺任一项只能留在 research。",
         "候选模型必须在每个目标地区 sample bucket 中分别超过 baseline，不能用全局平均掩盖某地区退化。",
         "主流 10 语种必须逐语种达标；翻译充分性、语义保真和当前 session 匹配低于阈值时禁止晋级。",
         "任何候选如果 duplicateInsertionRate、noSpeechFalsePositiveRate 或旧 session 改写率高于 baseline，直接降级为 research。",
@@ -2179,6 +2180,12 @@
         "candidateCurrentSessionMatch",
         "audioSampleID",
         "transcriptSessionID",
+        "candidateLifecycleStage",
+        "modelArtifactVersion",
+        "adapterRuntimeID",
+        "downloadState",
+        "explicitUserConsent",
+        "baselineCandidatePairID",
         "deviceClass",
         "peakMemoryMB",
         "thermalState"
@@ -2223,6 +2230,12 @@
         "candidateCurrentSessionMatch",
         "hallucinationRate",
         "staleContextRewriteRate",
+        "candidateLifecycleStage",
+        "modelArtifactVersion",
+        "adapterRuntimeID",
+        "downloadState",
+        "explicitUserConsent",
+        "baselineCandidatePairID",
         "deviceClass",
         "peakMemoryMB",
         "thermalState"
@@ -2231,6 +2244,7 @@
         "任何地区默认 ASR 只能从 Apple Speech 开始；非 baseline ASR 先作为可下载或 research A/B 候选。",
         "Apple Speech 是不可移除 ASR 基线；随包 270M LLM 是断网应急层；0.5B 轻量 Qwen 是下载后本地质量 baseline，远程配置不能移除这些层级。",
         "候选模型进入 default-eligible 前只能影子双跑：候选输出只写评测样本，不能直接影响键盘当前输入或自动覆盖 baseline。",
+        "候选样本必须带模型 artifact/version、iOS 适配器 ID、下载状态、用户同意状态和 baselineCandidatePairID，避免把不同模型或不同 session 的结果拼在一起。",
         "候选 ASR 只有在本地区真实键盘录音 finalWER、termRecall、duplicateInsertionRate 和 firstTokenLatencyMs 全部优于 baseline 后才允许推荐。",
         "候选 LLM 只有在本机延迟、热量、内存、styleAlignment、semanticPreservation、hallucinationRate 和 candidateCurrentSessionMatch 达标后才允许从推荐下载进入默认优先级。",
         "随包 270M LLM 只能用于应急整理和可用性兜底，不能因一次热更新被提升为高质量默认模型。",
