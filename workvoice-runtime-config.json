@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.2",
-  "updatedAt": "2026-07-01T02:25:00+08:00",
+  "configVersion": "2026-07-01.3",
+  "updatedAt": "2026-07-01T04:35:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -532,6 +532,7 @@
         "keyboardNoRewriteCandidate": "还没有可重写的语音内容。先轻点开始说话生成候选。",
         "recordingStarted": "正在录音。停顿后会自动生成候选，也可再次轻点结束。",
         "recordingHealthNoBuffers": "还没有收到麦克风数据。请确认 PIP 小窗仍在，并继续说话。",
+        "speechPermissionRequired": "语音识别权限未开启，无法开始录音。请回 App 打开权限。",
         "liveASRPermissionUnavailable": "已收到声音，但实时字幕权限不可用。结束录音后仍会尝试整理整段语音。",
         "liveASRNoFirstText": "已收到声音，实时字幕还没出字。结束录音后仍会处理整段录音。",
         "liveASRReconnecting": "已收到声音，正在重新连接实时字幕。继续说话即可。",
