@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-30.5",
-  "updatedAt": "2026-06-30T23:35:00+08:00",
+  "configVersion": "2026-07-01.1",
+  "updatedAt": "2026-07-01T01:05:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1074,8 +1074,8 @@
     "keyboardControlCarrierFreshSeconds": 120,
     "recordingCarrierFreshSeconds": 90,
     "pipCarrierStickyGraceSeconds": 60,
-    "speechRMSThreshold": 0.018,
-    "speechPeakThreshold": 0.055
+    "speechRMSThreshold": 0.012,
+    "speechPeakThreshold": 0.035
   },
   "voiceAnalysis": {
     "audioEvidenceEnabled": true,
