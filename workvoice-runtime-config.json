@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-30.2",
-  "updatedAt": "2026-06-30T12:33:23+08:00",
+  "configVersion": "2026-06-30.3",
+  "updatedAt": "2026-06-30T15:25:53+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -933,10 +933,7 @@
         "hello hello",
         "hello",
         "测试一下",
-        "试一下",
-        "能听到吗",
-        "能听见吗",
-        "听得到吗"
+        "试一下"
       ],
       "fillerOnlyPhrases": [
         "嗯嗯嗯",
@@ -959,22 +956,7 @@
         "hello hello",
         "hello",
         "测试一下",
-        "试一下",
-        "能听到吗",
-        "能听见吗",
-        "听得到吗",
-        "能听到我说话吗",
-        "能听见我说话吗",
-        "能听到我讲话吗",
-        "能听见我讲话吗",
-        "听得到我说话吗",
-        "听得到我讲话吗",
-        "听得见吗",
-        "听到吗",
-        "听见吗",
-        "有声音吗",
-        "有没有声音",
-        "麦克风有声音吗"
+        "试一下"
       ]
     },
     "liveRecognition": {
@@ -1073,8 +1055,8 @@
     "autoEndpointMaxInitialSilenceSeconds": 20,
     "recordingHealthEarlyCheckSeconds": 1.8,
     "recordingHealthLateCheckSeconds": 4.5,
-    "liveASRStaleRestartSeconds": 5.5,
-    "liveASRStaleWatchCheckIntervalSeconds": 0.7,
+    "liveASRStaleRestartSeconds": 2.6,
+    "liveASRStaleWatchCheckIntervalSeconds": 0.45,
     "liveRewriteDebounceSeconds": 0.26,
     "liveRewriteMinimumCharacters": 8,
     "liveRewriteMinimumDelta": 6,
