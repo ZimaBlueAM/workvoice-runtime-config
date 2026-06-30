@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.3",
-  "updatedAt": "2026-07-01T04:35:00+08:00",
+  "configVersion": "2026-07-01.4",
+  "updatedAt": "2026-07-01T05:32:49+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -497,6 +497,7 @@
         "refinementPaused": "已暂停精修，已保留当前候选。",
         "noRecording": "没有收到这次录音。",
         "backgroundFastDraftOnly": "已生成候选。为避免后台卡顿，精修会等回到 App 前台再运行。",
+        "liveASREmergencyFallback": "已用实时字幕生成候选。最终识别暂不可用，可继续轻点说话。",
         "keyboardRecoveringVoice": "正在恢复语音",
         "keyboardStartingRecording": "正在开始录音",
         "keyboardOpeningMic": "正在开麦",
