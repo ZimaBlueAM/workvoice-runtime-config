@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-06-29.19",
-  "updatedAt": "2026-06-29T23:36:00+08:00",
+  "configVersion": "2026-06-30.2",
+  "updatedAt": "2026-06-30T12:33:23+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -534,6 +534,7 @@
         "recordingHealthNoBuffers": "还没有收到麦克风数据。请确认 PIP 小窗仍在，并继续说话。",
         "liveASRNoFirstText": "已收到声音，实时字幕还没出字。结束录音后仍会处理整段录音。",
         "liveASRReconnecting": "已收到声音，正在重新连接实时字幕。继续说话即可。",
+        "liveASRReconnectingOnSpeech": "实时字幕会在继续说话时自动恢复。",
         "liveASRUnavailableDuringRecording": "实时文字暂不可用，结束录音后仍会整理整段语音。",
         "liveASRUnavailableIdle": "实时文字暂不可用。仍可轻点开始说话，再轻点结束后整理。",
         "translationTargetMismatch": "翻译结果没有稳定输出目标语种，已拒绝这次假翻译，避免插入错误文本。请再试一次。",
@@ -551,18 +552,18 @@
       }
     },
     "timing": {
-      "draftPollIntervalSeconds": 0.5,
+      "draftPollIntervalSeconds": 0.28,
       "autoLaunchCooldownSeconds": 4.0,
       "recordingRecoveryAutoLaunchCooldownSeconds": 8.0,
       "mainAppRecordStartWatchSeconds": [
-        1.2,
-        2.4
+        0.35,
+        0.8
       ],
-      "mainAppRecordStartCarrierRetryLimit": 4,
-      "mainAppRecordStartForcedLaunchLimit": 0,
+      "mainAppRecordStartCarrierRetryLimit": 1,
+      "mainAppRecordStartForcedLaunchLimit": 1,
       "mainAppRecordStartForceLaunchRequiresStaleCarrier": true,
-      "mainAppDraftWaitAttempts": 24,
-      "keyboardLocalDraftWaitAttempts": 90,
+      "mainAppDraftWaitAttempts": 12,
+      "keyboardLocalDraftWaitAttempts": 40,
       "refinedDraftWatchAttempts": 120,
       "styleRewriteTimeoutSeconds": 8,
       "liveTranscriptFallbackMaxAgeSeconds": 10,
@@ -902,7 +903,7 @@
       }
     ],
     "liveStream": {
-      "partialDebounceSeconds": 0.45,
+      "partialDebounceSeconds": 0.28,
       "largeRegressionRatio": 0.72,
       "largePrefixDropCharacters": 6,
       "shortFinalPrefixDropCharacters": 4,
@@ -961,7 +962,19 @@
         "试一下",
         "能听到吗",
         "能听见吗",
-        "听得到吗"
+        "听得到吗",
+        "能听到我说话吗",
+        "能听见我说话吗",
+        "能听到我讲话吗",
+        "能听见我讲话吗",
+        "听得到我说话吗",
+        "听得到我讲话吗",
+        "听得见吗",
+        "听到吗",
+        "听见吗",
+        "有声音吗",
+        "有没有声音",
+        "麦克风有声音吗"
       ]
     },
     "liveRecognition": {
@@ -976,7 +989,7 @@
       "finalResultRestartDelaySeconds": 0.12
     },
     "finalRoute": {
-      "preferLiveTranscriptWhenAvailable": true,
+      "preferLiveTranscriptWhenAvailable": false,
       "fallbackToLiveTranscriptOnFailure": true,
       "minimumLiveTranscriptCharacters": 8,
       "enableAppleSpeechAnalyzer": true,
@@ -989,7 +1002,15 @@
         "en-US",
         "ja-JP",
         "ko-KR",
-        "fr-FR"
+        "fr-FR",
+        "de-DE",
+        "es-ES",
+        "pt-BR",
+        "it-IT",
+        "ru-RU",
+        "ar-SA",
+        "hi-IN",
+        "th-TH"
       ],
       "whisperLocaleIdentifier": "und"
     }
@@ -2510,6 +2531,11 @@
       "有没有用",
       "是否听到",
       "听见了吗",
+      "能听到我说话吗",
+      "能听见我说话吗",
+      "听得到我说话吗",
+      "有声音吗",
+      "麦克风有声音吗",
       "随便说",
       "没什么",
       "无所谓",
