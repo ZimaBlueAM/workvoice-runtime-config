@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.1",
-  "updatedAt": "2026-07-01T01:05:00+08:00",
+  "configVersion": "2026-07-01.2",
+  "updatedAt": "2026-07-01T02:25:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -963,6 +963,7 @@
     "liveRecognition": {
       "localeIdentifiers": [
         "zh-Hans",
+        "en-US",
         "zh-CN"
       ],
       "requiresOnDeviceRecognition": false,
