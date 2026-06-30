@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.5",
-  "updatedAt": "2026-07-01T06:32:36+08:00",
+  "configVersion": "2026-07-01.6",
+  "updatedAt": "2026-07-01T06:48:04+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -980,6 +980,8 @@
       "minimumLiveTranscriptCharacters": 8,
       "maxAppleLocaleAttemptsWithLiveFallback": 2,
       "maxAppleLocaleAttemptsWithoutLiveFallback": 3,
+      "maxAppleSFSpeechFallbackAttemptsWithLiveFallback": 1,
+      "maxAppleSFSpeechFallbackAttemptsWithoutLiveFallback": 2,
       "enableAppleSpeechAnalyzer": true,
       "enableAppleSFSpeechFallback": true,
       "enableWhisperKitFallback": false,
