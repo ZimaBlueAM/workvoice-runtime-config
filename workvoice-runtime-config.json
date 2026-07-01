@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.11",
-  "updatedAt": "2026-07-01T12:43:00+08:00",
+  "configVersion": "2026-07-01.12",
+  "updatedAt": "2026-07-01T13:42:45+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -510,6 +510,7 @@
         "audioInterruptedEndedArmed": "音频中断已结束。需要语音输入时，在键盘重新轻点开始说话。",
         "audioInterruptedEnded": "音频中断已结束。",
         "mediaServicesReset": "系统音频服务已重置。回键盘时会提示重新准备语音。",
+        "voiceProcessingRecoveredIdle": "语音任务已收尾，可以继续说。",
         "backgroundFastDraftOnly": "已生成候选。为避免后台卡顿，精修会等回到 App 前台再运行。",
         "liveASREmergencyFallback": "已用实时字幕生成候选。最终识别暂不可用，可继续轻点说话。",
         "keyboardRecoveringVoice": "正在恢复语音",
