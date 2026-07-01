@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.9",
-  "updatedAt": "2026-07-01T08:55:00+08:00",
+  "configVersion": "2026-07-01.10",
+  "updatedAt": "2026-07-01T10:48:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -991,7 +991,7 @@
     "finalRoute": {
       "preferLiveTranscriptWhenAvailable": false,
       "fallbackToLiveTranscriptOnFailure": true,
-      "minimumLiveTranscriptCharacters": 8,
+      "minimumLiveTranscriptCharacters": 2,
       "maxAppleLocaleAttemptsWithLiveFallback": 2,
       "maxAppleLocaleAttemptsWithoutLiveFallback": 3,
       "maxAppleSFSpeechFallbackAttemptsWithLiveFallback": 1,
