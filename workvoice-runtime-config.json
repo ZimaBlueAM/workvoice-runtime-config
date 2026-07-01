@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.13",
-  "updatedAt": "2026-07-01T13:56:12+08:00",
+  "configVersion": "2026-07-01.14",
+  "updatedAt": "2026-07-01T14:23:11+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1073,7 +1073,7 @@
     "stopTailCaptureSeconds": 0.75,
     "optimisticStopTailCaptureSeconds": 0.35,
     "optimisticLiveTranscriptMaxAgeSeconds": 8,
-    "optimisticLiveTranscriptMinimumCharacters": 4,
+    "optimisticLiveTranscriptMinimumCharacters": 1,
     "autoEndpointMinimumSpeechDurationSeconds": 0.65,
     "autoEndpointMinimumRecordingDurationSeconds": 4,
     "autoEndpointSilenceSeconds": 12,
