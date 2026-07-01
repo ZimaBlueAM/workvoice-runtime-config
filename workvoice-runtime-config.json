@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-01.12",
-  "updatedAt": "2026-07-01T13:42:45+08:00",
+  "configVersion": "2026-07-01.13",
+  "updatedAt": "2026-07-01T13:56:12+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -1018,6 +1018,7 @@
         "hi-IN",
         "th-TH"
       ],
+      "speechAnalyzerResultDrainGraceSeconds": 0.9,
       "whisperLocaleIdentifier": "und"
     }
   },
