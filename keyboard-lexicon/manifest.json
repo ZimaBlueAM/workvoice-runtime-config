@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "version": "2026.10.29.1",
+  "payloadURL": "https://raw.githubusercontent.com/ZimaBlueAM/workvoice-runtime-config/main/keyboard-lexicon/sayit-keyboard-lexicon.tsv",
+  "sha256": "a2a413d625672acffae857faa003c10b71b32b637ec273ffcf3ee80badf7b2c8",
+  "minimumClientBuild": 0,
+  "rankingMode": "weightDescending",
+  "maxCandidatesPerReading": 24,
+  "entryCount": 76642,
+  "source": {
+    "project": "rime-ice",
+    "license": "GPL-3.0",
+    "input": "KeyboardExtension/Resources/rime_ice_compact.tsv",
+    "normalization": "lowercase ASCII pinyin; ü mapped to v; first occurrence and descending source weight"
+  }
+}

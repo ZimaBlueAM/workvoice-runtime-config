@@ -1,27 +1,28 @@
 {
   "schemaVersion": 1,
-  "configVersion": "2026-07-10.16",
-  "updatedAt": "2026-07-10T22:10:00+08:00",
+  "professionalRewriteDefaultsVersion": 1,
+  "configVersion": "2026-10-31.7",
+  "updatedAt": "2026-10-31T15:35:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
     "cloudQuality": {
       "enabled": true,
       "provider": "coincoin",
-      "baseURL": "https://coincoin.ai/v1",
-      "model": "gpt-5.5",
+      "baseURL": "https://clawfather.up.railway.app/v1",
+      "model": "gpt-6-luna",
       "timeoutSeconds": 15,
       "temperature": 0,
-      "maxTokens": 512,
-      "systemPrompt": "你负责把中文 ASR 转写整理成可以直接发送的工作消息。只输出最终消息，不要解释，不要添加事实。语气要像真人正在工作聊天，不要官腔；除非原文以问候开头，否则不要新增“您好”“你好”。即使目标风格是正式，也不要凭空补问候。"
+      "maxTokens": 768,
+      "systemPrompt": "把 ASR 转写整理成可直接发送的文字，只输出最终消息，不输出解释、候选项或额外标题。先删除无语义口癖、重复和明确的 ASR 错字；保留全部事实、意图、请求、承诺、名字、术语、时间、数字、单位、否定、条件和不确定程度。用户明确自我更正时采用最后确认的说法，不确定时保留原意，不猜测，不添加事实、结论、原因、责任人、问候或承诺。按主语和动作识别事项边界：单事项保持自然段；两个以上独立事项按原顺序用真实换行分开，不主动添加项目符号或编号。只有原文或用户明确要求清单、列点、编号或步骤时，才保留或采用相应的“• ”或“1. ”标记；时间、预算、条件等并列事实不要逐句编号，条件与结果尽量同段。只有原文明示字段才用标签；不补标题、字段、空行或前后缀。默认输出纯文本和真实换行，不输出字面“\\n”、Markdown、表格或代码围栏。除非原文已有问候，否则不要新增“您好”“你好”；正式风格也不补问候。"
     },
     "localQuality": {
-      "systemPrompt": "你是一个在 iPhone 输入法里运行的工作消息编辑器。你的任务是把语音 ASR 的凌乱转写整理成可以直接发送的消息。只输出最终消息，不要解释，不要标题，不要候选项，不要 Markdown。保留事实、时间、数字、人名、任务和承诺；不要编造新信息。除非原文以问候开头，否则不要新增“您好”“你好”。即使目标风格是正式，也不要凭空补问候。如果用户中英混合，保留原意和必要的英文术语。",
+      "systemPrompt": "把 ASR 转写整理成可直接发送的文字，只输出最终消息，不输出解释、候选项或额外标题。先删除无语义口癖、重复和明确的 ASR 错字；保留全部事实、意图、请求、承诺、名字、术语、时间、数字、单位、否定、条件和不确定程度。用户明确自我更正时采用最后确认的说法，不确定时保留原意，不猜测，不添加事实、结论、原因、责任人、问候或承诺。按主语和动作识别事项边界：单事项保持自然段；两个以上独立事项按原顺序用真实换行分开，不主动添加项目符号或编号。只有原文或用户明确要求清单、列点、编号或步骤时，才保留或采用相应的“• ”或“1. ”标记；时间、预算、条件等并列事实不要逐句编号，条件与结果尽量同段。只有原文明示字段才用标签；不补标题、字段、空行或前后缀。默认输出纯文本和真实换行，不输出字面“\\n”、Markdown、表格或代码围栏。除非原文已有问候，否则不要新增“您好”“你好”；正式风格也不补问候。",
       "temperature": 0.2,
       "topP": 0.9,
       "topK": 30,
       "repeatPenalty": 1.08,
-      "maxTokens": 384,
+      "maxTokens": 512,
       "partialMinimumCharacters": 6,
       "partialMinimumDelta": 8,
       "partialMinimumIntervalSeconds": 0.45
@@ -39,21 +40,23 @@
       "whisperColdSeconds": 45,
       "whisperWithLiveFallbackSeconds": 20,
       "speechColdSeconds": 25,
-      "speechWithLiveFallbackSeconds": 12
+      "speechWithLiveFallbackSeconds": 12,
+      "finalTextRewriteSeconds": 12
     }
   },
   "rewrite": {
-    "systemPrompt": "把手机 ASR 转写整理成一条能直接发送的工作消息。只输出最终消息，不输出解释，不输出候选项，不添加事实。修正明显 ASR 错字、断句错误和中英混合术语误切分；除非原文以问候开头，否则不要新增“您好”“你好”。即使目标风格是正式，也不要凭空补问候。",
+    "systemPrompt": "把 ASR 转写整理成可直接发送的文字，只输出最终消息，不输出解释、候选项或额外标题。先删除无语义口癖、重复和明确的 ASR 错字；保留全部事实、意图、请求、承诺、名字、术语、时间、数字、单位、否定、条件和不确定程度。用户明确自我更正时采用最后确认的说法，不确定时保留原意，不猜测，不添加事实、结论、原因、责任人、问候或承诺。按主语和动作识别事项边界：单事项保持自然段；两个以上独立事项按原顺序用真实换行分开，不主动添加项目符号或编号。只有原文或用户明确要求清单、列点、编号或步骤时，才保留或采用相应的“• ”或“1. ”标记；时间、预算、条件等并列事实不要逐句编号，条件与结果尽量同段。只有原文明示字段才用标签；不补标题、字段、空行或前后缀。默认输出纯文本和真实换行，不输出字面“\\n”、Markdown、表格或代码围栏。除非原文已有问候，否则不要新增“您好”“你好”；正式风格也不补问候。",
     "toneInstructions": {
-      "clear": "像真人随手发出的清楚消息。保留一点口语感，输出 1-3 句，不要像公文或会议纪要。",
-      "work": "适合日常工作 IM，先说结论，再说必要背景和下一步。自然、靠谱、能直接发给同事或平级，不要太客套。",
-      "formal": "适合发给上级、跨团队或外部合作方。表达更完整稳妥，适当礼貌，但不要夸张客套。",
-      "concise": "压缩成最短可发送版本，只保留结论、请求、时间点和下一步，尽量比原文短 30% 以上。"
+      "clear": "专业、自然、清楚的书面表达。先理顺逻辑，再组织句子和段落；保留全部信息及原有语气强度，短句不硬改，复杂内容不堆成口语长句。",
+      "work": "适合日常工作沟通，优先呈现原文已有的重点或请求，再给必要背景和下一步；没有说出的结论或行动不要补。表达专业、自然、直接，不要过度客套。",
+      "formal": "适合上级、跨团队或外部合作方，使用专业、完整、稳妥的书面表达。按事项和逻辑组织，适当礼貌，不新增问候，不将不确定意见写成承诺。",
+      "concise": "精简重复和口癖，保留全部事实、请求、时间点、条件和不确定程度，不为缩短而丢信息。"
     },
     "toneExamples": {
-      "work": "ASR：嗯那个我现在在外面没带电脑，然后你先把那个最新的数据表发我一下，我晚点到地方以后看一下，今天应该能给你一个最终版本\n最终消息：我现在在外面，暂时没带电脑。你先把最新数据表发我，我到地方后看一下，今天给你最终版本。",
-      "formal": "ASR：嗯那个我现在在外面没带电脑，然后你先把那个最新的数据表发我一下，我晚点到地方以后看一下，今天应该能给你一个最终版本\n最终消息：我现在在外面，暂时不方便用电脑。麻烦您先把最新数据表发我，我到地方后会尽快确认，今天给您最终版本。",
-      "concise": "ASR：嗯那个我现在在外面没带电脑，然后你先把那个最新的数据表发我一下，我晚点到地方以后看一下，今天应该能给你一个最终版本\n最终消息：我现在没带电脑。请先发最新数据表，我晚点给你最终版本。"
+      "clear": "结构仅示意排版，不得复制尖括号内容或新增事实：\n默认使用纯文本自然段和真实换行；只有原文或用户明确要求清单、列点、编号或步骤时，才保留相应前缀。",
+      "work": "结构仅示意排版，不得复制尖括号内容或新增事实：\n默认使用纯文本自然段和真实换行；只有原文或用户明确要求清单、列点、编号或步骤时，才保留相应前缀。",
+      "formal": "结构仅示意排版，不得复制尖括号内容或新增事实：\n默认使用纯文本自然段和真实换行；只有原文或用户明确要求清单、列点、编号或步骤时，才保留相应前缀。",
+      "concise": "结构仅示意排版，不得复制尖括号内容或新增事实：\n默认使用纯文本自然段和真实换行；只有原文或用户明确要求清单、列点、编号或步骤时，才保留相应前缀。"
     },
     "corrections": {
       "玩点": "晚点",
@@ -66,7 +69,16 @@
       "其微": "企微",
       "企业威信": "企业微信",
       "拉克": "Lark",
-      "查 g p t": "ChatGPT"
+      "查 g p t": "ChatGPT",
+      "长安空格": "长按空格",
+      "长安键盘": "长按键盘",
+      "长安按钮": "长按按钮",
+      "长安说话": "长按说话",
+      "长安录音": "长按录音",
+      "长安麦克风": "长按麦克风",
+      "长安开始": "长按开始",
+      "长安停止": "长按停止",
+      "长安这个": "长按这个"
     },
     "fillers": [
       "喂喂喂",
@@ -116,12 +128,19 @@
     "cloud": {
       "enabled": true,
       "provider": "coincoin",
-      "baseURL": "https://coincoin.ai/v1",
-      "model": "gpt-5.5",
+      "baseURL": "https://clawfather.up.railway.app/v1",
+      "model": "gpt-6-luna",
       "timeoutSeconds": 45,
       "temperature": 0.2,
       "maxTokens": 360,
-      "systemPrompt": "你是手机键盘里的 ASR 文案整理器。严格按用户给出的任务 JSON 整理。只输出最终可发送文本，不输出 JSON、解释或候选项，不添加事实。除非原文极短，否则禁止原样输出 ASR；除非原文以问候开头，否则不要新增“您好”“你好”。即使目标风格是正式，也不要凭空补问候。"
+      "systemPrompt": "把 ASR 转写整理成可直接发送的文字，只输出最终消息，不输出解释、候选项或额外标题。先删除无语义口癖、重复和明确的 ASR 错字；保留全部事实、意图、请求、承诺、名字、术语、时间、数字、单位、否定、条件和不确定程度。用户明确自我更正时采用最后确认的说法，不确定时保留原意，不猜测，不添加事实、结论、原因、责任人、问候或承诺。按主语和动作识别事项边界：单事项保持自然段；两个以上独立事项按原顺序用真实换行分开，不主动添加项目符号或编号。只有原文或用户明确要求清单、列点、编号或步骤时，才保留或采用相应的“• ”或“1. ”标记；时间、预算、条件等并列事实不要逐句编号，条件与结果尽量同段。只有原文明示字段才用标签；不补标题、字段、空行或前后缀。默认输出纯文本和真实换行，不输出字面“\\n”、Markdown、表格或代码围栏。未指定翻译目标时保留原语言及中英混合术语。"
+    },
+    "lexicon": {
+      "enabled": true,
+      "manifestURL": "https://raw.githubusercontent.com/ZimaBlueAM/workvoice-runtime-config/main/keyboard-lexicon/manifest.json",
+      "minimumClientBuild": 0,
+      "rankingMode": "weightDescending",
+      "maxCandidatesPerReading": 24
     },
     "defaultTone": "clear",
     "presets": [
@@ -131,7 +150,7 @@
         "tone": "clear",
         "maxTokens": 260,
         "temperature": 0.2,
-        "instruction": "像真人随手发出的清楚消息。保留温度和口语感，但删除口癖、重复和明显 ASR 噪声。输出 1-3 句，不要像会议纪要。"
+        "instruction": "中性、自然地整理整段表达。删除口癖和重复，按重点归并相关内容，理顺句子顺序；短消息直接成句，复杂内容分短段，明确列举时分行。保留全部事实、时间、数字、名字、否定、条件和不确定程度，不新增情绪、问候或承诺。"
       },
       {
         "id": "work",
@@ -159,6 +178,13 @@
       }
     ],
     "styleOptions": [
+      {
+        "id": "natural",
+        "title": "自然",
+        "emoji": "✍️",
+        "basePresetRawValue": "natural",
+        "prompt": "中性、自然地整理整段表达。删除口癖和重复，按重点归并相关内容，理顺句子顺序；短消息直接成句，复杂内容分短段，明确列举时分行。保留全部事实、时间、数字、名字、否定、条件和不确定程度，不新增情绪、问候或承诺。"
+      },
       {
         "id": "joy",
         "title": "喜",
@@ -417,53 +443,56 @@
       "hapticsEnabled": true,
       "hapticIntensities": {
         "key": 0.45,
-        "primaryPress": 0.65,
-        "recordStart": 0.85,
-        "recordStop": 0.9,
+        "primaryPress": 0.4,
+        "primaryRelease": 0.24,
+        "recordStart": 0.7,
+        "recordStop": 0.72,
         "styleSelect": 0.62,
         "intensityStep": 0.9,
         "translationSelect": 0.5,
         "delete": 0.68,
         "restore": 0.55,
         "warning": 0.75,
-        "cursorStep": 0.72
+        "cursorStep": 0.32,
+        "gestureDeleteStep": 0.42,
+        "gestureRestoreStep": 0.3
       },
       "palette": {
         "deckLight": {
-          "red": 0,
-          "green": 0,
-          "blue": 0,
-          "alpha": 0
+          "red": 0.8549019607843137,
+          "green": 0.8549019607843137,
+          "blue": 0.8549019607843137,
+          "alpha": 0.75
         },
         "deckDark": {
-          "red": 0,
-          "green": 0,
-          "blue": 0,
-          "alpha": 0
+          "red": 0.10980392156862745,
+          "green": 0.10980392156862745,
+          "blue": 0.10980392156862745,
+          "alpha": 0.86
         },
         "primaryKeyLight": {
-          "red": 0.94,
-          "green": 0.95,
-          "blue": 0.96,
-          "alpha": 0.82
+          "red": 1,
+          "green": 1,
+          "blue": 1,
+          "alpha": 1
         },
         "primaryKeyDark": {
-          "red": 0.27,
-          "green": 0.27,
-          "blue": 0.29,
-          "alpha": 0.96
-        },
-        "auxiliaryKeyLight": {
-          "red": 0.72,
-          "green": 0.73,
-          "blue": 0.75,
-          "alpha": 0.78
-        },
-        "auxiliaryKeyDark": {
           "red": 0.22,
           "green": 0.22,
-          "blue": 0.24,
-          "alpha": 0.92
+          "blue": 0.23,
+          "alpha": 1
+        },
+        "auxiliaryKeyLight": {
+          "red": 1,
+          "green": 1,
+          "blue": 1,
+          "alpha": 1
+        },
+        "auxiliaryKeyDark": {
+          "red": 0.31,
+          "green": 0.31,
+          "blue": 0.33,
+          "alpha": 1
         }
       },
       "layout": {
@@ -474,7 +503,30 @@
         "translationButtonSpacing": 9,
         "horizontalInset": 18,
         "verticalInset": 4,
-        "styleLabelSpacing": 5
+        "styleLabelSpacing": 5,
+        "keyboardPortraitHeight": 339,
+        "keyboardLandscapeHeight": 296,
+        "keyboardFooterInset": 80,
+        "keyboardHorizontalInset": 6,
+        "keyboardTopInset": 8,
+        "keyboardCandidateHeight": 24,
+        "keyboardKeyHeight": 45,
+        "keyboardRowSpacing": 11,
+        "keyboardKeySpacing": 5,
+        "keyboardMiddleRowInset": 16,
+        "keyboardCandidateToLayoutSpacing": 8,
+        "keyboardLayoutToInputSpacer": 10,
+        "keyboardBottomKeyPadding": 2,
+        "keyboardCornerRadius": 8,
+        "keyboardKeyWidthScale": 0.9,
+        "keyboardLetterKeyWidthScale": 0.96,
+        "keyboardUtilityKeyWidth": 42,
+        "keyboardShiftKeyWidth": 42,
+        "keyboardDeleteKeyWidth": 42,
+        "keyboardNumericKeyWidth": 91,
+        "keyboardReturnKeyWidth": 91,
+        "keyboardCandidateGap": 8,
+        "keyboardCandidateHorizontalPadding": 10
       },
       "animationsEnabled": true,
       "messages": {
@@ -486,7 +538,7 @@
         "ready": "候选已准备好。回键盘查看并插入。",
         "readyShort": "候选已准备好",
         "readyForImport": "候选已准备好。回键盘导入并插入。",
-        "noAudio": "没有录到麦克风声音。请确认 PIP 小窗还在，再轻点重说。",
+        "noAudio": "没有录到麦克风声音。请重新激活语音后再试。",
         "noSpeech": "没有识别到可用语音。按钮已恢复，可以轻点重新说。",
         "voiceDismissed": "语音已收起。",
         "voiceDismissedSetup": "语音已收起。回键盘点“准备语音”后可继续使用。",
@@ -517,6 +569,8 @@
         "keyboardStartingRecording": "正在开始录音",
         "keyboardOpeningMic": "正在开麦",
         "keyboardRecording": "正在录音",
+        "recordingInputConfirmed": "正在录音，实时文字正在连接。再次轻点结束。",
+        "rewriteUnavailable": "大模型暂时不可用，原文已保留。可以继续说话，稍后再试。",
         "keyboardPreparingRecording": "正在准备录音",
         "keyboardLiveTranscribing": "实时转写",
         "keyboardNeedsRecovery": "语音需恢复",
@@ -527,10 +581,10 @@
         "keyboardStoppedWaiting": "已停止等待。可重新轻点说话。",
         "keyboardWaitingVoiceEntry": "正在等待语音入口",
         "keyboardWakingApp": "正在唤醒",
-        "keyboardExportedToApp": "已导出给工作语音",
+        "keyboardExportedToApp": "已导出给说话键盘",
         "keyboardRewritingInput": "正在整理输入",
-        "keyboardJumpDenied": "系统没有允许从键盘跳转。请手动打开“工作语音”App 完成准备，再回这里轻点开始说话。",
-        "keyboardDeepLinkFailed": "无法生成工作语音跳转链接。",
+        "keyboardJumpDenied": "系统没有允许从键盘跳转。请手动打开“说话键盘”App 完成准备，再回这里轻点开始说话。",
+        "keyboardDeepLinkFailed": "无法生成说话键盘跳转链接。",
         "keyboardNoVoiceRetry": "没有录到声音。轻点重新说。",
         "keyboardNoVoiceStoppedRetry": "没有录到声音，已停止等待。轻点重新说。",
         "keyboardSavedNoDraft": "录音已保存，但主 App 暂时没有返回候选。请再按一次“准备语音”唤醒处理。",
@@ -547,7 +601,7 @@
         "keyboardNoCurrentInput": "输入框里还没有可整理的文字。先用系统麦克风听写出一段原文，或手动输入/粘贴一段草稿。",
         "keyboardNoRewriteCandidate": "还没有可重写的语音内容。先轻点开始说话生成候选。",
         "recordingStarted": "正在录音。停顿后会自动生成候选，也可再次轻点结束。",
-        "recordingHealthNoBuffers": "还没有收到麦克风数据。请确认 PIP 小窗仍在，并继续说话。",
+        "recordingHealthNoBuffers": "还没有收到麦克风数据。请结束本次录音，重新激活语音后再试。",
         "speechPermissionRequired": "语音识别权限未开启，无法开始录音。请回 App 打开权限。",
         "liveASRPermissionUnavailable": "已收到声音，但实时字幕权限不可用。结束录音后仍会尝试整理整段语音。",
         "liveASRNoFirstText": "已收到声音，实时字幕还没出字。结束录音后仍会处理整段录音。",
@@ -563,7 +617,7 @@
         "liveActivityProcessingPhase": "正在整理",
         "liveActivityProcessingStatus": "正在转写和润色，完成后回键盘插入。",
         "liveActivityStandbyPhase": "键盘待命",
-        "liveActivityStandbyStatus": "回输入框，轻点工作语音键盘按钮开始说话。",
+        "liveActivityStandbyStatus": "回输入框，轻点说话键盘键盘按钮开始说话。",
         "liveActivityDismissedPhase": "已收起",
         "liveActivityDismissedStatus": "语音入口已收起。",
         "liveActivityHiddenKeyboardStatus": "语音入口已转入键盘隐形模式。"
@@ -618,7 +672,7 @@
       "飞书",
       "Typeless",
       "Wispr Flow",
-      "VoiceBoard",
+      "Sayit",
       "WorkVoice",
       "钉钉",
       "企业微信",
@@ -664,6 +718,9 @@
       "AppIntent",
       "需求",
       "排期",
+      "长按",
+      "按住说话",
+      "空格键",
       "里程碑",
       "版本",
       "上线",
@@ -1631,6 +1688,41 @@
         "requiresExplicitDownload": false
       }
     ],
+    "embeddingModels": [
+      {
+        "id": "bge-small-zh-v1.5-q4km",
+        "title": "bge-small-zh-v1.5 Q4_K_M",
+        "kind": "embedding",
+        "provider": "BAAI/CompendiumLabs",
+        "model": "bge-small-zh-v1.5",
+        "repo": "CompendiumLabs/bge-small-zh-v1.5-gguf",
+        "artifactFile": "bge-small-zh-v1.5-q4_k_m.gguf",
+        "format": "gguf",
+        "downloadMode": "optional",
+        "runtimeStatus": "local-llama-embedding-index",
+        "candidateLifecycleStage": "recommended",
+        "defaultEligible": false,
+        "role": "本地笔记和历史草稿的语义检索，不参与键盘实时改写。",
+        "localeIdentifiers": [
+          "zh-Hans",
+          "zh-Hant",
+          "en-US"
+        ],
+        "regionIDs": [
+          "cn-mainland",
+          "hk-tw",
+          "global"
+        ],
+        "industryContextIDs": [
+          "general",
+          "ai-product",
+          "engineering"
+        ],
+        "sizeBytesApprox": 15400000,
+        "defaultEnabled": false,
+        "requiresExplicitDownload": true
+      }
+    ],
     "regionProfiles": [
       {
         "id": "cn-mainland",
@@ -2363,7 +2455,7 @@
     "configFetchTimeoutSeconds": 8,
     "commandPollIntervalSeconds": 0.25,
     "commandFreshIntervalSeconds": 120,
-    "automaticSetupDedupWindowSeconds": 2.5,
+    "automaticSetupDedupWindowSeconds": 0.2,
     "heartbeatIntervalSeconds": 1,
     "voiceCarrierStateRefreshIntervalSeconds": 1,
     "postStopRefinementDelaySeconds": 0.35,
@@ -2371,9 +2463,9 @@
     "selfTestRecordingSeconds": 2,
     "appTestDraftWaitAttempts": 90,
     "appTestDraftPollIntervalSeconds": 0.5,
-    "idleAutoStopCompletedKeyboardSeconds": 8,
+    "idleAutoStopCompletedKeyboardSeconds": 120,
     "idleAutoStopCompletedAppSeconds": 30,
-    "idleAutoStopBeforeRecordKeyboardSeconds": 90,
+    "idleAutoStopBeforeRecordKeyboardSeconds": 300,
     "idleAutoStopBeforeRecordAppSeconds": 180,
     "audioCarrierFallbackDelaySeconds": 4,
     "pipActivationRetryLimit": 56,
@@ -2391,22 +2483,22 @@
       1.3
     ],
     "autoReturnReadyDelaysSeconds": [
-      0.18,
-      0.42,
-      0.85,
-      1.45
+      0.05,
+      0.15,
+      0.3,
+      0.5
     ],
     "autoReturnReadinessWatchSeconds": [
-      0.18,
-      0.36,
-      0.7,
+      0.05,
+      0.1,
+      0.2,
+      0.35,
+      0.5,
+      0.8,
       1.2,
-      1.9,
+      2,
       3,
-      4.8,
-      7.5,
-      11,
-      15
+      5
     ],
     "autoReturnRecoveryDelaySeconds": 0.65,
     "autoReturnPostRequestCleanupSeconds": 2.2,
@@ -2580,7 +2672,7 @@
     "refinedDraftWatchEnabled": true,
     "keyboardCloudRewriteEnabled": true,
     "cloudQualityEnabled": true,
-    "liveStreamingRewriteEnabled": false,
+    "liveStreamingRewriteEnabled": true,
     "asrPrewarmEnabled": false
   }
 }
