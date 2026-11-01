@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "professionalRewriteDefaultsVersion": 1,
-  "configVersion": "2026-10-31.7",
-  "updatedAt": "2026-10-31T15:35:00+08:00",
+  "configVersion": "2026-11-01.8",
+  "updatedAt": "2026-11-01T10:25:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -512,7 +512,7 @@
         "keyboardCandidateHeight": 24,
         "keyboardKeyHeight": 45,
         "keyboardRowSpacing": 11,
-        "keyboardKeySpacing": 5,
+        "keyboardKeySpacing": 4,
         "keyboardMiddleRowInset": 16,
         "keyboardCandidateToLayoutSpacing": 8,
         "keyboardLayoutToInputSpacer": 10,
@@ -521,10 +521,10 @@
         "keyboardKeyWidthScale": 0.9,
         "keyboardLetterKeyWidthScale": 0.96,
         "keyboardUtilityKeyWidth": 42,
-        "keyboardShiftKeyWidth": 42,
-        "keyboardDeleteKeyWidth": 42,
-        "keyboardNumericKeyWidth": 91,
-        "keyboardReturnKeyWidth": 91,
+        "keyboardShiftKeyWidth": 45,
+        "keyboardDeleteKeyWidth": 45,
+        "keyboardNumericKeyWidth": 96,
+        "keyboardReturnKeyWidth": 96,
         "keyboardCandidateGap": 8,
         "keyboardCandidateHorizontalPadding": 10
       },
@@ -625,8 +625,8 @@
     },
     "timing": {
       "draftPollIntervalSeconds": 0.28,
-      "autoLaunchCooldownSeconds": 4.0,
-      "recordingRecoveryAutoLaunchCooldownSeconds": 8.0,
+      "autoLaunchCooldownSeconds": 4,
+      "recordingRecoveryAutoLaunchCooldownSeconds": 8,
       "mainAppRecordStartWatchSeconds": [
         0.35,
         0.8
@@ -2310,7 +2310,7 @@
         "semanticPreservationMinimum": 0.96,
         "hallucinationRateMaximum": 0.01,
         "actionItemAccuracyMinimum": 0.95,
-        "staleContextRewriteRateMaximum": 0.0,
+        "staleContextRewriteRateMaximum": 0,
         "candidateCurrentSessionMatchMinimum": 0.98,
         "peakMemoryMaximumMB": 900,
         "perLocaleMinimumSamples": 12,
