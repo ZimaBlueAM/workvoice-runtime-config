@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "professionalRewriteDefaultsVersion": 1,
-  "configVersion": "2026-11-01.9",
-  "updatedAt": "2026-11-01T11:35:00+08:00",
+  "configVersion": "2026-11-01.10",
+  "updatedAt": "2026-11-01T11:45:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -510,9 +510,9 @@
         "keyboardHorizontalInset": 6,
         "keyboardTopInset": 8,
         "keyboardCandidateHeight": 24,
-        "keyboardKeyHeight": 45,
-        "keyboardRowSpacing": 11,
-        "keyboardKeySpacing": 4,
+        "keyboardKeyHeight": 52,
+        "keyboardRowSpacing": 8,
+        "keyboardKeySpacing": 2,
         "keyboardMiddleRowInset": 16,
         "keyboardCandidateToLayoutSpacing": 8,
         "keyboardLayoutToInputSpacer": 10,
