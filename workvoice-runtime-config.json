@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "professionalRewriteDefaultsVersion": 1,
-  "configVersion": "2026-11-01.11",
-  "updatedAt": "2026-11-01T12:00:00+08:00",
+  "configVersion": "2026-11-01.12",
+  "updatedAt": "2026-11-01T12:30:00+08:00",
   "refreshIntervalSeconds": 300,
   "services": {
     "defaultProcessingPolicy": "localFirst",
@@ -137,10 +137,8 @@
     },
     "lexicon": {
       "enabled": true,
-      "manifestURL": "https://raw.githubusercontent.com/ZimaBlueAM/workvoice-runtime-config/main/keyboard-lexicon/manifest.json",
-      "minimumClientBuild": 0,
-      "rankingMode": "weightDescending",
-      "maxCandidatesPerReading": 24
+      "manifestURL": "https://raw.githubusercontent.com/ZimaBlueAM/SayIt/main/RemoteConfig/keyboard-lexicon/manifest.json",
+      "minimumClientBuild": 0
     },
     "defaultTone": "clear",
     "presets": [
@@ -504,11 +502,11 @@
         "horizontalInset": 18,
         "verticalInset": 4,
         "styleLabelSpacing": 5,
-        "keyboardPortraitHeight": 339,
+        "keyboardPortraitHeight": 344,
         "keyboardLandscapeHeight": 296,
         "keyboardFooterInset": 80,
         "keyboardHorizontalInset": 6,
-        "keyboardTopInset": 8,
+        "keyboardTopInset": 13,
         "keyboardCandidateHeight": 24,
         "keyboardKeyHeight": 45,
         "keyboardRowSpacing": 11,
@@ -519,12 +517,10 @@
         "keyboardBottomKeyPadding": 2,
         "keyboardCornerRadius": 8,
         "keyboardKeyWidthScale": 0.9,
-        "keyboardLetterKeyWidthScale": 0.96,
-        "keyboardUtilityKeyWidth": 42,
-        "keyboardShiftKeyWidth": 45,
-        "keyboardDeleteKeyWidth": 45,
-        "keyboardNumericKeyWidth": 96,
-        "keyboardReturnKeyWidth": 96,
+        "keyboardShiftKeyWidth": 50,
+        "keyboardDeleteKeyWidth": 50,
+        "keyboardNumericKeyWidth": 91,
+        "keyboardReturnKeyWidth": 90,
         "keyboardCandidateGap": 8,
         "keyboardCandidateHorizontalPadding": 10
       },
@@ -574,10 +570,10 @@
         "keyboardPreparingRecording": "正在准备录音",
         "keyboardLiveTranscribing": "实时转写",
         "keyboardNeedsRecovery": "语音需恢复",
-        "keyboardVoiceReady": "热更新测试 2026-11-01.9",
+        "keyboardVoiceReady": "语音已准备好",
         "keyboardLiveTranscribingNow": "实时转写中",
-        "keyboardPrepareVoice": "热更新测试 2026-11-01.9",
-        "keyboardFirstPrepare": "热更新测试 2026-11-01.9",
+        "keyboardPrepareVoice": "点准备语音",
+        "keyboardFirstPrepare": "首次准备",
         "keyboardStoppedWaiting": "已停止等待。可重新轻点说话。",
         "keyboardWaitingVoiceEntry": "正在等待语音入口",
         "keyboardWakingApp": "正在唤醒",
@@ -625,8 +621,8 @@
     },
     "timing": {
       "draftPollIntervalSeconds": 0.28,
-      "autoLaunchCooldownSeconds": 4,
-      "recordingRecoveryAutoLaunchCooldownSeconds": 8,
+      "autoLaunchCooldownSeconds": 4.0,
+      "recordingRecoveryAutoLaunchCooldownSeconds": 8.0,
       "mainAppRecordStartWatchSeconds": [
         0.35,
         0.8
@@ -2310,7 +2306,7 @@
         "semanticPreservationMinimum": 0.96,
         "hallucinationRateMaximum": 0.01,
         "actionItemAccuracyMinimum": 0.95,
-        "staleContextRewriteRateMaximum": 0,
+        "staleContextRewriteRateMaximum": 0.0,
         "candidateCurrentSessionMatchMinimum": 0.98,
         "peakMemoryMaximumMB": 900,
         "perLocaleMinimumSamples": 12,
